@@ -1,0 +1,650 @@
+/*RECURSOS IMPORTADOS*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*ESTILOS GLOBALES*/
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0 auto;
+    color: white;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.canvas-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.matrix-container {
+    display: none;
+}
+
+header{
+    display: grid;
+    position: relative;
+    max-width: 100vw;
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    padding: 0px 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: 1;
+}
+
+main{
+    display: grid;
+    margin: 0;
+    padding: 5vh auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: calc(100vw - 0vw);
+    max-height: calc(100vh - 12vh);
+    overflow-y: auto;
+    z-index: 2;
+}
+
+section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 100vh;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+article {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+    max-height: 100vh;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+/*ETILOS PARA EL BANNER*/
+.aling_items_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh;
+}
+
+.container_banner{
+    text-align: center;
+}
+
+.container_banner h1{
+    font-size: 0.9em;
+}
+
+nav{
+    display: grid;
+    align-items: baseline;
+    z-index: 9999;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 2vw;
+    cursor: pointer;
+}
+
+/*CORRESPONDE AL ARTICULO PRINCIPAL*/
+.container_welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    margin: 2vh auto;
+    padding: 2vh;
+    background-color: rgb(16, 16, 16);
+    border-radius: 20px;
+    border: 2px solid rgb(0, 166, 255);
+}
+
+.container_encabezado{
+    text-align: center;
+    font-family: 'Press Start 2P', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.container_encabezado h1 {
+    text-align: center;
+    font-size: 2em;
+    max-width: 100%;
+}
+
+.container_encabezado .p{
+    font-size: 2em;
+    max-width: 100%;
+    text-align: center;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_contact{
+    width: auto;
+    max-height: 10vh;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: white;
+    margin: 2vh;
+    padding: 1vh;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 255, 0);
+}
+
+.btn_contact:hover{
+    transform: scale(1.15);
+    box-shadow: 0 1vh 0.5vh rgba(0, 149, 255, 0.286);
+}
+
+.btn_contact svg{
+    max-width: 3vw;
+    height: auto;
+    vertical-align: middle;
+}
+
+.btn_contact svg path {
+    fill: black;
+}
+
+.btn_contact a{
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.container_skills {
+    display: flex;
+    max-width: 90%;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2vh auto;
+}
+
+.container_skills svg{
+    max-width: 5vw;
+    height: auto;
+}
+
+.git-svg {
+    fill: white;
+}
+
+/*CORRESPONDE AL ATRICULO MIS PROYECTOS*/
+.container_proyects {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.proyects_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.proyect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    background-color: rgb(16, 16, 16);
+    border: 2px solid rgb(0, 166, 255);
+    border-radius: 20px;
+}
+.description_proyect {
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    padding-right: 2vw;
+}
+
+.description_proyect h1 {
+    text-align: center;
+}
+
+.imagen_proyect img{
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+}
+
+/*CORRESPONDE AL ARTICULO DE MI TRAYECTORIA*/
+.trajectory_container {
+    display: flex;
+}
+
+.presentation_container {
+    display: grid;
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(0, 166, 255);
+    border-radius: 20px;
+    background-color: rgb(16, 16, 16);
+    margin-right: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_presentation{
+    align-items: center;
+}
+
+.container_txt p{
+    max-width: 300px;
+    height: auto;
+    margin: 20px;
+    color: white;
+}
+
+.container_imagen img{
+    max-width: 15vw;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 20px 0 20px;
+}
+
+.list_trajectory{
+    display: grid;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.list_trajectory ul {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(0, 166, 255);
+    border-radius: 20px;
+    background-color: rgb(16, 16, 16);
+    max-width: 690px;
+    height: auto;
+}
+.list_trajectory li h1 {
+    margin: 2vh 2vw 0 2vw;
+    text-align: left;
+}
+
+.list_trajectory li p {
+    margin: 0.2vh 2vw 2vh 2vw;
+    text-align: left;
+}
+
+/*CORRESPONDE AL ARTICULO MIS CERTIFICADOS*/
+.swiper {
+    width: 100%;
+}
+
+.swiper-wrapper {
+    padding: 0;
+}
+
+.swiper-slide {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    text-align: center;
+}
+
+.certification_content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(0, 166, 255);
+    border-radius: 20px;
+    background-color: rgb(16, 16, 16);
+    max-width: 390px;
+    width: 100%;
+    height: auto;
+}
+
+.certification-img {
+    padding: 20px 20px 0 20px;
+    flex-basis: 50%;
+
+}
+
+.certification-img img{
+    max-width: 350px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.info_certifi {
+    padding: 20px;
+    flex-basis: 50%;
+}
+
+.info_certifi h1 {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.info_certifi p {
+    font-size: 14px;
+    color: white;
+}
+
+/*CORRESPONDE AL ARTICULO MIS SKILLS*/
+.container_skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.list_skills {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.bottom_skils {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid rgb(0, 166, 255);
+    border-radius: 20px;
+    background-color: rgb(16, 16, 16);
+    width: 20vw;
+    height: auto;
+    min-width: 20vw;
+    min-height: auto;
+    padding: 1vh;
+}
+
+.icon_skill {
+    margin-bottom: 1vh;
+    padding: 1vh;
+}
+
+.icon_skill svg {
+    width: 5vw; 
+    height: 5vw;
+}
+
+.container_description {
+    margin: 0 2vw 2vh 2vw;
+}
+
+/*ESILOS PARA TABLETAS*/
+@media only screen and (max-width: 768px) {
+    /*ESTILOS GENERALES*/
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    section {
+        padding: 30px;
+    }
+    .canvas-container {
+        display: block;
+    }
+
+    .matrix-container {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    
+    .container_welcome,
+    .btn_contact,
+    .container_skills,
+    .proyect,
+    .presentation_container,
+    .container_certifi,
+    .img_certifi,
+    .list_skills .icon_skill,
+    .container_description,
+    .list_trajectory li {
+        width: 90%;
+        max-width: 90%;
+        margin: 2vh auto;
+    }
+    
+    /**/
+    .container_encabezado h1 {
+        font-size: 1.5em;
+    }
+    
+    .container_encabezado .p{
+        font-size: 1.5em;
+    }
+
+    .btn_contact {
+        max-height: 10vh;
+        padding: 1vh;
+        margin: 2vh;
+    }
+
+    .btn_contact svg {
+        max-width: 5vw;
+    }
+
+    .container_skills svg {
+        max-width: 7vw;
+    }
+
+    .list_skills svg {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .img_certifi img {
+        max-width: 25vw;
+        margin-top: 2vh;
+    }
+
+    .bottom_skils {
+        width: 20vw;
+        padding: 1vh;
+    }
+    .trajectory_container{
+        display: grid;
+    }
+    .container_presentation {
+        display: flex;
+    }
+    .list_trajectory li h1,
+    .list_trajectory li p {
+        margin: 2vh 2vw;
+    }
+
+    .container_certifi li h1 {
+        margin: 2vh 0 0 0;
+    }
+
+    .container_certifi li p {
+        margin: 2vh;
+    }
+    .bottom_skils {
+        min-width: 175px;
+    }
+}
+
+/*ESTILOS PARA CELULARES*/
+@media only screen and (max-width: 428px) {
+
+    
+    .canvas-container {
+        display: block;
+    }
+
+    .matrix-container {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    .aling_items_nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    nav{
+        display: none;
+    }
+
+    .container_welcome,
+    .btn_contact,
+    .container_skills,
+    .proyect,
+    .presentation_container,
+    .list_skills .icon_skill,
+    .container_description,
+    .list_trajectory li {
+        width: 90%;
+        max-width: 90%;
+        margin: 2vh auto;
+    }
+
+    .container_encabezado h1 {
+        font-size: 1em;
+    }
+    
+    .container_encabezado .p{
+        font-size: 1em;
+    }
+
+    .btn_contact {
+        max-height: 10vh;
+        padding: 1vh;
+        margin: 2vh;
+    }
+
+    .btn_contact svg {
+        max-width: 5vw;
+    }
+
+    .container_skills svg {
+        max-width: 7vw;
+    }
+
+    .list_skills svg {
+        width: 7vw;
+        height: 7vw;
+    }
+    
+    .presentation_container {
+        display: flex;
+        max-width: 380px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img_certifi img {
+        max-width: 25vw;
+        margin-top: 2vh;
+    }
+
+    .bottom_skils {
+        width: 20vw;
+        padding: 1vh;
+    }
+
+    .proyect {
+        flex-direction: column;
+    }
+    .description_proyect, .imagen_proyect {
+        flex: 1;
+        padding: 10px;
+    }
+    
+    .imagen_proyect img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .trajectory_container{
+        display: grid;
+    }
+    .container_presentation {
+        display: flex;
+    }
+    .list_trajectory li h1,
+    .list_trajectory li p {
+        margin: 2vh 2vw;
+    }
+    .certification_content {
+        min-width: 180px;
+        width: 100%;
+        height: auto;
+    }
+    .info_certifi h1 {
+        margin: 2vh 0 0 0;
+    }
+
+    .info_certifi p {
+        margin: 2vh;
+    }
+    .list_skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}

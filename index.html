@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JhonDev | Software Developer</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+            />
+        <link rel="stylesheet" href="css/styles.css" />
+        <!--conectamos nuestro css-->
+    </head>
+    <body>
+        <div class="canvas-container">
+            <canvas width="50" height="500" id="lienzo"></canvas>
+        </div>
+        <!--para versiones moviles-->
+        <div class="matrix-container">
+            <div class="matrix-row"></div>
+            <div class="matrix-row"></div>
+            <div class="matrix-row"></div>
+            <div class="matrix-row"></div>
+            <div class="matrix-row"></div>
+            <div class="matrix-row"></div>
+            <!-- Agregar mas filas si no se llena por completo la pantalla del movil -->
+        </div>
+        <header>
+            <div class="aling_items_nav">
+                <div class="container_banner">
+                    <h1>JhonDev | Software Developer</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li>beginning</li>
+                        <li>Projects</li>
+                        <li>Trajectory</li>
+                        <li>Certifications</li>
+                        <li>Skills</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+        <main>
+            <section>
+                <article>
+                    <div class="container_welcome">
+                        <div class="container_encabezado">
+                            <h1>Software Developer Espinal Jhonatan.</h1>
+                            <p>Web & Desktop Developer.</p>
+                        </div>
+                        <div class="btns">
+                            <button class="btn_contact">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+                                    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path>
+                                </svg>
+                                <a href="https://www.linkedin.com/in/jhoneg/">Linkedin</a>
+                            </button>
+                            <button class="btn_contact">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 64 64">
+                                    <path d="M32,10c12.15,0,22,9.85,22,22c0,9.768-6.369,18.045-15.179,20.916c0.002-0.008,0.006-0.021,0.006-0.021	s-1.485-0.696-1.453-1.938c0.035-1.367,0-4.556,0-5.727c0-2.01-1.272-3.434-1.272-3.434s9.977,0.112,9.977-10.533	c0-4.107-2.147-6.245-2.147-6.245s1.128-4.385-0.39-6.245c-1.701-0.184-4.749,1.626-6.05,2.472c0,0-2.062-0.846-5.492-0.846	c-3.43,0-5.492,0.846-5.492,0.846c-1.301-0.846-4.348-2.656-6.05-2.472c-1.518,1.86-0.39,6.245-0.39,6.245s-2.147,2.137-2.147,6.245	c0,10.645,9.977,10.533,9.977,10.533s-1.005,1.136-1.225,2.806c-0.696,0.236-1.721,0.528-2.549,0.528	c-2.165,0-3.812-2.105-4.416-3.078c-0.595-0.96-1.815-1.766-2.953-1.766c-0.749,0-1.115,0.375-1.115,0.803s1.05,0.727,1.743,1.521	c1.461,1.674,1.435,5.438,6.641,5.438c0.565,0,1.719-0.139,2.588-0.256c-0.005,1.185-0.007,2.436,0.012,3.167	c0.031,1.242-1.453,1.938-1.453,1.938s0.004,0.012,0.006,0.021C16.369,50.045,10,41.768,10,32C10,19.85,19.85,10,32,10z"></path>
+                                </svg>
+                                <a href="https://github.com/JhonEG-17">GitHub</a>
+                            </button>
+                        </div>
+                        <div class="container_skills">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path><path fill="#000001" d="M29.538,32.947c0.692,1.124,1.444,2.201,3.037,2.201c1.338,0,2.04-0.665,2.04-1.585 c0-1.101-0.726-1.492-2.198-2.133l-0.807-0.344c-2.329-0.988-3.878-2.226-3.878-4.841c0-2.41,1.845-4.244,4.728-4.244 c2.053,0,3.528,0.711,4.592,2.573l-2.514,1.607c-0.553-0.988-1.151-1.377-2.078-1.377c-0.946,0-1.545,0.597-1.545,1.377 c0,0.964,0.6,1.354,1.985,1.951l0.807,0.344C36.452,29.645,38,30.839,38,33.523C38,36.415,35.716,38,32.65,38 c-2.999,0-4.702-1.505-5.65-3.368L29.538,32.947z M17.952,33.029c0.506,0.906,1.275,1.603,2.381,1.603 c1.058,0,1.667-0.418,1.667-2.043V22h3.333v11.101c0,3.367-1.953,4.899-4.805,4.899c-2.577,0-4.437-1.746-5.195-3.368 L17.952,33.029z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <path fill="#283593" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#5c6bc0" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#3949ab" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <path fill="#00549d" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#0086d4" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#0075c0" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clip-rule="evenodd"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <path fill="#37474f" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#546e7a" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#455a64" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M34 20H35V28H34zM37 20H38V28H37z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M32 25H40V26H32zM32 22H40V23H32z" clip-rule="evenodd"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <path fill="#F4511E" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"></path>
+                            </svg>
+                            <svg class="git-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 64 64">
+                                <path d="M32,10c12.15,0,22,9.85,22,22c0,9.768-6.369,18.045-15.179,20.916c0.002-0.008,0.006-0.021,0.006-0.021	s-1.485-0.696-1.453-1.938c0.035-1.367,0-4.556,0-5.727c0-2.01-1.272-3.434-1.272-3.434s9.977,0.112,9.977-10.533	c0-4.107-2.147-6.245-2.147-6.245s1.128-4.385-0.39-6.245c-1.701-0.184-4.749,1.626-6.05,2.472c0,0-2.062-0.846-5.492-0.846	c-3.43,0-5.492,0.846-5.492,0.846c-1.301-0.846-4.348-2.656-6.05-2.472c-1.518,1.86-0.39,6.245-0.39,6.245s-2.147,2.137-2.147,6.245	c0,10.645,9.977,10.533,9.977,10.533s-1.005,1.136-1.225,2.806c-0.696,0.236-1.721,0.528-2.549,0.528	c-2.165,0-3.812-2.105-4.416-3.078c-0.595-0.96-1.815-1.766-2.953-1.766c-0.749,0-1.115,0.375-1.115,0.803s1.05,0.727,1.743,1.521	c1.461,1.674,1.435,5.438,6.641,5.438c0.565,0,1.719-0.139,2.588-0.256c-0.005,1.185-0.007,2.436,0.012,3.167	c0.031,1.242-1.453,1.938-1.453,1.938s0.004,0.012,0.006,0.021C16.369,50.045,10,41.768,10,32C10,19.85,19.85,10,32,10z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <path fill="#29b6f6" d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"></path><path fill="#0277bd" d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"></path><path fill="#0288d1" d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                <linearGradient id="~jm6wMmI3aADOIa51_ZGPa_ezj3zaVtImPg_gr1" x1="37.672" x2="37.672" y1="3.68" y2="44.487" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c391f7"></stop><stop offset="1" stop-color="#b579f4"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPa_ezj3zaVtImPg_gr1)" d="M44,10.781v26.403c0,1.147-0.653,2.193-1.684,2.696c-2.348,1.144-6.392,3.113-7.05,3.413	C34.33,43.721,33.742,44,33.007,44s-1.221-0.479-1.559-0.836C31.11,42.806,34,33,34,33V6.23c0,0-3.182-0.666-2.58-1.337	c0.603-0.671,1.107-0.899,1.736-0.899c0.725,0,1.311,0.323,1.971,0.641c0.468,0.225,4.732,2.271,7.174,3.443	C43.342,8.577,44,9.627,44,10.781z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPb_ezj3zaVtImPg_gr2" x1="4.598" x2="37.92" y1="38.164" y2="4.842" gradientUnits="userSpaceOnUse"><stop offset=".019" stop-color="#742fb6"></stop><stop offset=".32" stop-color="#702db5"></stop><stop offset=".364" stop-color="#5d2596"></stop><stop offset=".38" stop-color="#5d2596"></stop><stop offset=".48" stop-color="#5d2596"></stop><stop offset=".485" stop-color="#60279a"></stop><stop offset=".517" stop-color="#6f2dab"></stop><stop offset=".556" stop-color="#7932b6"></stop><stop offset=".61" stop-color="#7e34bd"></stop><stop offset=".762" stop-color="#8035bf"></stop><stop offset=".806" stop-color="#7d34bb"></stop><stop offset=".851" stop-color="#7530ae"></stop><stop offset=".897" stop-color="#66299a"></stop><stop offset=".943" stop-color="#52207d"></stop><stop offset=".963" stop-color="#481b6e"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPb_ezj3zaVtImPg_gr2)" d="M4,32c0,1.928,0.261,2.214,2.134,3.028C7.59,35.661,8.17,36,8.559,36	c0.469,0,0.91-0.323,1.327-0.664S34,15.525,34,15.525V5.546c0-1.198-1.674-1.676-2.467-0.778c0,0-24.791,27.531-25.533,28.244	S5.767,31.119,4,32z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPc_ezj3zaVtImPg_gr3" x1="4.405" x2="35.886" y1="25.413" y2="30.112" gradientUnits="userSpaceOnUse"><stop offset=".002" stop-color="#9c55d4"></stop><stop offset=".003" stop-color="#9c55d4"></stop><stop offset=".337" stop-color="#9751d2"></stop><stop offset=".737" stop-color="#8847cb"></stop><stop offset=".848" stop-color="#8343c8"></stop><stop offset=".89" stop-color="#8042c3"></stop><stop offset=".938" stop-color="#773db6"></stop><stop offset=".988" stop-color="#68369f"></stop><stop offset="1" stop-color="#643499"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPc_ezj3zaVtImPg_gr3)" d="M4.62,13.681c0.317-0.152,2.934-1.322,3.256-1.463C8.254,12.053,8.39,12,8.669,12	c0.308,0,0.518,0.117,1.001,0.514C10.345,13.068,34,32.483,34,32.483v9.759c0,1.675-1.744,1.847-2.728,0.741	C30.574,42.199,6.389,15.434,6.389,15.434S4,16.641,4,15.587C4,14.166,4.276,13.847,4.62,13.681z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPd_ezj3zaVtImPg_gr4" x1="6.5" x2="6.5" y1="34.157" y2="14.799" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5c1d9c"></stop><stop offset="1" stop-color="#561b90"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPd_ezj3zaVtImPg_gr4)" d="M9,18.323v11.412c0,0-2.73,2.999-3.34,3.659C5.118,33.981,4,33.797,4,32.148v-16.72	c0-1.251,1.131-1.378,2.098-0.323C6.273,15.296,9,18.323,9,18.323z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                </article>
+                <article>
+                    <div class="container_encabezado">
+                        <h1>
+                            My projects
+                        </h1>
+                    </div>
+                    <div class="container_proyects">
+                        <div class="proyects_list">
+                            <div class="proyect">
+                                <div class="description_proyect">
+                                    <h1>
+                                        Calculadora de impuestos
+                                    </h1>
+                                    <p>
+                                        Este proyecto da una herramienta al area de recursos humanos de las empresas, asi como a las personas empleados que quisieran comprobar o calcular sus impuestos segun el corte mensual de la institucion gubernamental SAT encargada de la recoleccion de los impuestos de los contribuyentes.
+                                    </p>
+
+                                </div>
+                                <div class="imagen_proyect">
+                                    <img src="assets/img/proyects/9518476230.png" >
+                                </div>
+
+                            </div>
+                                    
+                        </div>
+                        
+
+                    </div>
+
+                </article>
+                <article>
+                    <div class="container_encabezado">
+                        <h1>
+                            My trajectory
+                        </h1>
+                    </div>
+                    <div class="trajectory_container">
+                        <div class="presentation_container">
+                            <div class="container_imagen">
+                                <img src="assets/img/fotoperfil/e3802d06.png" alt="">
+                            </div>
+                            <div class="container_txt">
+                                <p>
+                                    Hello, my name is Jhonatan Espinal, I am 21 years old and I am a web and desktop developer eager to create technological solutions for small, medium and large companies that fit their needs and thus provide solutions to real problems.
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div class="list_trajectory">
+                            <ul>
+                                <li>
+                                    <h1>
+                                        I studied the Baccalaureate level at Cetis N152.
+                                    </h1>
+                                    <p>
+                                        I graduated with a technical degree in Computer Support and Maintenance.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h1>
+                                        He studied at Universidad Rosario Castellanos.
+                                    </h1>
+                                    <p>
+                                        I am currently studying a Bachelor's Degree in Information and Communication Technologies, specializing in the area of software development and web development.
+                                    </p>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </article>
+                <article>
+                    <div class="container_encabezado">
+                        <h1>
+                            My Certifications
+                        </h1>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoC++.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate C++ esencial
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in c++, the course is taught by developer Eliezer Lopez and distributed by LinkedIn Learning.
+                                        </p>
+    
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoGitGitHub.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate Git
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in Git, the course is taught by Eng. Luisina De Paula on the TodoCode Academy platform.
+                                        </p>
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoC++.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate C++ esencial
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in c++, the course is taught by developer Eliezer Lopez and distributed by LinkedIn Learning.
+                                        </p>
+    
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoC++.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate C++ esencial
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in c++, the course is taught by developer Eliezer Lopez and distributed by LinkedIn Learning.
+                                        </p>
+    
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoC++.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate C++ esencial
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in c++, the course is taught by developer Eliezer Lopez and distributed by LinkedIn Learning.
+                                        </p>
+    
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoC++.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate C++ esencial
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in c++, the course is taught by developer Eliezer Lopez and distributed by LinkedIn Learning.
+                                        </p>
+    
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoC++.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate C++ esencial
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in c++, the course is taught by developer Eliezer Lopez and distributed by LinkedIn Learning.
+                                        </p>
+    
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoC++.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate C++ esencial
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in c++, the course is taught by developer Eliezer Lopez and distributed by LinkedIn Learning.
+                                        </p>
+    
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification_content">
+                                    <div class="certification-img">
+                                        <img src="assets/img/certifications/CertificadoC++.png">
+                                    </div>
+                                    <div class="info_certifi">
+                                        <h1>
+                                            Certificate C++ esencial
+                                        </h1>
+                                        <p>
+                                            In this course I developed my basic level skills in c++, the course is taught by developer Eliezer Lopez and distributed by LinkedIn Learning.
+                                        </p>
+    
+                                    </div>
+                                
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="skills">
+                    <div class="container_encabezado">
+                        <h1>
+                            My Skills
+                        </h1>
+                    </div>
+                    <div class="container_skills">
+                        <div class="list_skills">
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                                        <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Web
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Vanilla HTML 5 Web Development
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                        <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Web
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Vanilla CSS Web Development
+                                    </p>
+                                    
+                                </div>
+    
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                        <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path><path fill="#000001" d="M29.538,32.947c0.692,1.124,1.444,2.201,3.037,2.201c1.338,0,2.04-0.665,2.04-1.585 c0-1.101-0.726-1.492-2.198-2.133l-0.807-0.344c-2.329-0.988-3.878-2.226-3.878-4.841c0-2.41,1.845-4.244,4.728-4.244 c2.053,0,3.528,0.711,4.592,2.573l-2.514,1.607c-0.553-0.988-1.151-1.377-2.078-1.377c-0.946,0-1.545,0.597-1.545,1.377 c0,0.964,0.6,1.354,1.985,1.951l0.807,0.344C36.452,29.645,38,30.839,38,33.523C38,36.415,35.716,38,32.65,38 c-2.999,0-4.702-1.505-5.65-3.368L29.538,32.947z M17.952,33.029c0.506,0.906,1.275,1.603,2.381,1.603 c1.058,0,1.667-0.418,1.667-2.043V22h3.333v11.101c0,3.367-1.953,4.899-4.805,4.899c-2.577,0-4.437-1.746-5.195-3.368 L17.952,33.029z"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Web
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Vanilla JavaScript Web Development
+                                    </p>
+                                    
+                                </div>
+    
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                        <path fill="#283593" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#5c6bc0" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#3949ab" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Desktop
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Desktop application development.
+                                    </p>
+                                    
+                                </div>
+    
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                        <path fill="#00549d" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#0086d4" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#0075c0" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Desktop
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Desktop application development.
+                                    </p>
+                                    
+                                </div>
+                                
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                        <path fill="#37474f" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#546e7a" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#455a64" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M34 20H35V28H34zM37 20H38V28H37z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M32 25H40V26H32zM32 22H40V23H32z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Desktop
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        .NET Development.
+                                    </p>
+                                    
+                                </div>
+    
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                        <path fill="#F4511E" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Version control
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Development and version control for remote or group work.
+                                    </p>
+                                    
+                                </div>
+    
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg class="git-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 64 64">
+                                        <path d="M32,10c12.15,0,22,9.85,22,22c0,9.768-6.369,18.045-15.179,20.916c0.002-0.008,0.006-0.021,0.006-0.021	s-1.485-0.696-1.453-1.938c0.035-1.367,0-4.556,0-5.727c0-2.01-1.272-3.434-1.272-3.434s9.977,0.112,9.977-10.533	c0-4.107-2.147-6.245-2.147-6.245s1.128-4.385-0.39-6.245c-1.701-0.184-4.749,1.626-6.05,2.472c0,0-2.062-0.846-5.492-0.846	c-3.43,0-5.492,0.846-5.492,0.846c-1.301-0.846-4.348-2.656-6.05-2.472c-1.518,1.86-0.39,6.245-0.39,6.245s-2.147,2.137-2.147,6.245	c0,10.645,9.977,10.533,9.977,10.533s-1.005,1.136-1.225,2.806c-0.696,0.236-1.721,0.528-2.549,0.528	c-2.165,0-3.812-2.105-4.416-3.078c-0.595-0.96-1.815-1.766-2.953-1.766c-0.749,0-1.115,0.375-1.115,0.803s1.05,0.727,1.743,1.521	c1.461,1.674,1.435,5.438,6.641,5.438c0.565,0,1.719-0.139,2.588-0.256c-0.005,1.185-0.007,2.436,0.012,3.167	c0.031,1.242-1.453,1.938-1.453,1.938s0.004,0.012,0.006,0.021C16.369,50.045,10,41.768,10,32C10,19.85,19.85,10,32,10z"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Version control
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Development and version control for remote or group work.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                        <path fill="#29b6f6" d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"></path><path fill="#0277bd" d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"></path><path fill="#0288d1" d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Development Tool
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Code Compilers and Editors
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="bottom_skils">
+                                <div class="icon_skill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="auto" height="auto" viewBox="0 0 48 48">
+                                        <linearGradient id="~jm6wMmI3aADOIa51_ZGPa_ezj3zaVtImPg_gr1" x1="37.672" x2="37.672" y1="3.68" y2="44.487" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c391f7"></stop><stop offset="1" stop-color="#b579f4"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPa_ezj3zaVtImPg_gr1)" d="M44,10.781v26.403c0,1.147-0.653,2.193-1.684,2.696c-2.348,1.144-6.392,3.113-7.05,3.413	C34.33,43.721,33.742,44,33.007,44s-1.221-0.479-1.559-0.836C31.11,42.806,34,33,34,33V6.23c0,0-3.182-0.666-2.58-1.337	c0.603-0.671,1.107-0.899,1.736-0.899c0.725,0,1.311,0.323,1.971,0.641c0.468,0.225,4.732,2.271,7.174,3.443	C43.342,8.577,44,9.627,44,10.781z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPb_ezj3zaVtImPg_gr2" x1="4.598" x2="37.92" y1="38.164" y2="4.842" gradientUnits="userSpaceOnUse"><stop offset=".019" stop-color="#742fb6"></stop><stop offset=".32" stop-color="#702db5"></stop><stop offset=".364" stop-color="#5d2596"></stop><stop offset=".38" stop-color="#5d2596"></stop><stop offset=".48" stop-color="#5d2596"></stop><stop offset=".485" stop-color="#60279a"></stop><stop offset=".517" stop-color="#6f2dab"></stop><stop offset=".556" stop-color="#7932b6"></stop><stop offset=".61" stop-color="#7e34bd"></stop><stop offset=".762" stop-color="#8035bf"></stop><stop offset=".806" stop-color="#7d34bb"></stop><stop offset=".851" stop-color="#7530ae"></stop><stop offset=".897" stop-color="#66299a"></stop><stop offset=".943" stop-color="#52207d"></stop><stop offset=".963" stop-color="#481b6e"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPb_ezj3zaVtImPg_gr2)" d="M4,32c0,1.928,0.261,2.214,2.134,3.028C7.59,35.661,8.17,36,8.559,36	c0.469,0,0.91-0.323,1.327-0.664S34,15.525,34,15.525V5.546c0-1.198-1.674-1.676-2.467-0.778c0,0-24.791,27.531-25.533,28.244	S5.767,31.119,4,32z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPc_ezj3zaVtImPg_gr3" x1="4.405" x2="35.886" y1="25.413" y2="30.112" gradientUnits="userSpaceOnUse"><stop offset=".002" stop-color="#9c55d4"></stop><stop offset=".003" stop-color="#9c55d4"></stop><stop offset=".337" stop-color="#9751d2"></stop><stop offset=".737" stop-color="#8847cb"></stop><stop offset=".848" stop-color="#8343c8"></stop><stop offset=".89" stop-color="#8042c3"></stop><stop offset=".938" stop-color="#773db6"></stop><stop offset=".988" stop-color="#68369f"></stop><stop offset="1" stop-color="#643499"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPc_ezj3zaVtImPg_gr3)" d="M4.62,13.681c0.317-0.152,2.934-1.322,3.256-1.463C8.254,12.053,8.39,12,8.669,12	c0.308,0,0.518,0.117,1.001,0.514C10.345,13.068,34,32.483,34,32.483v9.759c0,1.675-1.744,1.847-2.728,0.741	C30.574,42.199,6.389,15.434,6.389,15.434S4,16.641,4,15.587C4,14.166,4.276,13.847,4.62,13.681z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPd_ezj3zaVtImPg_gr4" x1="6.5" x2="6.5" y1="34.157" y2="14.799" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5c1d9c"></stop><stop offset="1" stop-color="#561b90"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPd_ezj3zaVtImPg_gr4)" d="M9,18.323v11.412c0,0-2.73,2.999-3.34,3.659C5.118,33.981,4,33.797,4,32.148v-16.72	c0-1.251,1.131-1.378,2.098-0.323C6.273,15.296,9,18.323,9,18.323z"></path>
+                                    </svg>
+                                </div>
+                                <div class="container_description">
+                                    <div class="date_description">
+                                        <p>
+                                            Skill Type: Development Tool
+                                        </p>
+                                        <p>
+                                            Level: Junior
+                                        </p>
+                                    </div>
+                                    <p>
+                                        Code Compilers and Editors.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </article>
+                <article class="contact">
+
+                </article>
+            </section>
+            
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
