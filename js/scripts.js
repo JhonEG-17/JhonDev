@@ -3,43 +3,39 @@
 const canvas = document.getElementById('lienzo');
 const ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
 
-const w = canvas.width;
-const h = canvas.height;
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
 
-ctx.fillStyle = '#000';
-ctx.fillRect(0, 0, w, h);
-
-const cols = Math.floor(w / 20) + 1;
+const cols = Math.floor(canvas.width / 20) + 1;
 const position_y = Array(cols).fill(0);
 
-function matrix () {
+function matrix() {
     ctx.fillStyle = '#0001';
-    ctx.fillRect(0, 0, w, h);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    //ctx.fillStyle = '#0f0';
     ctx.fillStyle = '#00bfff';
     ctx.font = '15pt monospace';
 
-    position_y.forEach((y,ind) => {
-        const text = 
-        String.fromCharCode(
-            Math.random() * 128);
+    position_y.forEach((y, ind) => {
+        const text = String.fromCharCode(Math.random() * 128);
         const x = ind * 20;
         ctx.fillText(text, x, y);
         if (y > 100 + Math.random() * 10000) {
             position_y[ind] = 0;
+        } else {
+            position_y[ind] = y + 20;
         }
-        else position_y[ind] = y + 20;
     });
-
 }
 
+//PARA EL CASO DE SER UN DISPOSITIVO MOVIL
 setInterval(matrix, 50);
 
-//PARA EL CASO DE SER UN DISPOSITIVO MOVIL
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     const rows = document.querySelectorAll('.matrix-row');
 
@@ -59,10 +55,10 @@ var swiper = new Swiper(".mySwiper", {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 3, // Número de slides que quieres ver al mismo tiempo
-    spaceBetween: 10, // Espacio entre cada slide
+    spaceBetween: 5, // Espacio entre cada slide
     loop: true,
     coverflowEffect: {
-        depth: 500,
+        depth: 200,
         modifier: 1,
         slideShadows: true,
         rotate: 0,
