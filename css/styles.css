@@ -124,27 +124,6 @@ nav a {
 
 /*#2 CORRESPONDE AL ARTICULO PRINCIPAL*/
 
-.canvas-container {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1;
-}
-
-canvas {
-    display: block;
-    width: 100%;
-    height: 100vh;
-}
-
-.matrix-container {
-    display: none;
-}
-
 .center-welcome {
     display: flex;
     position: absolute;
@@ -155,31 +134,29 @@ canvas {
 }
 
 .container_welcome {
-    background-image: linear-gradient(#242424,#000000 );
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 700px;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100vh;
     padding: 25px;
 }
 
-.container_encabezado{
+.container_encabezado {
     text-align: center;
     font-family: 'Press Start 2P', sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
-.btns{
+.btns {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.btn-contact{
+.btn-contact {
     width: auto;
     max-height: 10vh;
     border: 2px solid rgb(255, 255, 255);
@@ -193,12 +170,12 @@ canvas {
     box-shadow: 0 2px 4px rgba(0, 0, 255, 0);
 }
 
-.btn-contact:hover{
+.btn-contact:hover {
     transform: scale(1.15);
     box-shadow: 0 1vh 0.5vh rgba(0, 149, 255, 0.286);
 }
 
-.btn-contact svg{
+.btn-contact svg {
     max-width: 3vw;
     height: auto;
     vertical-align: middle;
@@ -208,7 +185,7 @@ canvas {
     fill: black;
 }
 
-.btn-contact a{
+.btn-contact a {
     color: black;
     text-align: center;
     text-decoration: none;
@@ -217,20 +194,24 @@ canvas {
 
 .container_skills {
     display: flex;
-    max-width: 90%;
+    width: 100%;
     height: auto;
-    align-items: center;
     justify-content: space-around;
-    margin: 2vh auto;
+    
 }
 
-.container_skills svg{
+.iconskils{
     max-width: 5vw;
     height: auto;
+    transition: all 0.3s ease;
 }
 
 .git-svg {
     fill: white;
+}
+
+.iconskils:hover {
+    transform: scale(1.15);
 }
 
 /*#2 CORRESPONDE AL ATRICULO MIS PROYECTOS*/
@@ -275,12 +256,13 @@ canvas {
 }
 
 .btn-WebProyects {
+    max-height: 70px;
+    height: 100%;
     width: auto;
-    max-height: 5vh;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
     background-color: white;
-    margin: 2vh;
+    margin: 7vh 0 0 0;
     padding: 1vh;
     align-items: center;
     cursor: pointer;
@@ -296,6 +278,7 @@ canvas {
 .url-btn {
     text-decoration: none;
     color: black;
+    font-size: 2.5em;
 }
 
 /*#3 CORRESPONDE AL ARTICULO DE MI TRAYECTORIA*/
@@ -336,13 +319,14 @@ canvas {
 }
 
 .container-trajectory {
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .list-trajectory {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -351,9 +335,16 @@ canvas {
     border-radius: 20px;
     background-image: linear-gradient(#242424,#000000 );
     max-width: 690px;
+    width: 100%;
     height: auto;
     margin: 10px 0;
     padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.event-trajectory:hover {
+    transform: scale(1.05);
 }
 
 .trajectory-title {
@@ -432,12 +423,13 @@ canvas {
     color: white;
 }
 
-/*CORRESPONDE AL ARTICULO MIS SKILLS*/
+/*#5 CORRESPONDE AL ARTICULO MIS SKILLS*/
 .container_skills {
     display: inline-grid;
     grid-template-columns: auto auto auto auto;
     padding: 10px;
-    gap: 10px;
+    gap: 15px;
+    justify-content: space-evenly;
 }
 
 .bottom_skils {
@@ -445,13 +437,18 @@ canvas {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     border-radius: 20px;
     background-image: linear-gradient(#242424,#000000 );
+    max-width: 30vw;
     width: 100%;
-    height: 100%;
-    min-width: 20vw;
-    min-height: auto;
+    height: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bottom_skils:hover {
+    transform: scale(1.05);
 }
 
 .icon_skill {
@@ -460,12 +457,23 @@ canvas {
 }
 
 .icon_skill svg {
-    width: 5vw; 
-    height: 5vw;
+    max-width: 7vw; 
+    height: auto;
 }
 
 .container_description {
     margin: 0 2vw 2vh 2vw;
+}
+
+.date_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75em;
+}
+
+.type-level {
+    display: flex;
 }
 
 /*#6 contacto*/
@@ -483,12 +491,101 @@ canvas {
 }
 
 /*ESILOS PARA TABLETAS*/
-@media only screen and (max-width: 768px) {
-    /*ESTILOS GENERALES*/
+@media only screen and (max-width: 1024px) {
+    /*ESTILOS GLOBALES*/
+    header {
+        justify-content: center;
+
+    }
+
+    nav {
+        display: none;
+    }
+    /*Seccion #1*/
+    .title-principal {
+        font-size: 30px;
+    }
+
+    .container_welcome {
+        padding: 10px;
+    }
+
+    .btn-contact {
+        margin: 1vh;
+        padding: 0.5vh;
+    }
+
+    .iconskils {
+        max-width: 10vw;
+    }
     
+    /*Seccion #2*/
+
+    /*Seccion #3*/
+    .event-trajectory {
+        max-width: 90%;
+    }
+    
+    /*Seccion #4*/
+    .certification_content {
+        max-width: 90%;
+    }
+
+    /*Seccion #5*/
+    .icon_skill svg {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .container_banner h1 {
+        font-size: 0.8em;
+    }
+
+    .date-proyect {
+        flex-direction: column;
+        font-size: 1em;
+    }
+
+    .trajectory-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .trajectory-title,
+    .trajectory-lorem {
+        text-align: initial;
+    }
+
+    .container_skills {
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+
 }
 
 /*ESTILOS PARA CELULARES*/
 @media only screen and (max-width: 428px) {
+    
+    /*Seccion #1*/
+    /*Seccion #2*/
+    .date-proyect {
+        padding: 15px;
+    }
 
+    .url-btn {
+        font-size: 1.5em;
+    }
+    /*Seccion #3*/
+    /*Seccion #4*/
+    /*Seccion #5*/
+    .icon_skill svg {
+        max-width: 5vw; 
+        height: auto;
+    }
+    /*Seccion #6*/
+
+    
 }
