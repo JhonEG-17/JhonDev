@@ -39,7 +39,6 @@ section {
     text-align: center;
     width: 100%;
     height: 100vh;
-    padding: 60px 0 0 0;
     box-sizing: border-box;
     z-index: 1;
 }
@@ -47,18 +46,17 @@ section {
 article {
     align-items: center;
     justify-content: center;
-    place-items: center;
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
 }
 
 .container-principal {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin: 60px 0 0 00px;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
@@ -124,28 +122,21 @@ nav a {
 
 /*#2 CORRESPONDE AL ARTICULO PRINCIPAL*/
 
-.center-welcome {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-}
 
 .container_welcome {
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100vh;
-    padding: 25px;
 }
 
 .container_encabezado {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: space-around;
     font-family: 'Press Start 2P', sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
@@ -153,18 +144,23 @@ nav a {
 .btns {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
 }
 
 .btn-contact {
-    width: auto;
-    max-height: 10vh;
+    display: flex;
+    background-color: white;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
-    background-color: white;
-    margin: 2vh;
+    margin: 5vh 0 5vh 0;
     padding: 1vh;
     align-items: center;
+    justify-content: space-around;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 255, 0);
@@ -176,7 +172,7 @@ nav a {
 }
 
 .btn-contact svg {
-    max-width: 3vw;
+    width: 20%;
     height: auto;
     vertical-align: middle;
 }
@@ -186,6 +182,8 @@ nav a {
 }
 
 .btn-contact a {
+    width: 80%;
+    height: auto;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -194,14 +192,19 @@ nav a {
 
 .container_skills {
     display: flex;
+    justify-content: space-around;
     width: 100%;
     height: auto;
-    justify-content: space-around;
     
 }
 
+.aling-skills {
+    justify-content: center;
+    align-items: center;
+}
+
 .iconskils{
-    max-width: 5vw;
+    max-width: 7vw;
     height: auto;
     transition: all 0.3s ease;
 }
@@ -358,43 +361,33 @@ nav a {
 }
 
 /*#4 CORRESPONDE AL ARTICULO MIS CERTIFICADOS*/
-.swiper {
+.container-slide {
     display: flex;
-    position: relative;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
-}
-
-
-.swiper-wrapper {
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    overflow-x: auto;
     width: 100%;
     height: auto;
-    padding: 50px 0 0 0;
-}
-
-.swiper-slide {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    text-align: center;
-    box-sizing: border-box;
+    padding: 5%;
 }
 
 .certification_content {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
     background-image: linear-gradient(#242424,#000000 );
-    max-width: 390px;
+    max-width: 350px;
+    max-height: 450px;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .certification-img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
     padding: 20px 20px 0 20px;
     flex-basis: 50%;
 
@@ -403,10 +396,14 @@ nav a {
 .certification-img img{
     max-width: 350px;
     width: 100%;
+    height: auto;
     border-radius: 20px;
 }
 
 .info_certifi {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
     padding: 20px;
     flex-basis: 50%;
 }
@@ -476,20 +473,6 @@ nav a {
     display: flex;
 }
 
-/*#6 contacto*/
-.center-form {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-.form-conten {
-    border: 2px solid white;
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-
-}
-
 /*ESILOS PARA TABLETAS*/
 @media only screen and (max-width: 1024px) {
     /*ESTILOS GLOBALES*/
@@ -527,9 +510,7 @@ nav a {
     }
     
     /*Seccion #4*/
-    .certification_content {
-        max-width: 90%;
-    }
+    
 
     /*Seccion #5*/
     .icon_skill svg {
@@ -570,6 +551,9 @@ nav a {
 @media only screen and (max-width: 428px) {
     
     /*Seccion #1*/
+    .btn-contact {
+        flex-direction: column;
+    }
     /*Seccion #2*/
     .date-proyect {
         padding: 15px;
