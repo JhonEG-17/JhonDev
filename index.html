@@ -21,15 +21,14 @@
         <meta name="geo.position" content="19.4326;-99.1332">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <!--Import bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
   </head>
   <body style="font-family: 'Bebas Neue', sans-serif;" class="conatiner bg-secondary-subtle m-0 p-0">
-    <header class="header text-light" style="height: 80vh;">
+    <header class="header text-light" style="height: 88vh;">
         <img src="assets\img\Background\Background-min.webp" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-        <div class="card-img-overlay d-flex flex-column p-5 m-0 h-100">
+        <div class="card-img-overlay d-flex flex-column p-5 m-0" style="background-color: rgba(0, 0, 0, 0.388);">
             <div class="d-flex justify-content-between">
                 <div class="d-flex pt-3 gap-3">
                     <div class="social-item">
@@ -45,12 +44,12 @@
                         </a>
                     </div>
                 </div>
-                <button id="toggleDarkMode" class="btn btn-dark">🌙 Modo Oscuro</button>
+                <button id="toggleDarkMode" class="btn btn-dark shadow">🌙 Modo Oscuro</button>
             </div>
             <div class="header-content pt-5">
-                <h4 class="header-subtitle">Hola, soy</h4>
-                <h1 class="header-title">Jhonatan Espinal Garcia</h1>
-                <h6 class="header-mono">Desarrollador Web | Diseñador Frontend</h6>
+                <h4 class="header-subtitle lh-lg shadow" style="font-size: 2rem;">Hola, soy</h4>
+                <h1 class="header-title fw-bold" style="font-size: 5rem;">Jhonatan Espinal</h1>
+                <h6 class="header-mono lh-lg" style="font-size: 1.5rem;">Desarrollador Web | Diseñador Frontend</h6>
                 <div class="m-0 pb-3 grid gap-3" style="width: 100%;">
                     <svg class="iconskils" width="60" height="60" viewBox="0 0 48 48">
                         <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
@@ -61,34 +60,22 @@
                     <svg class="iconskils" width="60" height="60" viewBox="0 0 48 48">
                         <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path><path fill="#000001" d="M29.538,32.947c0.692,1.124,1.444,2.201,3.037,2.201c1.338,0,2.04-0.665,2.04-1.585 c0-1.101-0.726-1.492-2.198-2.133l-0.807-0.344c-2.329-0.988-3.878-2.226-3.878-4.841c0-2.41,1.845-4.244,4.728-4.244 c2.053,0,3.528,0.711,4.592,2.573l-2.514,1.607c-0.553-0.988-1.151-1.377-2.078-1.377c-0.946,0-1.545,0.597-1.545,1.377 c0,0.964,0.6,1.354,1.985,1.951l0.807,0.344C36.452,29.645,38,30.839,38,33.523C38,36.415,35.716,38,32.65,38 c-2.999,0-4.702-1.505-5.65-3.368L29.538,32.947z M17.952,33.029c0.506,0.906,1.275,1.603,2.381,1.603 c1.058,0,1.667-0.418,1.667-2.043V22h3.333v11.101c0,3.367-1.953,4.899-4.805,4.899c-2.577,0-4.437-1.746-5.195-3.368 L17.952,33.029z"></path>
                     </svg>
-                    <svg class="iconskils" width="60" height="60" viewBox="0 0 48 48">
-                        <path fill="#283593" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#5c6bc0" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#3949ab" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path>
-                    </svg>
-                    <svg class="iconskils" width="60" height="60" viewBox="0 0 48 48">
-                        <path fill="#00549d" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#0086d4" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#0075c0" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clip-rule="evenodd"></path>
-                    </svg>
-                    <svg class="iconskils" width="60" height="60" viewBox="0 0 48 48">
-                        <path fill="#37474f" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path><path fill="#546e7a" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path><path fill="#455a64" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M34 20H35V28H34zM37 20H38V28H37z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M32 25H40V26H32zM32 22H40V23H32z" clip-rule="evenodd"></path>
-                    </svg>
+                    <img src="assets\icons\redes sociales\svg\icon-react.svg" alt="icono-de-react" width="60">
+                    <img src="assets\icons\redes sociales\svg\icon-bootstrap.svg" alt="icono-de-bootstrap" width="60">
+                    <img src="assets\icons\redes sociales\svg\icon-c.svg" alt="icono-de-c" width="60">
+                    <img src="assets\icons\redes sociales\svg\icon-c++.svg" alt="icono-de-c++" width="60">
+                    <img src="assets\icons\redes sociales\svg\icon-c-sharp.svg" alt="icono-de.c#" width="60">
                     <svg class="iconskils" width="60" height="60" viewBox="0 0 48 48">
                         <path fill="#F4511E" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"></path>
                     </svg>
-                    <svg class="text-light"  width="60"  height="60"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/>
-                    </svg>
-                    <svg class="iconskils" width="60" height="60" viewBox="0 0 48 48">
-                        <path fill="#29b6f6" d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"></path><path fill="#0277bd" d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"></path><path fill="#0288d1" d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"></path>
-                    </svg>
-                    <svg class="iconskils" width="60" height="60" viewBox="0 0 48 48">
-                        <linearGradient id="~jm6wMmI3aADOIa51_ZGPa_ezj3zaVtImPg_gr1" x1="37.672" x2="37.672" y1="3.68" y2="44.487" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c391f7"></stop><stop offset="1" stop-color="#b579f4"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPa_ezj3zaVtImPg_gr1)" d="M44,10.781v26.403c0,1.147-0.653,2.193-1.684,2.696c-2.348,1.144-6.392,3.113-7.05,3.413	C34.33,43.721,33.742,44,33.007,44s-1.221-0.479-1.559-0.836C31.11,42.806,34,33,34,33V6.23c0,0-3.182-0.666-2.58-1.337	c0.603-0.671,1.107-0.899,1.736-0.899c0.725,0,1.311,0.323,1.971,0.641c0.468,0.225,4.732,2.271,7.174,3.443	C43.342,8.577,44,9.627,44,10.781z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPb_ezj3zaVtImPg_gr2" x1="4.598" x2="37.92" y1="38.164" y2="4.842" gradientUnits="userSpaceOnUse"><stop offset=".019" stop-color="#742fb6"></stop><stop offset=".32" stop-color="#702db5"></stop><stop offset=".364" stop-color="#5d2596"></stop><stop offset=".38" stop-color="#5d2596"></stop><stop offset=".48" stop-color="#5d2596"></stop><stop offset=".485" stop-color="#60279a"></stop><stop offset=".517" stop-color="#6f2dab"></stop><stop offset=".556" stop-color="#7932b6"></stop><stop offset=".61" stop-color="#7e34bd"></stop><stop offset=".762" stop-color="#8035bf"></stop><stop offset=".806" stop-color="#7d34bb"></stop><stop offset=".851" stop-color="#7530ae"></stop><stop offset=".897" stop-color="#66299a"></stop><stop offset=".943" stop-color="#52207d"></stop><stop offset=".963" stop-color="#481b6e"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPb_ezj3zaVtImPg_gr2)" d="M4,32c0,1.928,0.261,2.214,2.134,3.028C7.59,35.661,8.17,36,8.559,36	c0.469,0,0.91-0.323,1.327-0.664S34,15.525,34,15.525V5.546c0-1.198-1.674-1.676-2.467-0.778c0,0-24.791,27.531-25.533,28.244	S5.767,31.119,4,32z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPc_ezj3zaVtImPg_gr3" x1="4.405" x2="35.886" y1="25.413" y2="30.112" gradientUnits="userSpaceOnUse"><stop offset=".002" stop-color="#9c55d4"></stop><stop offset=".003" stop-color="#9c55d4"></stop><stop offset=".337" stop-color="#9751d2"></stop><stop offset=".737" stop-color="#8847cb"></stop><stop offset=".848" stop-color="#8343c8"></stop><stop offset=".89" stop-color="#8042c3"></stop><stop offset=".938" stop-color="#773db6"></stop><stop offset=".988" stop-color="#68369f"></stop><stop offset="1" stop-color="#643499"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPc_ezj3zaVtImPg_gr3)" d="M4.62,13.681c0.317-0.152,2.934-1.322,3.256-1.463C8.254,12.053,8.39,12,8.669,12	c0.308,0,0.518,0.117,1.001,0.514C10.345,13.068,34,32.483,34,32.483v9.759c0,1.675-1.744,1.847-2.728,0.741	C30.574,42.199,6.389,15.434,6.389,15.434S4,16.641,4,15.587C4,14.166,4.276,13.847,4.62,13.681z"></path><linearGradient id="~jm6wMmI3aADOIa51_ZGPd_ezj3zaVtImPg_gr4" x1="6.5" x2="6.5" y1="34.157" y2="14.799" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5c1d9c"></stop><stop offset="1" stop-color="#561b90"></stop></linearGradient><path fill="url(#~jm6wMmI3aADOIa51_ZGPd_ezj3zaVtImPg_gr4)" d="M9,18.323v11.412c0,0-2.73,2.999-3.34,3.659C5.118,33.981,4,33.797,4,32.148v-16.72	c0-1.251,1.131-1.378,2.098-0.323C6.273,15.296,9,18.323,9,18.323z"></path>
-                    </svg>
+                    <img src="assets\icons\redes sociales\svg\github-white.svg" alt="icon-github" width="50">
                 </div>
                 <a href="assets\files\Jhonatan-Espinal-Garcia-CV.pdf" type="button" class="btn btn btn-info" target="_blank">Descargar CV</a>
             </div>
         </div>
     </header>
     
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white shadow" data-spy="affix" data-offset-top="510">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -115,7 +102,7 @@
     <section id="about" class="container mt-5">
         <div class="container-fluid gap-1 p-2 m-0">
             <div id="about" class="row gap-5 justify-content-evenly">
-                <div class="col-6 col-md-4 about-card bg-white p-4 m-0 rounded" style="width: 320px;">
+                <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded" style="width: 320px;">
                     <h3 class="font-weight-light">¿Quien soy yo?</h3>
                     <hr style="color: aqua;">
                     <h5 class="mb-3">Soy Un Desarrollador y Diseñador Web</h5>
@@ -123,7 +110,7 @@
                     <a class="btn btn btn-outline-info" href="assets\files\Jhonatan-Espinal-Garcia-CV.pdf" target="_blank">Descargar Mi CV</a>
                 </div>
 
-                <div class="col-6 col-md-4 about-card bg-white p-4 m-0 rounded" style="width: 320px;">
+                <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded" style="width: 320px;">
                     <h3 class="font-weight-light">Información Personal</h3>
                     <hr>
                     <ul class="mt40 info list-unstyled">
@@ -146,7 +133,7 @@
                         </div>
                     </div> 
                 </div>
-                <div class="col-6 col-md-4 about-card bg-white p-4 m-0 rounded" style="width: 320px;">
+                <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded" style="width: 320px;">
                     <h3 class="font-weight-light">Mi experiencia</h3>
                     <hr>
                     <div class="row">
@@ -164,7 +151,7 @@
         <h2>Portafolio</h2>
         <div class="row w-100 gap-3 justify-content-evenly">
             <div class="col-6 col-md-4">
-                <div class="card">
+                <div class="card shadow">
                     <img src="assets\img\proyects\proyects-img\CalculFisc.webp" class="card-img-top" alt="Proyecto 1">
                     <div class="card-body">
                         <h5 class="card-title">CalCulFisc</h5>
@@ -176,7 +163,7 @@
                 </div>
             </div>
             <div class="col-6 col-md-4">
-                <div class="card">
+                <div class="card shadow">
                     <img src="assets\img\proyects\proyects-img\JEGDEVSTUDIOS.webp" class="card-img-top" alt="Proyecto 2">
                     <div class="card-body">
                         <h5 class="card-title">JEGDevStudios WEB</h5>
@@ -193,7 +180,7 @@
         <h2>Certificados</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 gap-5 justify-content-evenly">
             <div class="col">
-                <div class="card" style="max-width: 320px; min-width: 300px;">
+                <div class="card shadow" style="max-width: 320px; min-width: 300px;">
                     <img src="assets\img\certifications\CertificadoHTMLCSS.webp" class="card-img-top" alt="Certificado 2" style="aspect-ratio: 16/9;">
                     <div class="card-body">
                         <h5 class="card-title">Certificado HTML y CSS desde CERO</h5>
@@ -203,7 +190,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="max-width: 320px; min-width: 300px;">
+                <div class="card shadow" style="max-width: 320px; min-width: 300px;">
                     <img src="assets\img\certifications\HTML-ESENCIAL.webp" class="card-img-top" alt="Certificado 3" style="aspect-ratio: 16/9;">
                     <div class="card-body">
                         <h5 class="card-title">HTML esencial</h5>
@@ -213,7 +200,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="max-width: 320px; min-width: 300px;">
+                <div class="card shadow" style="max-width: 320px; min-width: 300px;">
                     <img src="assets\img\certifications\BD Relacionales con MySQL - TodoCode.webp" class="card-img-top" alt="Certificado 3" style="aspect-ratio: 16/9;">
                     <div class="card-body">
                         <h5 class="card-title">BD Relacionales con MySQL</h5>
@@ -223,7 +210,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="max-width: 320px; min-width: 300px;">
+                <div class="card shadow" style="max-width: 320px; min-width: 300px;">
                     <img src="assets\img\certifications\Bases-de-datos-con-un-cafe.webp" class="card-img-top" alt="imagen-certificado-bases-de-datos" style="aspect-ratio: 16/9;">
                     <div class="card-body">
                         <h5 class="card-title">Bases de datos con un café</h5>
@@ -233,7 +220,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="max-width: 320px; min-width: 300px;">
+                <div class="card shadow" style="max-width: 320px; min-width: 300px;">
                     <img src="assets\img\certifications\CertificadoGitGitHub.webp" class="card-img-top" alt="Certificado 3" style="aspect-ratio: 16/9;">
                     <div class="card-body">
                         <h5 class="card-title">Introduccion a Git y GitHub</h5>
@@ -243,7 +230,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="max-width: 320px; min-width: 300px;">
+                <div class="card shadow" style="max-width: 320px; min-width: 300px;">
                     <img src="assets\img\certifications\CertificadoC.webp" class="card-img-top" alt="Certificado 1" style="aspect-ratio: 16/9;">
                     <div class="card-body">
                         <h5 class="card-title">Certificado C++ esencial</h5>
@@ -253,7 +240,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="max-width: 320px; min-width: 300px;">
+                <div class="card shadow" style="max-width: 320px; min-width: 300px;">
                     <img src="assets\img\certifications\Machine-learning.webp" class="card-img-top" alt="Certificado 1" style="aspect-ratio: 16/9;">
                     <div class="card-body">
                         <h5 class="card-title">Machine leraning con un cafe</h5>
@@ -263,7 +250,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="max-width: 320px; min-width: 300px;">
+                <div class="card shadow" style="max-width: 320px; min-width: 300px;">
                     <img src="assets\img\certifications\Certificado-Python-santander.webp" class="card-img-top" alt="Certificado 1" style="aspect-ratio: 16/9;">
                     <div class="card-body">
                         <h5 class="card-title">Python</h5>
@@ -275,22 +262,47 @@
         </div>
     </section>
     <section id="contact" class="container my-5">
-        <div class="contact-form-card">
-            <h4 class="contact-title">Envíame un correo</h4>
-            <form action="index.js" method="post">
-                <div class="form-group">
-                    <input  class="form-control" type="text" placeholder="Nombre *" required>
+        <div class="d-flex bg-white shadow rounded p-3">
+            <div class="contact-form-card w-50">
+                <h4 class="contact-title">Envíame un correo</h4>
+                <form  method="post">
+                    <div class="form-group">
+                        <input  class="form-control" type="text" placeholder="Nombre *" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="email" placeholder="Correo *" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id=" placeholder="Mensaje *" rows="7" required></textarea>
+                    </div>
+                    <div class="form-group ">
+                        <button type="submit" class="form-control btn btn-primary" >Envíar mensaje</button>
+                    </div>
+                </form>
+                <div class="w-100 text-center p-4">
+                    <p class="h1">Ó</p>
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="email" placeholder="Correo *" required>
+                <div class="d-flex flex-column pt-3 gap-3">
+                    <h3 class="text-center">Contactame mediante mis redes</h3>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="social-item">
+                            <a class="social-link text-light" href="https://www.linkedin.com/in/jhoneg
+        
+                            " target="_blank">
+                                <img src="assets\icons\redes sociales\svg\linkedin-black.svg" alt="icon-link-linkedin" width="33px">
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a class="social-link text-light" href="https://github.com/JhonEG-17" target="_blank">
+                                <img src="assets\icons\redes sociales\svg\github-black.svg" alt="icon-link-github" width="30px">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <textarea class="form-control" id=" placeholder="Mensaje *" rows="7" required></textarea>
-                </div>
-                <div class="form-group ">
-                    <button type="submit" class="form-control btn btn-primary" >Envíar mensaje</button>
-                </div>
-            </form>
+            </div>
+            <div class="card w-50 rounded-0 border-0">
+                <img class="card-img img-fluid" src="assets\img\Background\Fondo-form.png" alt="imagen-de-fondo-envio-de-correo">
+            </div>
         </div>
     </section>
     <footer class="text-center py-3">

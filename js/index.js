@@ -23,3 +23,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+//Formulario section
+
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault(); // Evita el envío por defecto del formulario
+
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    };
+
+    try {
+        const response = await fetch("https://jegdevstudios.onrender.com", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        alert(result.message);
+    } catch (error) {
+        alert("Error al enviar el mensaje.");
+    }
+});
