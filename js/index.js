@@ -6,19 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
         toggleButton.classList.replace("btn-dark", "btn-light");
-        toggleButton.textContent = "☀️ Modo Claro";
+        toggleButton.textContent = "☀️";
     }
 
     toggleButton.addEventListener("click", function () {
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             toggleButton.classList.replace("btn-light", "btn-dark");
-            toggleButton.textContent = "🌙 Modo Oscuro";
+            toggleButton.textContent = "🌙";
             localStorage.setItem("dark-mode", "disabled");
         } else {
             body.classList.add("dark-mode");
             toggleButton.classList.replace("btn-dark", "btn-light");
-            toggleButton.textContent = "☀️ Modo Claro";
+            toggleButton.textContent = "☀️";
             localStorage.setItem("dark-mode", "enabled");
         }
     });
