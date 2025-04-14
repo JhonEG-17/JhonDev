@@ -19,62 +19,42 @@
         <meta name="geo.region" content="MX">
         <meta name="geo.placename" content="Ciudad de México, México">
         <meta name="geo.position" content="19.4326;-99.1332">
+
+        <!--Import fonts-->
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <!-- Scripts -->
+
+        <script type="module" src="./app.js?v=1.2.0"></script>
+    
+        <!-- Stylesheets -->
+    
+        <!-- CSS Slick Slider -->
+        
+        <link
+        rel="stylesheet"
+        href="src\styles\css\__css-librerias\_slick-slider\slick.css"
+        />
+
+        <link
+        rel="stylesheet"
+        href="src\styles\css\__css-librerias\_slick-slider\slick-theme.css"
+        />
+
         <!--Import bootstrap-->
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
+
+        <!--Import components styles-->
+
+        <link rel="stylesheet" href="src\styles\css\_css-components\home.min.css"/>
   </head>
   <body style="font-family: 'Bebas Neue', sans-serif;" class="conatiner bg-secondary-subtle m-0 p-0">
-    <header class="text-light" style="height: 650px;">
-        <img src="assets\img\Background\Background-min.webp" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-        <div class="card-img-overlay d-flex flex-column p-5">
-            <div class="d-flex justify-content-between">
-                <div class="d-flex pt-3 gap-3">
-                    <div class="social-item">
-                        <a class="social-link text-light" href="https://www.linkedin.com/in/jhoneg
     
-                        " target="_blank" style="box-shadow: 0 2px 10px #000;">
-                            <img src="assets\icons\redes sociales\svg\linkedin.svg" alt="icon-link-linkedin" width="33px">
-                        </a>
-                    </div>
-                    <div class="social-item">
-                        <a class="social-link text-light" href="https://github.com/JhonEG-17" target="_blank" style="box-shadow: 0 2px 10px #000;">
-                            <img src="assets\icons\redes sociales\svg\github-white.svg" alt="icon-link-github" width="30px">
-                        </a>
-                    </div>
-                </div>
-                <button id="toggleDarkMode" class="btn btn-dark shadow rounded-circle" style=" box-shadow: 0 2px 10px #000; ">🌙</button>
-            </div>
-            <div class="header-content pt-5">
-                <h4 class="header-subtitle lh-lg shadow" style="font-size: 3vw; text-shadow: 0 2px 10px #000;">Hola, soy</h4>
-                <h1 class="header-title fw-bold" style="font-size: 8vw; text-shadow: 0 2px 10px #000;">Jhonatan Espinal</h1>
-                <h6 class="header-mono lh-lg" style="font-size: 1.5vw; text-shadow: 0 2px 10px #000;">Desarrollador Web | Diseñador Frontend</h6>
-                <div class="m-0 pb-3 grid gap-3" style="width: 100%;">
-                    <svg class="iconskils" viewBox="0 0 48 48" style="max-width: 60px; width: 100%; text-shadow: 0 2px 10px #000;">
-                        <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
-                    </svg>
-                    <svg class="iconskils" style="max-width: 60px; width: 100%; min-width: 20px; text-shadow: 0 2px 10px #000;" viewBox="0 0 48 48">
-                        <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path>
-                    </svg>
-                    <svg class="iconskils" viewBox="0 0 48 48"  style="max-width: 60px; width: 100%;">
-                        <path fill="#f7df1e" d="M6,42V6h36v36H6z"></path><path fill="#000001" d="M29.538,32.947c0.692,1.124,1.444,2.201,3.037,2.201c1.338,0,2.04-0.665,2.04-1.585 c0-1.101-0.726-1.492-2.198-2.133l-0.807-0.344c-2.329-0.988-3.878-2.226-3.878-4.841c0-2.41,1.845-4.244,4.728-4.244 c2.053,0,3.528,0.711,4.592,2.573l-2.514,1.607c-0.553-0.988-1.151-1.377-2.078-1.377c-0.946,0-1.545,0.597-1.545,1.377 c0,0.964,0.6,1.354,1.985,1.951l0.807,0.344C36.452,29.645,38,30.839,38,33.523C38,36.415,35.716,38,32.65,38 c-2.999,0-4.702-1.505-5.65-3.368L29.538,32.947z M17.952,33.029c0.506,0.906,1.275,1.603,2.381,1.603 c1.058,0,1.667-0.418,1.667-2.043V22h3.333v11.101c0,3.367-1.953,4.899-4.805,4.899c-2.577,0-4.437-1.746-5.195-3.368 L17.952,33.029z"></path>
-                    </svg>
-                    <img src="assets\icons\redes sociales\svg\icon-react.svg" alt="icono-de-react" style="max-width: 50px; width: 100%;">
-                    <img src="assets\icons\redes sociales\svg\icon-bootstrap.svg" alt="icono-de-bootstrap" style="max-width: 50px; width: 100%;">
-                    <img src="assets\icons\redes sociales\svg\icon-c.svg" alt="icono-de-c" style="max-width: 50px; width: 100%;">
-                    <img src="assets\icons\redes sociales\svg\icon-c++.svg" alt="icono-de-c++" style="max-width: 50px; width: 100%;">
-                    <img src="assets\icons\redes sociales\svg\icon-c-sharp.svg" alt="icono-de.c#" style="max-width: 50px; width: 100%;">
-                    <svg class="iconskils" viewBox="0 0 48 48" style="max-width: 50px; width: 100%;">
-                        <path fill="#F4511E" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"></path>
-                    </svg>
-                    <img src="assets\icons\redes sociales\svg\github-white.svg" alt="icon-github" style="max-width: 50px; width: 100%;">
-                </div>
-                <a href="assets\files\Jhonatan-Espinal-Garcia-CV.pdf" type="button" class="btn btn btn-info" target="_blank">Descargar CV</a>
-            </div>
-        </div>
-    </header>
-    
+    <app-header></app-header>
+
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white shadow" data-spy="affix" data-offset-top="510">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,198 +78,204 @@
             </div>
         </div>
     </nav>
-    
-    <section id="about" class="container pt-5">
-        <div class="container-fluid gap-1 p-2 m-0">
-            <div id="about" class="row gap-5 justify-content-evenly">
-                <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
-                    <h3 class="font-weight-light">¿Quien soy yo?</h3>
-                    <hr>
-                    <h5 class="mb-3">Soy Un Desarrollador y Diseñador Web</h5>
-                    <p class="mt-20">Mi nombre es Jhonatan Espinal, tengo 21 años y soy un desarrollador web con muchas ganas de crear soluciones tecnológicas y así brindar soluciones a problemas reales.</p>
-                    <a class="btn btn btn-info" href="assets\files\Jhonatan-Espinal-Garcia-CV.pdf" target="_blank">Descargar Mi CV</a>
-                </div>
 
-                <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
-                    <h3 class="font-weight-light">Información Personal</h3>
-                    <hr>
-                    <ul class="mt40 info list-unstyled">
-                        <li><span>Correo</span> : jhoneg_jobs@outlook.com</li>
-                        <li><span>Cel</span> : + (52) 5632642709</li>
-                        <li><span>Localidad</span> :  México, Ciudad de México</li>
-                    </ul>
-                    <div class="d-flex pt-3 gap-3">
-                        <div class="social-item">
-                            <a class="social-link text-light" href="https://www.linkedin.com/in/jhoneg
-        
-                            " target="_blank">
-                                <img src="assets\icons\redes sociales\svg\linkedin-black.svg" alt="icon-link-linkedin" width="33px">
-                            </a>
-                        </div>
-                        <div class="social-item">
-                            <a class="social-link text-light" href="https://github.com/JhonEG-17" target="_blank">
-                                <img src="assets\icons\redes sociales\svg\github-black.svg" alt="icon-link-github" width="30px">
-                            </a>
-                        </div>
-                    </div> 
-                </div>
-                <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
-                    <h3 class="font-weight-light">Mi experiencia</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-1 text-info pt-1">{/}</div>
-                        <div class="col-10 ml-auto mr-3">
-                            <h6>Desarrollador Web | ETN Turistar Lujo</h6>
-                            <p class="subtitle"> Mantenimiento y creacion de sitios web, maquetado y estilado de sitios web.</p>
+    <main>
+        <section id="about" class="container pt-5">
+            <div class="container-fluid gap-1 p-2 m-0">
+                <div id="about" class="row gap-5 justify-content-evenly">
+                    <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
+                        <h3 class="font-weight-light">¿Quien soy yo?</h3>
+                        <hr>
+                        <h5 class="mb-3">Soy Un Desarrollador y Diseñador Web</h5>
+                        <p class="mt-20">Mi nombre es Jhonatan Espinal, tengo 21 años y soy un desarrollador web con muchas ganas de crear soluciones tecnológicas y así brindar soluciones a problemas reales.</p>
+                        <a class="btn btn btn-info" href="src\assets\files\Jhonatan-Espinal-Garcia-CV.pdf" target="_blank">Descargar Mi CV</a>
+                    </div>
+
+                    <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
+                        <h3 class="font-weight-light">Información Personal</h3>
+                        <hr>
+                        <ul class="mt40 info list-unstyled">
+                            <li><span>Correo</span> : jhoneg_jobs@outlook.com</li>
+                            <li><span>Cel</span> : + (52) 5632642709</li>
+                            <li><span>Localidad</span> :  México, Ciudad de México</li>
+                        </ul>
+                        <div class="d-flex pt-3 gap-3">
+                            <div class="social-item">
+                                <a class="social-link text-black icon-linkedin-bg-black" href="https://www.linkedin.com/in/jhoneg
+            
+                                " target="_blank">
+                                </a>
+                            </div>
+                            <div class="social-item">
+                                <a class="social-link text-black icon-github" href="https://github.com/JhonEG-17" target="_blank">
+                                </a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
+                        <h3 class="font-weight-light">Mi experiencia</h3>
+                        <hr>
+                        <div class="row">
+                            <i class="col-1 text-info pt-1 icon-embed"></i>
+                            <div class="col-10 ml-auto mr-3">
+                                <h6>Desarrollador Web | ETN Turistar Lujo</h6>
+                                <p class="subtitle"> Mantenimiento y creacion de sitios web, maquetado y estilado de sitios web.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="portfolio" class="container my-5">
-        <h2>Portafolio</h2>
-        <div class="container-fluid gap-1 p-2 m-0">
-            <div class="row gap-5 justify-content-evenly">
-                <div class="col-6 col-md-4 card shadow bg-white p-0 m-0 rounded"  style="width: 320px;">
-                    <img src="assets\img\proyects\proyects-img\CalculFisc.webp" class="card-img-top" alt="Proyecto 1">
+        </section>
+
+        <section id="portfolio" class="container my-5">
+            <h2>Portafolio</h2>
+            <div class="container-fluid gap-1 p-2 m-0">
+                <div class="row gap-5 justify-content-evenly">
+                    <div class="col-6 col-md-4 card shadow bg-white p-0 m-0 rounded"  style="width: 320px;">
+                        <img src="src\assets\img\proyects\proyects-img\CalculFisc.webp" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">CalCulFisc</h5>
+                            <p class="card-text">Este proyecto es una herramienta para los empleados que deseen revisar o calcular el ISR retenido de su salario para el pago de impuestos.</p>
+                            <a class="btn btn-dark text-light icon-github" href="https://github.com/JhonEG-17/CalculFisc-Web" role="button" target="blank" rel="noreferrer" aria-label="link-github" aria-labelledby="link-github"></a>
+
+                            <a class="btn btn-primary text-light icon-new-tab" href="https://jhoneg-17.github.io/CalculFisc-Web/" role="button" target="blank" rel="noreferrer" aria-label="link-site" aria-labelledby="link-site">Visitar sitio</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 card shadow bg-white p-0 m-0 rounded"  style="width: 320px;">
+                        <img src="src\assets\img\proyects\proyects-img\JEGDEVSTUDIOS.webp" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">JEGDevStudios WEB</h5>
+                            <p class="card-text">Este es un sitio web creado para mí para poder manejar los pedidos de mis clientes y poder llevar un mejor registro de los mismos.</p>
+                            <a class="btn btn-dark text-light icon-github" href="https://github.com/JEGDevStudios/site" role="button"></a>
+                            <a class="btn btn-primary text-light icon-new-tab" href="https://jegdevstudios.github.io/site" role="button" target="blank" rel="noreferrer" aria-label="link-site" aria-labelledby="link-site">Visitar sitio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="container mt-5">
+            <h2>Certificados</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 gap-5 justify-content-evenly">
+                <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
+                    <img src="assets\img\certifications\CertificadoHTMLCSS.webp" class="card-img-top" alt="imagen-certificado-html-y-css-de-todocode-academy" style="aspect-ratio: 16/9;">
                     <div class="card-body">
-                        <h5 class="card-title">CalCulFisc</h5>
-                        <p class="card-text">Este proyecto es una herramienta para los empleados que deseen revisar o calcular el ISR retenido de su salario para el pago de impuestos.</p>
-                        <a class="btn btn-dark" href="https://github.com/JhonEG-17/CalculFisc-Web" role="button">
-                            <img src="assets\icons\redes sociales\svg\github-white.svg" alt="icon-link-github" width="23px"></a>
-                        <a class="btn btn-info" href="https://jhoneg-17.github.io/CalculFisc-Web/" role="button">Visitar sitio</a>
+                        <h5 class="card-title">Certificado HTML y CSS desde CERO</h5>
+                        <p class="card-text">En este curso desarrollé mis habilidades de nivel básico en HTML y CSS, el curso es impartido por la Ing. Luisina De Paula en la plataforma TodoCode Academy.</p>
+                        <a class="btn btn-info" href="https://todocodeacademy.com/certificate/certificado-html-y-css-sez/" role="button">Ver</a>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 card shadow bg-white p-0 m-0 rounded"  style="width: 320px;">
-                    <img src="assets\img\proyects\proyects-img\JEGDEVSTUDIOS.webp" class="card-img-top" alt="Proyecto 2">
+                <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
+                    <img src="assets\img\certifications\HTML-ESENCIAL.webp" class="card-img-top" alt="imagen-certificado-html-semantico-learning-linkedin" style="aspect-ratio: 16/9;">
                     <div class="card-body">
-                        <h5 class="card-title">JEGDevStudios WEB</h5>
-                        <p class="card-text">Este es un sitio web creado para mí para poder manejar los pedidos de mis clientes y poder llevar un mejor registro de los mismos.</p>
-                        <a class="btn btn-dark" href="https://github.com/JEGDevStudios/site" role="button">
-                            <img src="assets\icons\redes sociales\svg\github-white.svg" alt="icon-link-github" width="23px"></a>
-                        <a class="btn btn-info" href="https://jegdevstudios.github.io/site" role="button">Visitar sitio</a>
+                        <h5 class="card-title">HTML esencial</h5>
+                        <p class="card-text">En este curso adquiri conocimiento de HTML semántico, maquetado con buenas practicas, entre otras cosas.</p>
+                        <a class="btn btn-info" href="https://www.linkedin.com/learning/certificates/593febd7fd893642d970ef9725d23d4d07238e286b7aff43d6c7050490082e45?trk=share_certificate" role="button">Ver</a>
+                    </div>
+                </div>
+                <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
+                    <img src="assets\img\certifications\BD Relacionales con MySQL - TodoCode.webp" class="card-img-top" alt="imagen-certificado-bases-de-datos-mysql-todocode-academy" style="aspect-ratio: 16/9;">
+                    <div class="card-body">
+                        <h5 class="card-title">BD Relacionales con MySQL</h5>
+                        <p class="card-text">En este curso desarrollé mis habilidades de nivel básico en MYSQL, el curso es impartido por la Ing. Luisina De Paula en la plataforma TodoCode Academy.</p>
+                        <a class="btn btn-info" href="https://todocodeacademy.com/certificate/bd-relacionales-con-mysql-hon/" role="button">Ver</a>
+                    </div>
+                </div>
+                <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
+                    <img src="assets\img\certifications\Bases-de-datos-con-un-cafe.webp" class="card-img-top" alt="imagen-certificado-bases-de-datos-con-un-cafe-learning-linkedin" style="aspect-ratio: 16/9;">
+                    <div class="card-body">
+                        <h5 class="card-title">Bases de datos con un café</h5>
+                        <p class="card-text">En este curso adquiri mis conocimientos de induccion a las bases de datos, sus tipos y donde utilizarlas, asi como a diseñarlas.</p>
+                        <a class="btn btn-info" href="https://www.linkedin.com/learning/certificates/e411eea930c449d780517d9ec3aacbe110316f8d57957a3b1d80acc6a814f481?trk=share_certificate" role="button">Ver</a>
+                    </div>
+                </div>
+                <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
+                    <img src="assets\img\certifications\CertificadoGitGitHub.webp" class="card-img-top" alt="imagen-certificado-git-y-github-todocode-academy" style="aspect-ratio: 16/9;">
+                    <div class="card-body">
+                        <h5 class="card-title">Introduccion a Git y GitHub</h5>
+                        <p class="card-text">En este curso desarrollé mis habilidades de nivel básico en Git, el curso es impartido por la Ing. Luisina De Paula en la plataforma TodoCode Academy.</p>
+                        <a class="btn btn-info" href="https://todocodeacademy.com/certificate/mig/" role="button">Ver</a>
+                    </div>
+                </div>
+                <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
+                    <img src="assets\img\certifications\CertificadoC.webp" class="card-img-top" alt="imagen-certificado-c++-esemcial-learning-linkedin" style="aspect-ratio: 16/9;">
+                    <div class="card-body">
+                        <h5 class="card-title">Certificado C++ esencial</h5>
+                        <p class="card-text">En este curso desarrollé mis habilidades de nivel básico en c++, el curso es impartido por el desarrollador Eliezer López y distribuido por LinkedIn Learning.</p>
+                        <a class="btn btn-info" href="https://www.linkedin.com/learning/certificates/02fe8f837bdf9c613a51e8e14d37aeccdcee6bf01346b763b543f95925fc2955" role="button">Ver</a>
+                    </div>
+                </div>
+                <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
+                    <img src="assets\img\certifications\Machine-learning.webp" class="card-img-top" alt="imagen-certificado-machine-learning-con-un-cafe-learning-linkedin" style="aspect-ratio: 16/9;">
+                    <div class="card-body">
+                        <h5 class="card-title">Machine leraning con un cafe</h5>
+                        <p class="card-text">En este curso adquiri conocimientos tecnicos sobre machine learning basico aplicable a las empresas</p>
+                        <a class="btn btn-info" href="https://www.linkedin.com/learning/certificates/8c22b3fbfaa32b5f2a9f0a4c89a4eb74c4c1e7d61f89d5c8cac1f83bf8edea0a?trk=share_certificate" role="button">Ver</a>
+                    </div>
+                </div>
+                <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
+                    <img src="assets\img\certifications\Certificado-Python-santander.webp" class="card-img-top" alt="imagen-certificado-python-santander-academy" style="aspect-ratio: 16/9;">
+                    <div class="card-body">
+                        <h5 class="card-title">Python</h5>
+                        <p class="card-text">En este curso adquiri conocimientos sobre Python desde la sintaxis basica hasta manipulación de documentos de texto</p>
+                        <a class="btn btn-info" href="assets\img\certifications\Certificado-python.pdf" role="button">Ver</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="certificates" class="container mt-5">
-        <h2>Certificados</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 gap-5 justify-content-evenly">
-            <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
-                <img src="assets\img\certifications\CertificadoHTMLCSS.webp" class="card-img-top" alt="imagen-certificado-html-y-css-de-todocode-academy" style="aspect-ratio: 16/9;">
-                <div class="card-body">
-                    <h5 class="card-title">Certificado HTML y CSS desde CERO</h5>
-                    <p class="card-text">En este curso desarrollé mis habilidades de nivel básico en HTML y CSS, el curso es impartido por la Ing. Luisina De Paula en la plataforma TodoCode Academy.</p>
-                    <a class="btn btn-info" href="https://todocodeacademy.com/certificate/certificado-html-y-css-sez/" role="button">Ver</a>
-                </div>
-            </div>
-            <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
-                <img src="assets\img\certifications\HTML-ESENCIAL.webp" class="card-img-top" alt="imagen-certificado-html-semantico-learning-linkedin" style="aspect-ratio: 16/9;">
-                <div class="card-body">
-                    <h5 class="card-title">HTML esencial</h5>
-                    <p class="card-text">En este curso adquiri conocimiento de HTML semántico, maquetado con buenas practicas, entre otras cosas.</p>
-                    <a class="btn btn-info" href="https://www.linkedin.com/learning/certificates/593febd7fd893642d970ef9725d23d4d07238e286b7aff43d6c7050490082e45?trk=share_certificate" role="button">Ver</a>
-                </div>
-            </div>
-            <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
-                <img src="assets\img\certifications\BD Relacionales con MySQL - TodoCode.webp" class="card-img-top" alt="imagen-certificado-bases-de-datos-mysql-todocode-academy" style="aspect-ratio: 16/9;">
-                <div class="card-body">
-                    <h5 class="card-title">BD Relacionales con MySQL</h5>
-                    <p class="card-text">En este curso desarrollé mis habilidades de nivel básico en MYSQL, el curso es impartido por la Ing. Luisina De Paula en la plataforma TodoCode Academy.</p>
-                    <a class="btn btn-info" href="https://todocodeacademy.com/certificate/bd-relacionales-con-mysql-hon/" role="button">Ver</a>
-                </div>
-            </div>
-            <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
-                <img src="assets\img\certifications\Bases-de-datos-con-un-cafe.webp" class="card-img-top" alt="imagen-certificado-bases-de-datos-con-un-cafe-learning-linkedin" style="aspect-ratio: 16/9;">
-                <div class="card-body">
-                    <h5 class="card-title">Bases de datos con un café</h5>
-                    <p class="card-text">En este curso adquiri mis conocimientos de induccion a las bases de datos, sus tipos y donde utilizarlas, asi como a diseñarlas.</p>
-                    <a class="btn btn-info" href="https://www.linkedin.com/learning/certificates/e411eea930c449d780517d9ec3aacbe110316f8d57957a3b1d80acc6a814f481?trk=share_certificate" role="button">Ver</a>
-                </div>
-            </div>
-            <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
-                <img src="assets\img\certifications\CertificadoGitGitHub.webp" class="card-img-top" alt="imagen-certificado-git-y-github-todocode-academy" style="aspect-ratio: 16/9;">
-                <div class="card-body">
-                    <h5 class="card-title">Introduccion a Git y GitHub</h5>
-                    <p class="card-text">En este curso desarrollé mis habilidades de nivel básico en Git, el curso es impartido por la Ing. Luisina De Paula en la plataforma TodoCode Academy.</p>
-                    <a class="btn btn-info" href="https://todocodeacademy.com/certificate/mig/" role="button">Ver</a>
-                </div>
-            </div>
-            <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
-                <img src="assets\img\certifications\CertificadoC.webp" class="card-img-top" alt="imagen-certificado-c++-esemcial-learning-linkedin" style="aspect-ratio: 16/9;">
-                <div class="card-body">
-                    <h5 class="card-title">Certificado C++ esencial</h5>
-                    <p class="card-text">En este curso desarrollé mis habilidades de nivel básico en c++, el curso es impartido por el desarrollador Eliezer López y distribuido por LinkedIn Learning.</p>
-                    <a class="btn btn-info" href="https://www.linkedin.com/learning/certificates/02fe8f837bdf9c613a51e8e14d37aeccdcee6bf01346b763b543f95925fc2955" role="button">Ver</a>
-                </div>
-            </div>
-            <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
-                <img src="assets\img\certifications\Machine-learning.webp" class="card-img-top" alt="imagen-certificado-machine-learning-con-un-cafe-learning-linkedin" style="aspect-ratio: 16/9;">
-                <div class="card-body">
-                    <h5 class="card-title">Machine leraning con un cafe</h5>
-                    <p class="card-text">En este curso adquiri conocimientos tecnicos sobre machine learning basico aplicable a las empresas</p>
-                    <a class="btn btn-info" href="https://www.linkedin.com/learning/certificates/8c22b3fbfaa32b5f2a9f0a4c89a4eb74c4c1e7d61f89d5c8cac1f83bf8edea0a?trk=share_certificate" role="button">Ver</a>
-                </div>
-            </div>
-            <div class="col card shadow p-0 m-0" style="max-width: 320px; min-width: 300px;">
-                <img src="assets\img\certifications\Certificado-Python-santander.webp" class="card-img-top" alt="imagen-certificado-python-santander-academy" style="aspect-ratio: 16/9;">
-                <div class="card-body">
-                    <h5 class="card-title">Python</h5>
-                    <p class="card-text">En este curso adquiri conocimientos sobre Python desde la sintaxis basica hasta manipulación de documentos de texto</p>
-                    <a class="btn btn-info" href="assets\img\certifications\Certificado-python.pdf" role="button">Ver</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="container my-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3  gap-3 justify-content-evenly align-items-center">
-            <div class="col contact-form-card shadow bg-white rounded border-0 p-3 text-dark" style="width: 320px;">
-                <h4 class="contact-title">Envíame un correo</h4>
-                <form  method="post">
-                    <div class="form-group">
-                        <input  class="form-control" type="text" placeholder="Nombre *" required>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="email" placeholder="Correo *" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id=" placeholder="Mensaje *" rows="7" required></textarea>
-                    </div>
-                    <div class="form-group ">
-                        <button type="submit" class="form-control btn btn-primary" >Envíar mensaje</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col text-center p-4">
-                <p class="h1">Ó</p>
-            </div>
-            <div class="col p-3 shadow bg-white rounded border-0 text-dark" style="width: 320px; height: 100%;">
-                <div class="d-flex flex-column gap-3">
-                    <h3 class="text-center">Contactame mediante mis redes</h3>
-                    <div class="d-flex justify-content-evenly">
-                        <div class="social-item">
-                            <a class="social-link text-light" href="https://www.linkedin.com/in/jhoneg
-        
-                            " target="_blank">
-                                <img src="assets\icons\redes sociales\svg\linkedin-black.svg" alt="icon-link-linkedin" width="33px">
-                            </a>
+        </section>
+
+
+        <section id="contact" class="container my-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3  gap-3 justify-content-evenly align-items-center">
+                <div class="col contact-form-card shadow bg-white rounded border-0 p-3 text-dark" style="width: 320px;">
+                    <h4 class="contact-title">Envíame un correo</h4>
+                    <form  method="post">
+                        <div class="form-group">
+                            <input  class="form-control" type="text" placeholder="Nombre *" required>
                         </div>
-                        <div class="social-item">
-                            <a class="social-link text-light" href="https://github.com/JhonEG-17" target="_blank">
-                                <img src="assets\icons\redes sociales\svg\github-black.svg" alt="icon-link-github" width="30px">
-                            </a>
+                        <div class="form-group">
+                            <input class="form-control" type="email" placeholder="Correo *" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id=" placeholder="Mensaje *" rows="7" required></textarea>
+                        </div>
+                        <div class="form-group ">
+                            <button type="submit" class="form-control btn btn-primary" >Envíar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col text-center p-4">
+                    <p class="h1">Ó</p>
+                </div>
+                <div class="col p-3 shadow bg-white rounded border-0 text-dark" style="width: 320px; height: 100%;">
+                    <div class="d-flex flex-column gap-3">
+                        <h3 class="text-center">Contactame mediante mis redes</h3>
+                        <div class="d-flex justify-content-evenly">
+                            <div class="social-item">
+                                <a class="social-link text-light" href="https://www.linkedin.com/in/jhoneg
+            
+                                " target="_blank">
+                                    <img src="assets\icons\redes sociales\svg\linkedin-black.svg" alt="icon-link-linkedin" width="33px">
+                                </a>
+                            </div>
+                            <div class="social-item">
+                                <a class="social-link text-light" href="https://github.com/JhonEG-17" target="_blank">
+                                    <img src="assets\icons\redes sociales\svg\github-black.svg" alt="icon-link-github" width="30px">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer class="text-center py-3">
-        <p>&copy; 2025 <a href="https://jegdevstudios.github.io/site/" class="text-dark" style="text-decoration: none;">JEG Dev Studios</a> - Todos los derechos reservados.</p>
-    </footer>
+        </section>
+    </main>
+
+    <app-footer></app-footer>
+
+    <!-- scripts -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+    <script src="src\js\jquery.min.js"></script>
+    <script src="src\js\slick.js"></script>
   </body>
 </html>

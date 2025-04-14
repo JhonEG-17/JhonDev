@@ -1,0 +1,14 @@
+/*--------BREAKPOINTS--------*/
+$breakpoints: (
+  'xs': 320px,
+  // Móvil pequeño
+  'sm': 481px,
+  // Móvil estándar
+  'md': 990px,
+  // Tableta
+  'lg': 1025px,
+  // Laptop pequeña
+  'xl': 1200px,
+  // Escritorio estándar
+  'xxl': 1400px // Pantallas grandes
+);

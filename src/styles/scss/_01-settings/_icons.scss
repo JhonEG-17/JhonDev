@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../../../assets/icons/icons-fonts/icomoon.eot?rukeyj');
+    src:  url('../../../assets/icons/icons-fonts/icomoon.eot?rukeyj#iefix') format('embedded-opentype'),
+      url('../../../assets/icons/icons-fonts/icomoon.ttf?rukeyj') format('truetype'),
+      url('../../../assets/icons/icons-fonts/icomoon.woff?rukeyj') format('woff'),
+      url('../../../assets/icons/icons-fonts/icomoon.svg?rukeyj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-sass .path1:before {
+    content: "\e900";
+    color: rgb(204, 102, 153);
+  }
+  .icon-sass .path2:before {
+    content: "\e901";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-bootstrap .path1:before {
+    content: "\e902";
+    color: rgb(108, 25, 255);
+  }
+  .icon-bootstrap .path2:before {
+    content: "\e903";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+  .icon-c .path1:before {
+    content: "\e904";
+    color: rgb(40, 53, 147);
+  }
+  .icon-c .path2:before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(92, 107, 192);
+  }
+  .icon-c .path3:before {
+    content: "\e906";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-c .path4:before {
+    content: "\e907";
+    margin-left: -1em;
+    color: rgb(57, 73, 171);
+  }
+  .icon-c-mas .path1:before {
+    content: "\e908";
+    color: rgb(0, 84, 157);
+  }
+  .icon-c-mas .path2:before {
+    content: "\e909";
+    margin-left: -1em;
+    color: rgb(0, 134, 212);
+  }
+  .icon-c-mas .path3:before {
+    content: "\e90a";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-c-mas .path4:before {
+    content: "\e90b";
+    margin-left: -1em;
+    color: rgb(0, 117, 192);
+  }
+  .icon-c-mas .path5:before {
+    content: "\e90c";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-c-mas .path6:before {
+    content: "\e90d";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-c-sharp .path1:before {
+    content: "\e90e";
+    color: rgb(55, 71, 79);
+  }
+  .icon-c-sharp .path2:before {
+    content: "\e90f";
+    margin-left: -1em;
+    color: rgb(84, 110, 122);
+  }
+  .icon-c-sharp .path3:before {
+    content: "\e910";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-c-sharp .path4:before {
+    content: "\e911";
+    margin-left: -1em;
+    color: rgb(69, 90, 100);
+  }
+  .icon-c-sharp .path5:before {
+    content: "\e912";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-c-sharp .path6:before {
+    content: "\e913";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-mysql .path1:before {
+    content: "\e914";
+    color: rgb(0, 121, 107);
+  }
+  .icon-mysql .path2:before {
+    content: "\e915";
+    margin-left: -1em;
+    color: rgb(0, 121, 107);
+  }
+  .icon-mysql .path3:before {
+    content: "\e916";
+    margin-left: -1em;
+    color: rgb(245, 127, 23);
+  }
+  .icon-mysql .path4:before {
+    content: "\e917";
+    margin-left: -1em;
+    color: rgb(245, 127, 23);
+  }
+  .icon-mysql .path5:before {
+    content: "\e918";
+    margin-left: -1em;
+    color: rgb(245, 127, 23);
+  }
+  .icon-mysql .path6:before {
+    content: "\e919";
+    margin-left: -1em;
+    color: rgb(0, 121, 107);
+  }
+  .icon-mysql .path7:before {
+    content: "\e91a";
+    margin-left: -1em;
+    color: rgb(0, 121, 107);
+  }
+  .icon-node-js:before {
+    content: "\e91b";
+    color: #21a366;
+  }
+  .icon-react .path1:before {
+    content: "\e91c";
+    color: rgb(152, 204, 253);
+  }
+  .icon-react .path2:before {
+    content: "\e91d";
+    margin-left: -1em;
+    color: rgb(71, 136, 199);
+  }
+  .icon-react .path3:before {
+    content: "\e91e";
+    margin-left: -1em;
+    color: rgb(152, 204, 253);
+  }
+  .icon-react .path4:before {
+    content: "\e91f";
+    margin-left: -1em;
+    color: rgb(71, 136, 199);
+  }
+  .icon-git:before {
+    content: "\e920";
+    color: #f4511e;
+  }
+  .icon-javascript .path1:before {
+    content: "\e921";
+    color: rgb(247, 223, 30);
+  }
+  .icon-javascript .path2:before {
+    content: "\e922";
+    margin-left: -1em;
+    color: rgb(0, 0, 1);
+  }
+  .icon-css .path1:before {
+    content: "\e923";
+    color: rgb(2, 119, 189);
+  }
+  .icon-css .path2:before {
+    content: "\e924";
+    margin-left: -1em;
+    color: rgb(3, 155, 229);
+  }
+  .icon-css .path3:before {
+    content: "\e925";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-css .path4:before {
+    content: "\e926";
+    margin-left: -1em;
+    color: rgb(238, 238, 238);
+  }
+  .icon-html .path1:before {
+    content: "\e927";
+    color: rgb(230, 81, 0);
+  }
+  .icon-html .path2:before {
+    content: "\e928";
+    margin-left: -1em;
+    color: rgb(255, 109, 0);
+  }
+  .icon-html .path3:before {
+    content: "\e929";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-html .path4:before {
+    content: "\e92a";
+    margin-left: -1em;
+    color: rgb(238, 238, 238);
+  }
+  .icon-menu:before {
+    content: "\e9bd";
+  }
+  .icon-download:before {
+    content: "\e9c7";
+  }
+  .icon-link:before {
+    content: "\e9cb";
+  }
+  .icon-close:before {
+    content: "\ea0f";
+  }
+  .icon-new-tab:before {
+    content: "\ea7e";
+  }
+  .icon-embed:before {
+    content: "\ea80";
+  }
+  .icon-whatsapp:before {
+    content: "\ea93";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+  .icon-wordpress:before {
+    content: "\eab4";
+  }
+  .icon-linkedin-bg-black:before {
+    content: "\eac9";
+  }
+  .icon-linkedin-bg-white:before {
+    content: "\eaca";
+  }
+  
