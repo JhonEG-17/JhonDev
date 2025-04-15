@@ -1,96 +1,146 @@
+@import "../main";
+
 .section-portfolio {
+    // grid-area: "portfolio"; // <--- Elimina esta línea
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    height: 100%;
-    padding-top: 100px;
+    width: 100%; // Ocupa el ancho del grid item
+    height: 100%; // Ocupa el alto del grid item
+    padding: 30px;
     text-align: center;
+    box-sizing: border-box; // Buena práctica
+    overflow: unset;
+    -webkit-backdrop-filter: blur(10px); // Ejemplo si quieres el mismo efecto
+    backdrop-filter: blur(10px);      // Ejemplo si quieres el mismo efecto
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.404); // Ejemplo si quieres el mismo efecto
 
     .__portfolio-title {
-        display: flex;
         width: 100%;
         font-size: 2.5rem;
+        text-align: start; // Alinea el texto a la izquierda
+        margin-bottom: 20px; // Añade espacio debajo del título
     }
+    .__portfolio-slider-container {
 
-    .__portfolio-articles {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-
-        .__portfolio-card {
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            align-items: center;
-            justify-content: center;
-            max-width: 500px;
+        .__portfolio-articles {
             width: 100%;
-            height: 500px;
-            border-radius: 10px;
-            -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
-            text-align: start;
-            padding: 20px;
-            gap: 20px;
+            list-style: none; // Quita los puntos de la lista
+            padding:  0px; // Quita padding por defecto de ul
+            margin: 0; // Quita margen por defecto de ul
+            flex-grow: 1; // Permite que la lista ocupe el espacio restante
 
-            .__card-img {
+            // Estilos para las tarjetas DENTRO del slider Slick
+            .__portfolio-card {
                 display: flex;
-                width: 100%;
+                border-radius: 10px; // Fondo para que el texto sea legible
+                text-align: start;
+
+                // ... resto de estilos para __card-img, __card-body, __card-links ...
+                .__card-img {
+                aspect-ratio: 16/9;
+                height: 200px; // Altura fija o aspect-ratio
                 object-fit: cover;
+                display: block; // Evita espacio extra debajo de la imagen
+                }
+
+                .__card-body {
+                    display: grid;
+                    align-items: start;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    gap: 10px;
+
+                    .__card-text {
+                        .__card-title {
+                            color: #fff;
+                        }
+        
+                        .__card-text {
+                            color: #fff;
+                        }
+
+                        .__card__tech-list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            list-style: none;
+                            padding: 10px 0px;
+                            gap: 10px;
+                            li {
+                                .__icon-size::before {
+                                    font-size: 1.5rem;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                        
+                    .__card-links {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: auto;
+                        gap: 10px;
+
+                        .__card-link {
+                            text-align: center;
+                            font-size: 1.7rem;
+                            width: 50%;
+                            padding: 5px 0;
+                            color: #000;
+                            text-decoration: none;
+                            border-radius: 5px;
+                            background-color: var(--primary-color, #fff); // Usa tu color primario
+                            transition: background-color 0.3s ease;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            
+                            &:hover,
+                            &:focus {
+                                background-color: var(--primary-dark-color, #c7c7c7); // Color más oscuro al pasar el ratón
+                            }
+                        }
+
+                        .__bg-black {
+                            color: #000;
+                        }
+
+                        .__bg-white {
+                            color: #000;
+                        }
+                    }
+                }
             }
+        }
 
-            .__card-body {
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
+        .__portfolio-arrow {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: transparent; // Elimina el fondo por defecto
+            color: #fff; // Color del texto
 
-                .__card-title {
-                    color: #000;
-                }
-
-                .__card-text {
-                    color: #000;
-                }
-
+            &:hover,
+            &:focus {
+                background-color: var(--primary-color, #fff); // Color del fondo al pasar el ratón
+                color: #000;
             }
-            .__card-links {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                gap: 10px;
-
-                .__card-link {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 50%;
-                    font-size: 1.7rem;
-                    padding: 5px 0;
-                    border-radius: 50px;
-                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.253);
-                    text-decoration: none;
-                }
-
-                .__bg-black {
-                    background-color: #000;
-                    color: #fff;
-                }
-
-                .__bg-white {
-                    background-color: #fff;
-                    color: #000;
-                }
-            }
+        }
+        .portfolio-prev-arrow {
+            left: 10px;
+        }
+        .portfolio-next-arrow {
+            right: 10px;
         }
     }
 }

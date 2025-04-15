@@ -49,30 +49,14 @@ class AppHeader extends HTMLElement {
         `;
 
         // --- Selección de elementos ---
-        const headerContent = this.querySelector('#header-content');
         this.navBarContent = this.querySelector('#navbar');
         this.navToggle = this.querySelector('.__navbar-toggle'); // Seleccionamos el botón del menú
         this.navbarNav = this.querySelector('#navbar-nav-list'); // Seleccionamos la lista de navegación
 
-        // --- Intersection Observer (sin cambios) ---
-        if (headerContent && this.navBarContent) {
-            this.observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) {
-                        this.navBarContent.classList.add('scrolled');
-                    } else {
-                        this.navBarContent.classList.remove('scrolled');
-                    }
-                });
-            }, { root: null, threshold: 0 });
-            this.observer.observe(headerContent);
-        } else {
-            console.error("AppHeader: No se encontraron #header-content o #navbar.");
-        }
-
+        
         // --- Añadir Listeners ---
         this.addDarkModeToggleListener();
-        this.addMobileMenuToggleListener(); // Añadimos el listener para el menú móvil
+        this.addMobileMenuToggleListener();
     }
 
     // --- Listener Modo Oscuro (sin cambios funcionales, solo selector si cambiaste clase) ---
@@ -104,16 +88,6 @@ class AppHeader extends HTMLElement {
         } else {
              console.error("AppHeader: No se encontraron .__navbar-toggle o #navbar-nav-list.");
         }
-    }
-
-    // --- disconnectedCallback (sin cambios) ---
-    disconnectedCallback() {
-        if (this.observer) {
-            this.observer.disconnect();
-            console.log("AppHeader observer disconnected");
-        }
-        // Aquí podrías remover los listeners de los botones si fuera necesario,
-        // aunque al eliminar el elemento del DOM, generalmente se limpian solos.
     }
 }
 

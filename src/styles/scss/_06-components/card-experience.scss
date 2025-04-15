@@ -1,0 +1,43 @@
+@import "../main";
+
+.__card-experience {
+    // grid-area: "experience"; // <--- Elimina esta línea
+    // Añade estilos para que ocupe el espacio de su contenedor (app-card-experience)
+    display: flex; // O el display que necesites
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px; // Ejemplo de padding interno
+    box-sizing: border-box; // Buena práctica
+    // Añade aquí los estilos que tenías para el card (backdrop-filter, box-shadow, etc. si aplica)
+    -webkit-backdrop-filter: blur(10px); // Ejemplo si quieres el mismo efecto
+    backdrop-filter: blur(10px);      // Ejemplo si quieres el mismo efecto
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.404); // Ejemplo si quieres el mismo efecto
+
+    // ... resto de tus estilos ...
+    .__experience-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+
+        .__experience-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 0px;
+            gap: 5px;
+            .__card-img {
+                aspect-ratio: 1/1;
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+            }
+            .__experience-content {
+                padding: 10px;
+            }
+        }
+
+    }
+}

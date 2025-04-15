@@ -5,12 +5,8 @@
 $mobile-breakpoint: 768px; // Ejemplo
 
 .header-container {
-    display: flex;
-    background-image: url(../../../assets/img/Background/Background-min.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; // Puede dar problemas en algunos móviles
+    display: flex; // Puede dar problemas en algunos móviles
+    width: 100%;
     height: 100dvh;
     position: relative;
     overflow: hidden;
@@ -18,34 +14,46 @@ $mobile-breakpoint: 768px; // Ejemplo
 
     .__navbar {
         display: flex;
-        justify-content: space-between; // Cambiado a space-between para alinear mejor
+        justify-content: space-between;
         align-items: center;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: var(--navbar-height, 80px); // Usa variable CSS
-        padding: 0 20px; // Añade padding horizontal
-        box-sizing: border-box; // Incluye padding en el width/height
-        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1); // Sombra inicial opcional
-        -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(3px);
-        background-color: transparent;
-        color: var(--navbar-initial-text-color, white);
-        z-index: 10; // Asegura que esté por encima
-        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        height: var(--navbar-height, 80px);
+        padding: 0 20px;
+        box-sizing: border-box;
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: transparent; // Este será el fondo permanente ahora
+        color: var(--navbar-initial-text-color, white); // Este será el color de texto permanente
+        z-index: 10;
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; // Puedes quitar esta transición si ya no hay cambio
 
         .__navbar-brand {
+
             // Estilos para el logo/título
-            h1, p { margin: 0; } // Quita márgenes por defecto
+            h1,
+            p {
+                margin: 0;
+            }
+
+            // Quita márgenes por defecto
             .__brand-title,
             .__brand-subtitle {
                 color: inherit;
                 transition: color 0.3s ease;
             }
+
             // Ajusta tamaños de fuente si es necesario
-            .__brand-title { font-size: 1.5rem; }
-            .__brand-subtitle { font-size: 0.8rem; }
+            .__brand-title {
+                font-size: 1.5rem;
+            }
+
+            .__brand-subtitle {
+                font-size: 0.8rem;
+            }
         }
 
         .__navbar-nav {
@@ -61,8 +69,10 @@ $mobile-breakpoint: 768px; // Ejemplo
                 transition: color 0.3s ease;
                 padding: 5px 10px;
                 display: inline-block;
+
                 // Añade estilos hover/focus si quieres
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     color: var(--navbar-link-hover-color, lightgray); // Define esta variable o usa un color
                     text-decoration: underline;
                     font-weight: 700;
@@ -90,19 +100,24 @@ $mobile-breakpoint: 768px; // Ejemplo
                     display: flex; // Mostrarlo
                 }
 
-                 .__item-link {
-                     padding: 10px 0; // Más espacio vertical en móvil
-                     width: 100%;
-                     text-align: center;
-                     &:hover, &:focus {
-                         background-color: rgba(0,0,0, 0.05); // Feedback visual al tocar
-                     }
-                 }
+                .__item-link {
+                    padding: 10px 0; // Más espacio vertical en móvil
+                    width: 100%;
+                    text-align: center;
+
+                    &:hover,
+                    &:focus {
+                        background-color: rgba(0, 0, 0, 0.05); // Feedback visual al tocar
+                    }
+                }
             }
-        } // --- Fin .__navbar-nav ---
+        }
+
+        // --- Fin .__navbar-nav ---
 
         // --- Estilos Botón Dark Mode (sin Bootstrap) ---
-        .__dark-mode-toggle { // O usa #toggleDarkMode
+        .__dark-mode-toggle {
+            // O usa #toggleDarkMode
             color: inherit; // Hereda color blanco/negro del navbar
             background-color: rgba(128, 128, 128, 0.3); // Fondo semitransparente grisáceo
             border: none;
@@ -117,7 +132,8 @@ $mobile-breakpoint: 768px; // Ejemplo
             transition: background-color 0.3s ease, color 0.3s ease;
             margin-left: 15px; // Espacio respecto a los links o al toggle
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background-color: rgba(128, 128, 128, 0.5);
             }
         }
@@ -147,10 +163,12 @@ $mobile-breakpoint: 768px; // Ejemplo
             // El color de los hijos con 'inherit' cambiará automáticamente
             // Si el menú móvil está abierto y se hace scroll, ya tendrá el fondo/color correcto
         }
-    } // --- Fin .__navbar ---
+    }
+
+    // --- Fin .__navbar ---
 
     // --- Estilos Header Content (sin Bootstrap) ---
-     .__header-content {
+    .__header-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -164,17 +182,20 @@ $mobile-breakpoint: 768px; // Ejemplo
         color: #fff;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Sombra de texto más sutil
         width: 100%; // Ocupa todo el ancho del contenedor
+        height: 100vh;
         box-sizing: border-box; // Padding incluido en el tamaño
 
         .__header-paragraph {
             font-size: clamp(1.5rem, 3vw, 2.5rem); // Tamaño fluido
             line-height: 1.6; // Equivalente a lh-lg aprox.
         }
+
         .__header-title {
             font-size: clamp(3rem, 8vw, 6rem); // Tamaño fluido
             font-weight: bold; // Equivalente a fw-bold
             line-height: 1.2;
         }
+
         .__header-subtitle {
             font-size: clamp(1rem, 1.5vw, 1.5rem); // Tamaño fluido
             line-height: 1.6;
@@ -188,8 +209,8 @@ $mobile-breakpoint: 768px; // Ejemplo
 
             .__header-btn-download {
                 // Estilos para el botón de descarga
-                background-color: var(--primary-color, #007bff); // Usa tu color primario
-                color: white;
+                background-color: var(--primary-color, #fff); // Usa tu color primario
+                color: #000;
                 padding: 10px 20px;
                 text-decoration: none;
                 border-radius: 5px;
@@ -198,9 +219,11 @@ $mobile-breakpoint: 768px; // Ejemplo
                 align-items: center;
                 gap: 8px; // Espacio entre icono y texto
 
-                &:hover, &:focus {
-                    background-color: var(--primary-dark-color, #0056b3); // Color más oscuro al pasar el ratón
+                &:hover,
+                &:focus {
+                    background-color: var(--primary-dark-color, #c7c7c7); // Color más oscuro al pasar el ratón
                 }
+
                 // Asegúrate que la clase .icon-download aplica el icono
             }
 
@@ -212,12 +235,18 @@ $mobile-breakpoint: 768px; // Ejemplo
                 transition: transform 0.3s ease;
                 display: inline-block;
 
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     transform: scale(1.1); // Efecto de zoom ligero
                 }
+
                 // Asegúrate que las clases .icon-linkedin-bg-white y .icon-github aplican los iconos
             }
         }
-    } // --- Fin .__header-content ---
+    }
 
-} // --- Fin .header-container ---
+    // --- Fin .__header-content ---
+
+}
+
+// --- Fin .header-container ---
