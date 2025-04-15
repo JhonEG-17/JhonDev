@@ -41,3 +41,8 @@
 
     }
 }
+@include media('md') {
+    .__card-experience {
+        padding: 10px; // Ejemplo de padding interno
+    }
+}

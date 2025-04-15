@@ -34,3 +34,36 @@
         width: 100%; height: 100%;
     }
 }
+
+@include media('md') {
+    .section-about {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "aboutme aboutme"
+            "experience portfolio"
+            "experience portfolio";
+        grid-gap: 10px;
+        width: 100%;
+        height: 100vh;
+        padding: 80px 15px 15px;
+
+        // Asignar áreas a los hijos directos (custom elements)
+        app-card-about-me {
+            grid-area: aboutme;
+            width: 100%; height: 100%;
+        }
+        app-card-experience {
+            grid-area: experience;
+            width: 100%; height: 100%;
+        }
+        app-portfolio {
+            grid-area: portfolio;
+            width: 100%; height: 100%;
+        }
+    }
+}
+
+/*
+            "portfolio portfolio"
+            "experience experience";*/

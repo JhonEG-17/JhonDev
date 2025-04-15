@@ -10,7 +10,6 @@
     .__card-about-me {
         display: flex; // Organiza imagen y contenido en una fila
         align-items: center; // Centra verticalmente la imagen y el texto entre sí
-        // justify-content: center; // No es necesario si usamos gap y flex-grow
         width: 100%; // Ocupa todo el ancho de __about-me
         height: 100%; // Ocupa todo el alto de __about-me
         padding: 20px; // Añade padding interno a la tarjeta
@@ -102,4 +101,43 @@
             }
         }
     }
+}
+@include media('md') {
+    .__about-me {
+        // Contenedor interno que agrupa imagen y texto
+        .__card-about-me {
+            height: 100%;
+            padding: 10px; // Añade padding interno a la tarjeta
+            gap: 10px; // Espacio entre la imagen y el contenido
+    
+            .__card-img-container {
+                display: flex;
+                flex-direction: column; // Apila imagen y botón
+                align-items: center; // Centra imagen y botón horizontalmente
+                justify-content: center; // Centra verticalmente (si hay espacio extra)
+                flex-shrink: 0; // Evita que este contenedor se encoja si no hay espacio
+                width: 140px; // Ancho fijo para la columna de la imagen/botón
+                height: 100%;
+                gap: 20px; // Espacio entre la imagen y el botón
+                box-sizing: border-box;
+    
+                .__card-img {
+                    height: 140px; // Altura fija para la imagen (ajusta si es necesario)
+                    margin-bottom: 10px;
+                }
+            }
+    
+            .__card-content {
+                display: flex;
+                flex-direction: column; // Apila título, línea, subtítulo, texto
+                justify-content: center; // Centra el contenido verticalmente
+                align-items: flex-start; // Alinea el texto a la izquierda
+                flex-grow: 1; // Permite que esta columna ocupe el espacio restante
+                height: 100%; // Intenta ocupar la altura disponible
+                gap: 10px; // Espacio entre los elementos de texto
+    
+            }
+        }
+    }
+    
 }

@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 730px;
+  max-width: 730px;
+  width: 100%;
 
   .skills-slider {
     display: flex;
@@ -29,5 +30,11 @@
       }
 
     }
+  }
+}
+
+@include media('sm') {
+  .skills-slider-container {
+    max-width: 365px;
   }
 }
