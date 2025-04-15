@@ -1,0 +1,219 @@
+// _06-components/header.scss
+@import "../main"; // Asegúrate que aquí se definen las variables CSS necesarias
+
+// Define un breakpoint para el menú móvil, ajústalo según necesites
+$mobile-breakpoint: 768px; // Ejemplo
+
+.header-container {
+    display: flex;
+    background-image: url(../../../assets/img/Background/Background-min.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; // Puede dar problemas en algunos móviles
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+    // padding: 20px; // Este padding puede empujar el navbar si no se maneja bien
+
+    .__navbar {
+        display: flex;
+        justify-content: space-between; // Cambiado a space-between para alinear mejor
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--navbar-height, 80px); // Usa variable CSS
+        padding: 0 20px; // Añade padding horizontal
+        box-sizing: border-box; // Incluye padding en el width/height
+        // box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1); // Sombra inicial opcional
+        background-color: transparent;
+        color: var(--navbar-initial-text-color, white);
+        z-index: 10; // Asegura que esté por encima
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+        .__navbar-brand {
+            // Estilos para el logo/título
+            h1, p { margin: 0; } // Quita márgenes por defecto
+            .__brand-title,
+            .__brand-subtitle {
+                color: inherit;
+                transition: color 0.3s ease;
+            }
+            // Ajusta tamaños de fuente si es necesario
+            .__brand-title { font-size: 1.5rem; }
+            .__brand-subtitle { font-size: 0.8rem; }
+        }
+
+        .__navbar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; // Por defecto en escritorio
+            gap: 15px; // Espacio entre items
+
+            .__item-link {
+                text-decoration: none;
+                color: inherit;
+                transition: color 0.3s ease;
+                padding: 5px 10px;
+                display: inline-block;
+                // Añade estilos hover/focus si quieres
+                &:hover, &:focus {
+                    color: var(--navbar-link-hover-color, lightgray); // Define esta variable o usa un color
+                    text-decoration: underline;
+                }
+            }
+
+            // --- Estilos Móvil para la Navegación ---
+            @media (max-width: $mobile-breakpoint) {
+                display: none; // Oculto por defecto en móvil
+                position: absolute;
+                top: var(--navbar-height, 80px); // Justo debajo del navbar
+                left: 0;
+                width: 100%;
+                background-color: var(--navbar-scrolled-bg, #ffffff); // Fondo blanco (o el que uses en scroll)
+                flex-direction: column;
+                align-items: center;
+                padding: 15px 0;
+                box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+                // Asegura que los links sean negros en el menú desplegado
+                color: var(--navbar-scrolled-text-color, #000000);
+
+                // Cuando el menú está activo (clase añadida por JS)
+                &.is-active {
+                    display: flex; // Mostrarlo
+                }
+
+                 .__item-link {
+                     padding: 10px 0; // Más espacio vertical en móvil
+                     width: 100%;
+                     text-align: center;
+                     &:hover, &:focus {
+                         background-color: rgba(0,0,0, 0.05); // Feedback visual al tocar
+                     }
+                 }
+            }
+        } // --- Fin .__navbar-nav ---
+
+        // --- Estilos Botón Dark Mode (sin Bootstrap) ---
+        .__dark-mode-toggle { // O usa #toggleDarkMode
+            color: inherit; // Hereda color blanco/negro del navbar
+            background-color: rgba(128, 128, 128, 0.3); // Fondo semitransparente grisáceo
+            border: none;
+            border-radius: 50%; // Circular
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem; // Tamaño del icono luna/sol
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-left: 15px; // Espacio respecto a los links o al toggle
+
+            &:hover, &:focus {
+                background-color: rgba(128, 128, 128, 0.5);
+            }
+        }
+
+        // --- Estilos Botón Toggle Menú (sin Bootstrap) ---
+        .__navbar-toggle {
+            display: none; // Oculto por defecto en escritorio
+            color: inherit; // Hereda color blanco/negro del navbar
+            background: none;
+            border: none;
+            font-size: 1.8rem; // Tamaño del icono de menú
+            cursor: pointer;
+            padding: 5px;
+            margin-left: 10px; // Espacio respecto al botón dark mode
+
+            @media (max-width: $mobile-breakpoint) {
+                display: block; // Mostrar en móvil
+            }
+        }
+
+        // --- Estilos Navbar con Scroll (sin cambios) ---
+        &.scrolled {
+            background-color: var(--navbar-scrolled-bg, #ffffff);
+            color: var(--navbar-scrolled-text-color, #000000);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra al hacer scroll
+
+            // El color de los hijos con 'inherit' cambiará automáticamente
+            // Si el menú móvil está abierto y se hace scroll, ya tendrá el fondo/color correcto
+        }
+    } // --- Fin .__navbar ---
+
+    // --- Estilos Header Content (sin Bootstrap) ---
+     .__header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        // position: absolute; // Esto puede ser problemático con el navbar fijo
+        // top: 0; left: 0; width: 100%; height: 100%; // Considera si es necesario
+        padding: 70px; // Ajusta según necesites
+        padding-top: calc(var(--navbar-height, 80px) + 50px); // Asegura espacio debajo del navbar fijo
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.5); // Fondo oscuro semitransparente
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Sombra de texto más sutil
+        width: 100%; // Ocupa todo el ancho del contenedor
+        box-sizing: border-box; // Padding incluido en el tamaño
+
+        .__header-paragraph {
+            font-size: clamp(1.5rem, 3vw, 2.5rem); // Tamaño fluido
+            line-height: 1.6; // Equivalente a lh-lg aprox.
+        }
+        .__header-title {
+            font-size: clamp(3rem, 8vw, 6rem); // Tamaño fluido
+            font-weight: bold; // Equivalente a fw-bold
+            line-height: 1.2;
+        }
+        .__header-subtitle {
+            font-size: clamp(1rem, 1.5vw, 1.5rem); // Tamaño fluido
+            line-height: 1.6;
+        }
+
+        .__header-btns {
+            display: flex;
+            align-items: center;
+            gap: 15px; // Espacio entre botones/iconos
+            margin-top: 20px;
+
+            .__header-btn-download {
+                // Estilos para el botón de descarga
+                background-color: var(--primary-color, #007bff); // Usa tu color primario
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+                display: inline-flex; // Para alinear icono y texto
+                align-items: center;
+                gap: 8px; // Espacio entre icono y texto
+
+                &:hover, &:focus {
+                    background-color: var(--primary-dark-color, #0056b3); // Color más oscuro al pasar el ratón
+                }
+                // Asegúrate que la clase .icon-download aplica el icono
+            }
+
+            .__links-item {
+                // Estilos para los iconos sociales
+                color: white; // Color del icono
+                font-size: 1.8rem; // Tamaño del icono
+                text-decoration: none;
+                transition: transform 0.3s ease;
+                display: inline-block;
+
+                &:hover, &:focus {
+                    transform: scale(1.1); // Efecto de zoom ligero
+                }
+                // Asegúrate que las clases .icon-linkedin-bg-white y .icon-github aplican los iconos
+            }
+        }
+    } // --- Fin .__header-content ---
+
+} // --- Fin .header-container ---

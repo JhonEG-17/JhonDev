@@ -1,5 +1,10 @@
-@import '../main.scss';
+// Import components
+@import "../main";
 
-@import './skills-slider.scss';
+@import './header';
 
-@import './footer.scss';
+@import './about';
+
+@import './skills-slider';
+
+@import './footer';

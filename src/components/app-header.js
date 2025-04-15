@@ -1,37 +1,120 @@
 import './app-skills-slider.js';
 
 class AppHeader extends HTMLElement {
+    observer = null;
+    navBarContent = null;
+    // Referencias para el menú móvil
+    navToggle = null;
+    navbarNav = null;
+
     connectedCallback() {
         this.innerHTML = `
-            <header class="text-light" style="height: 650px;">
-                <img src="src/assets/img/Background/Background-min.webp" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-                <div class="card-img-overlay d-flex flex-column p-5">
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex pt-3 gap-3">
-                            <div class="social-item">
-                                <a class="social-link text-light h3 icon-linkedin-bg-white" href="https://www.linkedin.com/in/jhoneg
-            
-                                " target="_blank" style="box-shadow: 0 2px 10px #000;"></a>
-                            </div>
-                            <div class="social-item">
-                                <a class="social-link text-light h3 icon-github" href="https://github.com/JhonEG-17" target="_blank" style="box-shadow: 0 2px 10px #000;"></a>
-                            </div>
-                        </div>
-                        <button id="toggleDarkMode" class="btn btn-dark shadow rounded-circle" style=" box-shadow: 0 2px 10px #000; ">🌙</button>
+            <header class="header-container">
+                <nav class="__navbar" id="navbar">
+                    <div class="__navbar-brand">
+                        <h1 class="__brand-title">JhonDev</h1>
+                        <p class="__brand-subtitle">Desarrollador Web | Diseñador Frontend</p>
                     </div>
-                    <div class="header-content pt-5">
-                        <h4 class="header-subtitle lh-lg shadow" style="font-size: 3vw; text-shadow: 0 2px 10px #000;">Hola, soy</h4>
-                        <h1 class="header-title fw-bold" style="font-size: 8vw; text-shadow: 0 2px 10px #000;">Jhonatan Espinal</h1>
-                        <h6 class="header-mono lh-lg" style="font-size: 1.5vw; text-shadow: 0 2px 10px #000;">Desarrollador Web | Diseñador Frontend</h6>
-                        <div class="m-0 pb-3 grid gap-3" style="width: 100%;">
-                            <app-skills-slider></app-skills-slider>
-                        </div>
-                        <a href="../assets/files/Jhonatan-Espinal-Garcia-CV.pdf" type="button" class="btn btn btn-light icon-new-tab" target="_blank" role="button" rel="noopener noreferrer" aria-label="Download CV" aria-labelledby="button donwload-cv"> Descargar CV</a>
+                    <ul class="__navbar-nav" id="navbar-nav-list">
+                        <li class="__nav-item">
+                            <a class="__item-link" href="#about">Sobre mi</a>
+                        </li>
+                        <li class="__nav-item">
+                            <a class="__item-link" href="#portfolio">Portafolio</a>
+                        </li>
+                        <li class="__nav-item">
+                            <a class="__item-link" href="#certificates">Certificados</a>
+                        </li>
+                        <li class="__nav-item">
+                            <a class="__item-link" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                    <button id="toggleDarkMode" class="__dark-mode-toggle" aria-label="Cambiar modo oscuro">🌙</button>
+                    <button class="__navbar-toggle icon-menu" type="button" aria-controls="navbar-nav-list" aria-expanded="false" aria-label="Toggle navigation">
+                    </button>
+                </nav>
+
+                <div class="__header-content" id="header-content">
+                    <p class="__header-paragraph">Hola, soy</p>
+                    <h2 class="__header-title">Jhonatan Espinal</h2>
+                    <small class="__header-subtitle">Desarrollador Web | Diseñador Frontend</small>
+                    <app-skills-slider></app-skills-slider>
+                    <div class="__header-btns">
+                        <a class="__header-btn-download icon-download" href="../assets/files/Jhonatan-Espinal-Garcia-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Descargar CV"> Descargar CV</a>
+                        <a class="__links-item icon-linkedin-no-bg" href="https://www.linkedin.com/in/jhoneg" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+                        <a class="__links-item icon-github" href="https://github.com/JhonEG-17" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
                     </div>
                 </div>
             </header>
         `;
+
+        // --- Selección de elementos ---
+        const headerContent = this.querySelector('#header-content');
+        this.navBarContent = this.querySelector('#navbar');
+        this.navToggle = this.querySelector('.__navbar-toggle'); // Seleccionamos el botón del menú
+        this.navbarNav = this.querySelector('#navbar-nav-list'); // Seleccionamos la lista de navegación
+
+        // --- Intersection Observer (sin cambios) ---
+        if (headerContent && this.navBarContent) {
+            this.observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        this.navBarContent.classList.add('scrolled');
+                    } else {
+                        this.navBarContent.classList.remove('scrolled');
+                    }
+                });
+            }, { root: null, threshold: 0 });
+            this.observer.observe(headerContent);
+        } else {
+            console.error("AppHeader: No se encontraron #header-content o #navbar.");
+        }
+
+        // --- Añadir Listeners ---
+        this.addDarkModeToggleListener();
+        this.addMobileMenuToggleListener(); // Añadimos el listener para el menú móvil
+    }
+
+    // --- Listener Modo Oscuro (sin cambios funcionales, solo selector si cambiaste clase) ---
+    addDarkModeToggleListener() {
+        // Usa '#toggleDarkMode' o '.__dark-mode-toggle' si añadiste esa clase
+        const toggleButton = this.querySelector('#toggleDarkMode');
+        if (toggleButton) {
+            toggleButton.addEventListener('click', () => {
+                const isDarkMode = document.body.classList.toggle('dark-mode');
+                toggleButton.textContent = isDarkMode ? '☀️' : '🌙';
+                toggleButton.setAttribute('aria-label', isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+            });
+            // Inicializar texto/label basado en el estado actual al cargar
+            const isInitiallyDark = document.body.classList.contains('dark-mode');
+             toggleButton.textContent = isInitiallyDark ? '☀️' : '🌙';
+             toggleButton.setAttribute('aria-label', isInitiallyDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+        }
+    }
+
+    // --- NUEVO: Listener para el Menú Móvil ---
+    addMobileMenuToggleListener() {
+        if (this.navToggle && this.navbarNav) {
+            this.navToggle.addEventListener('click', () => {
+                // Alterna una clase en la lista de navegación para mostrarla/ocultarla
+                const isExpanded = this.navbarNav.classList.toggle('is-active');
+                // Actualiza el atributo aria-expanded en el botón
+                this.navToggle.setAttribute('aria-expanded', isExpanded);
+            });
+        } else {
+             console.error("AppHeader: No se encontraron .__navbar-toggle o #navbar-nav-list.");
+        }
+    }
+
+    // --- disconnectedCallback (sin cambios) ---
+    disconnectedCallback() {
+        if (this.observer) {
+            this.observer.disconnect();
+            console.log("AppHeader observer disconnected");
+        }
+        // Aquí podrías remover los listeners de los botones si fuera necesario,
+        // aunque al eliminar el elemento del DOM, generalmente se limpian solos.
     }
 }
-  
+
 customElements.define("app-header", AppHeader);

@@ -19,11 +19,6 @@
         <meta name="geo.region" content="MX">
         <meta name="geo.placename" content="Ciudad de México, México">
         <meta name="geo.position" content="19.4326;-99.1332">
-
-        <!--Import fonts-->
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         
         <!-- Scripts -->
 
@@ -35,97 +30,28 @@
         
         <link
         rel="stylesheet"
-        href="src\styles\css\__css-librerias\_slick-slider\slick.css"
+        href="./src/styles/css/__css-librerias/_slick-slider/slick.css?v=1.0.0"
         />
 
         <link
         rel="stylesheet"
-        href="src\styles\css\__css-librerias\_slick-slider\slick-theme.css"
+        href="./src/styles/css/__css-librerias/_slick-slider/slick-theme.css?v=1.0.0"
         />
 
-        <!--Import bootstrap-->
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
         <!--Import components styles-->
+        <link rel="stylesheet" href="./src/styles/css/_css-components/home.min.css?v=1.0.3"/>
 
-        <link rel="stylesheet" href="src\styles\css\_css-components\home.min.css"/>
   </head>
-  <body style="font-family: 'Bebas Neue', sans-serif;" class="conatiner bg-secondary-subtle m-0 p-0">
+  <body>
     
     <app-header></app-header>
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white shadow" data-spy="affix" data-offset-top="510">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-center" id="navbarNav">
-                <ul class="navbar-nav mx-auto gap-3">
-                    <li class="nav-item"><a href="#about" class="nav-link">Sobre mi</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portafolio</a></li>
-                </ul>
-                <ul class="navbar-nav brand d-none d-lg-block d-md-none list-unstyled">
-                    <li class="brand-txt text-dark">
-                        <h5 class="brand-title">JhonDev</h5>
-                        <p class="brand-subtitle">Desarrollador Web | Diseñador Frontend</p>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mx-auto gap-3">-
-                    <li class="nav-item"><a href="#certificates" class="nav-link">Certificados</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <main>
-        <section id="about" class="container pt-5">
-            <div class="container-fluid gap-1 p-2 m-0">
-                <div id="about" class="row gap-5 justify-content-evenly">
-                    <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
-                        <h3 class="font-weight-light">¿Quien soy yo?</h3>
-                        <hr>
-                        <h5 class="mb-3">Soy Un Desarrollador y Diseñador Web</h5>
-                        <p class="mt-20">Mi nombre es Jhonatan Espinal, tengo 21 años y soy un desarrollador web con muchas ganas de crear soluciones tecnológicas y así brindar soluciones a problemas reales.</p>
-                        <a class="btn btn btn-info" href="src\assets\files\Jhonatan-Espinal-Garcia-CV.pdf" target="_blank">Descargar Mi CV</a>
-                    </div>
-
-                    <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
-                        <h3 class="font-weight-light">Información Personal</h3>
-                        <hr>
-                        <ul class="mt40 info list-unstyled">
-                            <li><span>Correo</span> : jhoneg_jobs@outlook.com</li>
-                            <li><span>Cel</span> : + (52) 5632642709</li>
-                            <li><span>Localidad</span> :  México, Ciudad de México</li>
-                        </ul>
-                        <div class="d-flex pt-3 gap-3">
-                            <div class="social-item">
-                                <a class="social-link text-black icon-linkedin-bg-black" href="https://www.linkedin.com/in/jhoneg
-            
-                                " target="_blank">
-                                </a>
-                            </div>
-                            <div class="social-item">
-                                <a class="social-link text-black icon-github" href="https://github.com/JhonEG-17" target="_blank">
-                                </a>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="col-6 col-md-4 shadow about-card bg-white p-4 m-0 rounded text-dark" style="width: 320px;">
-                        <h3 class="font-weight-light">Mi experiencia</h3>
-                        <hr>
-                        <div class="row">
-                            <i class="col-1 text-info pt-1 icon-embed"></i>
-                            <div class="col-10 ml-auto mr-3">
-                                <h6>Desarrollador Web | ETN Turistar Lujo</h6>
-                                <p class="subtitle"> Mantenimiento y creacion de sitios web, maquetado y estilado de sitios web.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <i class="icon-c-sharp"></i>
+        <i class="icon-c"></i>
+        <i class="icon-c-mas"></i>
+        
+        <app-about-me></app-about-me>
 
         <section id="portfolio" class="container my-5">
             <h2>Portafolio</h2>
@@ -224,7 +150,6 @@
             </div>
         </section>
 
-
         <section id="contact" class="container my-5">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3  gap-3 justify-content-evenly align-items-center">
                 <div class="col contact-form-card shadow bg-white rounded border-0 p-3 text-dark" style="width: 320px;">
@@ -252,15 +177,13 @@
                         <h3 class="text-center">Contactame mediante mis redes</h3>
                         <div class="d-flex justify-content-evenly">
                             <div class="social-item">
-                                <a class="social-link text-light" href="https://www.linkedin.com/in/jhoneg
+                                <a class="social-link text-dark icon-linkedin-bg-black" href="https://www.linkedin.com/in/jhoneg
             
                                 " target="_blank">
-                                    <img src="assets\icons\redes sociales\svg\linkedin-black.svg" alt="icon-link-linkedin" width="33px">
                                 </a>
                             </div>
                             <div class="social-item">
-                                <a class="social-link text-light" href="https://github.com/JhonEG-17" target="_blank">
-                                    <img src="assets\icons\redes sociales\svg\github-black.svg" alt="icon-link-github" width="30px">
+                                <a class="social-link text-dark icon-github" href="https://github.com/JhonEG-17" target="_blank">
                                 </a>
                             </div>
                         </div>
@@ -273,9 +196,7 @@
     <app-footer></app-footer>
 
     <!-- scripts -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="src\js\jquery.min.js"></script>
-    <script src="src\js\slick.js"></script>
+    <script src="./src/js/jquery.min.js"></script>
+    <script src="./src/js/slick.js"></script>
   </body>
 </html>

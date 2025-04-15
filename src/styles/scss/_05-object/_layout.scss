@@ -1,9 +1,0 @@
-.main-container {
-    max-width: calc(100% - 140px);
-    margin: auto;
-
-    @media (max-width: 768px) {
-        width: 100%;
-        max-width: calc(100% - 30px);
-    }
-}
