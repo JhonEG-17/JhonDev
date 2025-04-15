@@ -123,6 +123,8 @@ class AppPortfolio extends HTMLElement {
                 nextArrow: this.nextButton, // Pasa la referencia al elemento DOM
                 // --- Fin Configuración ---
             });
+            $(sliderProyects).slick('refresh');
+
         } else if (sliderProyects) {
             // Mensaje de advertencia si falta jQuery, Slick o los botones
              if (typeof $ === 'undefined' || !$.fn.slick) {
