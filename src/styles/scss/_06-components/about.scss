@@ -1,4 +1,5 @@
-// d:\Documents\Proyects\JhonDev\src\styles\scss\_06-components\about.scss
+@import "../main";
+
 .section-about {
     display: grid;
     grid-template-columns: repeat(3, 1fr); // Dos columnas de igual tamaño
