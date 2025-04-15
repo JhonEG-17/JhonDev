@@ -4,4 +4,6 @@ import "./app-skills-slider.js";
 
 import "./app-about-me.js";
 
+import "./app-portfolio.js";
+
 import "./app-footer.js";

@@ -27,7 +27,9 @@ $mobile-breakpoint: 768px; // Ejemplo
         height: var(--navbar-height, 80px); // Usa variable CSS
         padding: 0 20px; // Añade padding horizontal
         box-sizing: border-box; // Incluye padding en el width/height
-        // box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1); // Sombra inicial opcional
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1); // Sombra inicial opcional
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
         background-color: transparent;
         color: var(--navbar-initial-text-color, white);
         z-index: 10; // Asegura que esté por encima
@@ -63,6 +65,8 @@ $mobile-breakpoint: 768px; // Ejemplo
                 &:hover, &:focus {
                     color: var(--navbar-link-hover-color, lightgray); // Define esta variable o usa un color
                     text-decoration: underline;
+                    font-weight: 700;
+                    transition: font-weight 0.3s ease, color 0.3s ease;
                 }
             }
 

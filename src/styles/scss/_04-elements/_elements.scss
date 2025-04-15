@@ -11,12 +11,22 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: #000000;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     min-height: 100vh;
-    padding: 0 80px;
+    box-sizing: border-box;
+    /*background-image: linear-gradient(#000000, #1d5a62);*/
+    background-color: rgb(226, 226, 226);
+}
+
+section {
+    max-width: 1280px;
+    width: 100%;
 }

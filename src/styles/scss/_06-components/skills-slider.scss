@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 780px;
+  width: 730px;
+
   .skills-slider {
     display: flex;
     justify-content: space-around;
@@ -12,18 +13,21 @@
     width: 100%;
     height: 90px;
     flex-wrap: wrap;
+
     .skills-slider-item {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 150px;
-      height: 100px;
-      .__icon-size {
+      text-align: center;
+      width: 100px;
+
+      .__icon-size::before {
         width: 100%;
         height: 100%;
         font-size: 2rem;
         color: #fff;
       }
+
     }
   }
 }
