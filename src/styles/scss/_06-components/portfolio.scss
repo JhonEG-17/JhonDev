@@ -32,83 +32,86 @@
             // Estilos para las tarjetas DENTRO del slider Slick
             .__portfolio-card {
                 display: flex;
+                flex-direction: column;
                 border-radius: 10px; // Fondo para que el texto sea legible
                 text-align: start;
-
-                // ... resto de estilos para __card-img, __card-body, __card-links ...
-                .__card-img {
-                aspect-ratio: 16/9;
-                height: 200px; // Altura fija o aspect-ratio
-                object-fit: cover;
-                display: block; // Evita espacio extra debajo de la imagen
-                }
-
-                .__card-body {
-                    display: grid;
-                    align-items: start;
-                    justify-content: space-between;
-                    width: 100%;
-                    height: 100%;
-                    padding: 10px;
-                    gap: 10px;
-
-                    .__card-text {
-                        .__card-title {
-                            color: #fff;
-                        }
-        
+                gap: 20px;
+                .__card-content {
+                    display: flex;
+                    // ... resto de estilos para __card-img, __card-body, __card-links ...
+                    .__card-img {
+                        aspect-ratio: 16/9;
+                        height: 200px; // Altura fija o aspect-ratio
+                        object-fit: cover;
+                        display: block; // Evita espacio extra debajo de la imagen
+                    }
+    
+                    .__card-body {
+                        display: grid;
+                        align-items: start;
+                        justify-content: space-between;
+                        height: 100%;
+                        padding: 10px;
+                        gap: 10px;
+    
                         .__card-text {
-                            color: #fff;
-                        }
-
-                        .__card__tech-list {
-                            display: flex;
-                            flex-wrap: wrap;
-                            list-style: none;
-                            padding: 10px 0px;
-                            gap: 10px;
-                            li {
-                                .__icon-size::before {
-                                    font-size: 1.5rem;
-                                    color: #fff;
+                            .__card-title {
+                                color: #fff;
+                            }
+            
+                            .__card-text {
+                                color: #fff;
+                            }
+    
+                            .__card__tech-list {
+                                display: flex;
+                                flex-wrap: wrap;
+                                list-style: none;
+                                padding: 10px 0px;
+                                gap: 10px;
+                                li {
+                                    .__icon-size::before {
+                                        font-size: 1.5rem;
+                                        color: #fff;
+                                    }
                                 }
                             }
                         }
                     }
-                        
-                    .__card-links {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                        height: auto;
-                        gap: 10px;
+                }
+                .__card-links {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: auto;
+                    padding: 0px 10px;
+                    gap: 10px;
 
-                        .__card-link {
-                            text-align: center;
-                            font-size: 1.7rem;
-                            width: 50%;
-                            padding: 5px 0;
-                            color: #000;
-                            text-decoration: none;
-                            border-radius: 5px;
-                            background-color: var(--primary-color, #fff); // Usa tu color primario
-                            transition: background-color 0.3s ease;
-                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            
-                            &:hover,
-                            &:focus {
-                                background-color: var(--primary-dark-color, #c7c7c7); // Color más oscuro al pasar el ratón
-                            }
+                    .__card-link {
+                        text-align: center;
+                        font-size: 1.7rem;
+                        width: 50%;
+                        padding: 5px 0;
+                        color: #000;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        background-color: var(--primary-color, #fff); // Usa tu color primario
+                        transition: background-color 0.3s ease;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        
+                        &:hover,
+                        &:focus {
+                            background-color: var(--primary-dark-color, #c7c7c7); // Color más oscuro al pasar el ratón
                         }
+                    }
 
-                        .__bg-black {
-                            color: #000;
-                        }
+                    .__bg-black {
+                        color: #000;
+                    }
 
-                        .__bg-white {
-                            color: #000;
-                        }
+                    .__bg-white {
+                        color: #000;
                     }
                 }
             }
@@ -155,22 +158,72 @@
             justify-content: center;
             align-items: center;
             .__portfolio-articles, .slick-slider, .slick-initialized {
-                max-width: 360px;
                 width: 100%;
                 // Estilos para las tarjetas DENTRO del slider Slick
                 .__portfolio-card {
-                    flex-direction: column;
+                    
+                    .__card-content {
+                        display: flex;
+                        // ... resto de estilos para __card-img, __card-body, __card-links ...
 
-                    .__card-img {
-                        aspect-ratio: 16/9;
-                        width: 100%;
-                        height: auto; // Altura fija o aspect-ratio
-                        object-fit: cover;
-                        display: block; // Evita espacio extra debajo de la imagen
+                        .__card-img {
+                            aspect-ratio: 16/9;
+                            width: 500px;
+                            height: 100%; // Altura fija o aspect-ratio
+                            object-fit: cover;
+                            display: block; // Evita espacio extra debajo de la imagen
+                        }
+        
+                        .__card-body {
+                            padding: 20px 10px 10px;
+                        }
                     }
+                }
+            }
     
-                    .__card-body {
-                        padding: 20px 10px 10px;
+            .__portfolio-arrow {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                top: 50%;
+                padding: 5px;
+    
+                &:hover,
+                &:focus {
+                    background-color: var(--primary-color, #fff); // Color del fondo al pasar el ratón
+                    color: #000;
+                }
+            }
+            .portfolio-prev-arrow {
+                left: -10px;
+            }
+            .portfolio-next-arrow {
+                right: -10px;
+            }
+        }
+    }
+}
+@include media('sm') {
+    .section-portfolio {
+        .__portfolio-slider-container {
+            .__portfolio-articles, .slick-slider, .slick-initialized {
+                max-width: 400px;
+                .__portfolio-card {
+                    .__card-content {
+                        flex-direction: column;
+                        .__card-img {
+                            aspect-ratio: 16/9;
+                            max-width: 400px;
+                            width: 100%;
+                            height: auto; // Altura fija o aspect-ratio
+                            object-fit: cover;
+                            display: block; // Evita espacio extra debajo de la imagen
+                        }
+    
+                        .__card-body {
+                            width: 100%;
+                            padding: 20px 10px 10px;
+                        }
                     }
                 }
             }

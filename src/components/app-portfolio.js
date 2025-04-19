@@ -50,34 +50,46 @@ class AppPortfolio extends HTMLElement {
       return;
     }
 
-    const portfolioItemsHTML = this.portfolioData.map(item => `
+    const portfolioItemsHTML = this.portfolioData
+      .map(
+        (item) => `
       <li>
         <div class="__portfolio-card">
-           <img src="${item.imgSrc}" class="__card-img" alt="${item.imgAlt}">
-           <div class="__card-body">
-             <div class="__card-text">
-               <h3 class="__card-title">${item.title}</h3>
-               <p class="__card-text">${item.description}</p>
-               <ul class="__card__tech-list">
-                 ${item.techIcons.map(icon => `<li><i class="__icon-size ${icon}"></i></li>`).join('')}
-               </ul>
-             </div>
-             <div class="__card-links">
-               ${item.links.map(link => `
-                 <a
-                   class="__card-link ${link.bgClass} ${link.iconClass}"
-                   href="${link.href}"
-                   role="button"
-                   target="_blank"
-                   rel="noreferrer noopener"
-                   aria-label="${link.ariaLabel}"
-                 ></a>
-               `).join('')}
-             </div>
-           </div>
+          <header class="__card-content">
+            <img src="${item.imgSrc}" class="__card-img" alt="${item.imgAlt}">
+            <aside class="__card-body">
+              <div class="__card-text">
+                <h3 class="__card-title">${item.title}</h3>
+                <p class="__card-text">${item.description}</p>
+                <ul class="__card__tech-list">
+                  ${item.techIcons
+                    .map((icon) => `<li><i class="__icon-size ${icon}"></i></li>`)
+                    .join("")}
+                </ul>
+              </div>
+            </aside>
+          </header>
+          <footer class="__card-links">
+            ${item.links
+              .map(
+                (link) => `
+              <a
+                class="__card-link ${link.bgClass} ${link.iconClass}"
+                href="${link.href}"
+                role="button"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="${link.ariaLabel}"
+              ></a>
+            `
+              )
+              .join("")}
+          </footer>
         </div>
       </li>
-    `).join('');
+    `
+      )
+      .join("");
 
     // 1. Añade los elementos para los botones personalizados
     this.innerHTML = `

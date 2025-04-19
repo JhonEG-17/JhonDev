@@ -1,0 +1,95 @@
+// d:\Documents\Proyects\JhonDev\src\styles\scss\_06-components\slider-certificates.scss
+@import "../main";
+
+// El elemento raíz <app-slider-certificates> ya recibe width/height: 100% del grid (.section-about)
+
+// Haz que el article interno también ocupe todo el espacio disponible
+.__section-certificates {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box; // Buena práctica
+    -webkit-backdrop-filter: blur(10px); // Ejemplo si quieres el mismo efecto
+    backdrop-filter: blur(10px); // Ejemplo si quieres el mismo efecto
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.404); // Ejemplo si quieres el mismo efecto
+
+    .__certificate-title {
+        font-size: 2.5rem;
+        text-align: start; // Alinea el texto a la izquierda
+        margin-bottom: 20px; // Añade espacio debajo del título
+    }
+
+    .__slider-certificates {
+        display: flex;
+        max-width: 600px;
+        width: 100%;
+        max-height: 340px;
+        height: 100%;
+
+        .__certificates__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 600px;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px; // Fondo para que el texto sea legible
+
+            .__certificates__img {
+                display: block;
+                aspect-ratio: 16/9;
+                object-fit: contain;
+                height: 300px;
+            }
+        }
+    }
+
+    @include media('md') {
+        .__slider-certificates {
+            max-width: 360px;
+            width: 100%;
+            max-height: 170px;
+            height: 100%;
+
+            .__certificates__item {
+                max-width: 300px;
+                width: 100%;
+                height: 150px;
+                border-radius: 10px; // Fondo para que el texto sea legible
+
+                .__certificates__img {
+                    display: block;
+                    aspect-ratio: 16/9;
+                    object-fit: contain;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    @include media('sm') {
+        .__slider-certificates {
+            display: flex;
+            max-width: 360px;
+            width: 100%;
+            max-height: 270px;
+            height: 100%;
+
+            .__certificates__item {
+                max-width: 300px;
+                width: 100%;
+                height: 170px;
+
+                .__certificates__img {
+                    height: 170px;
+                }
+            }
+        }
+    }
+}
+@include media("md") {
+    .__section-certificates {
+        padding: 15px;
+    }
+}

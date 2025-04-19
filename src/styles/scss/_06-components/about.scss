@@ -6,8 +6,8 @@
     grid-template-rows: auto auto auto; // Filas ajustadas al contenido, o puedes usar 1fr 1fr si quieres dividir el alto equitativamente
     grid-template-areas:
         "aboutme aboutme experience" // Primera fila: aboutme a la izquierda, experience a la derecha
-        "portfolio portfolio experience"
-        "portfolio portfolio experience"; // Segunda fila: portfolio a la izquierda, experience sigue a la derecha
+        "portfolio portfolio certificates"
+        "portfolio portfolio certificates"; // Segunda fila: portfolio a la izquierda, experience sigue a la derecha
     grid-gap: 20px; // Espacio entre celdas
     justify-content: center; // Centra el grid horizontalmente si es más pequeño que el contenedor
     align-items: stretch; // Estira los items para llenar la altura de la celda (puedes cambiar a 'start', 'center', 'end')
@@ -33,6 +33,10 @@
         //background-color: rgba(0, 0, 255, 0.5); // Azul semitransparente
         width: 100%; height: 100%;
     }
+    app-slider-certificates {
+        grid-area: certificates;
+        width: 100%; height: 100%;
+    }
 }
 
 @include media('md') {
@@ -41,8 +45,8 @@
         grid-template-rows: auto auto auto;
         grid-template-areas:
             "aboutme aboutme"
-            "experience portfolio"
-            "experience portfolio";
+            "experience certificates"
+            "portfolio portfolio";
         grid-gap: 10px;
         width: 100%;
         height: 100vh;
@@ -59,6 +63,45 @@
         }
         app-portfolio {
             grid-area: portfolio;
+            width: 100%; height: 100%;
+        }
+        app-slider-certificates {
+            grid-area: certificates;
+            width: 100%; height: 100%;
+        }
+    }
+}
+
+@include media('sm') {
+    .section-about {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "aboutme"
+            "experience"
+            "certificates"
+            "portfolio";
+        grid-gap: 10px;
+        width: 100%;
+        height: 100%;
+        padding: 80px 15px 15px;
+        gap: 10px;
+
+        // Asignar áreas a los hijos directos (custom elements)
+        app-card-about-me {
+            grid-area: aboutme;
+            width: 100%; height: 100%;
+        }
+        app-card-experience {
+            grid-area: experience;
+            width: 100%; height: 100%;
+        }
+        app-portfolio {
+            grid-area: portfolio;
+            width: 100%; height: 100%;
+        }
+        app-slider-certificates {
+            grid-area: certificates;
             width: 100%; height: 100%;
         }
     }
