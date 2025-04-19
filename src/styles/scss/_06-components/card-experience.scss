@@ -13,7 +13,11 @@
     -webkit-backdrop-filter: blur(10px); // Ejemplo si quieres el mismo efecto
     backdrop-filter: blur(10px);      // Ejemplo si quieres el mismo efecto
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.404); // Ejemplo si quieres el mismo efecto
-
+    .__card-title {
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: start; // Alinea el texto a la izquierda
+    }
     // ... resto de tus estilos ...
     .__experience-list {
         display: flex;
@@ -32,7 +36,7 @@
                 aspect-ratio: 1/1;
                 width: 60px;
                 height: 60px;
-                border-radius: 50px;
+                border-radius: 50%;
             }
             .__experience-content {
                 padding: 10px;
@@ -44,5 +48,21 @@
 @include media('md') {
     .__card-experience {
         padding: 10px; // Ejemplo de padding interno
+        // ... resto de tus estilos ...
+        .__experience-list {
+            .__experience-item{
+                .__card-img {
+                    aspect-ratio: 1/1;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+                .__experience-content {
+                    padding: 10px;
+                    width: calc(100% - 60px);
+                }
+            }
+    
+        }
     }
 }
