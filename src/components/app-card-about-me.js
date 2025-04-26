@@ -9,7 +9,7 @@ class appCardAboutMe extends HTMLElement {
                     <div class="__card-img-container">
 
                         <img class="__card-img" src="src/assets/img/fotoperfil/e3802d06.png" alt="Jhonatan Espinal">
-                        <a class="__card-btn-download icon-download" href="src/assets/files/Jhonatan-Espinal-Garcia-CV.pdf" target="_blank"> Descargar CV</a>
+                        <a class="__card-btn-download icon-download" href="public/files/Jhonatan-Espinal-Garcia-CV.pdf" target="_blank"> Descargar CV</a>
                     </div>
 
                     <div class="__card-content">
