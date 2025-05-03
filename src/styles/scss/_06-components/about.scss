@@ -13,9 +13,10 @@
     align-items: stretch; // Estira los items para llenar la altura de la celda (puedes cambiar a 'start', 'center', 'end')
     width: 100%;
     // Considera usar min-height en lugar de height para permitir que el contenido crezca si es necesario
-    height: 100vh;
-    padding: 100px 70px 70px; // Asegúrate que este padding no interfiera con el tamaño deseado
+    
+    padding: 80px; // Asegúrate que este padding no interfiera con el tamaño deseado
     box-sizing: border-box; // Incluye padding y border en el tamaño total del elemento
+    overflow: hidden;
 
     // Asignar áreas a los hijos directos (custom elements)
     app-card-about-me {

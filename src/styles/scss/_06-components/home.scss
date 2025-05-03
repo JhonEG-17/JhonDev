@@ -1,16 +1,70 @@
-// Import components
-@import "../main";
+// --- Estilos Header Content (sin Bootstrap) ---
+.__home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 70px;
+    padding-top: calc(var(--navbar-height, 80px) + 50px);
+    gap: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: calc(100vh - var(--navbar-height, 80px));
+    box-sizing: border-box;
 
-@import './header';
+    .__home-paragraph {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        line-height: 1.6;
+    }
 
-@import './skills-slider';
+    .__home-title {
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: bold;
+        line-height: 1.2;
+    }
 
-@import './slider-certificates';
+    .__home-subtitle {
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        line-height: 1.6;
+    }
 
-@import './about';
+    .__home-btns {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
 
-@import './card-about-me';
+        .__home-btn-download {
+            // Estilos para el botón de descarga
+            background-color: var(--primary-color, #fff);
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
 
-@import './card-experience';
+            &:hover,
+            &:focus {
+                background-color: var(--primary-dark-color, #c7c7c7);
+            }
+        }
 
-@import './portfolio';
+        .__links-item {
+            // Estilos para los iconos sociales
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: inline-block;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

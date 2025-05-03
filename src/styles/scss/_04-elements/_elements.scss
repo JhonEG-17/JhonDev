@@ -17,7 +17,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; // Puede dar problemas en algunos móviles
     width: 100%;
-    position: relative;
 }
 
 main {
@@ -27,7 +26,6 @@ main {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.5); // Fondo oscuro semitransparente
 }
 

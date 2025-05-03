@@ -13,6 +13,7 @@
     -webkit-backdrop-filter: blur(10px); // Ejemplo si quieres el mismo efecto
     backdrop-filter: blur(10px);      // Ejemplo si quieres el mismo efecto
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.404); // Ejemplo si quieres el mismo efecto
+    overflow: hidden;
     .__card-title {
         width: 100%;
         font-size: 2.5rem;
