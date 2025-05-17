@@ -1,0 +1,2 @@
+user-agent: *
+Sitemap: https://jhoneg-17.github.io/JhonDev/sitemap.xml
