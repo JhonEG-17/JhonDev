@@ -55,9 +55,9 @@ class layoutPortfolio extends HTMLElement {
         (item) => `
       <li>
         <div class="__portfolio-card">
-          <header class="__card-content">
+          <article class="__card-content">
             <img src="${item.imgSrc}" class="__card-img" alt="${item.imgAlt}" loading="lazy" />
-            <aside class="__card-body">
+            <article class="__card-body">
               <div class="__card-text">
                 <h3 class="__card-title">${item.title}</h3>
                 <p class="__card-text">${item.description}</p>
@@ -67,8 +67,8 @@ class layoutPortfolio extends HTMLElement {
                     .join("")}
                 </ul>
               </div>
-            </aside>
-          </header>
+            </article>
+          </article>
           <footer class="__card-links">
             ${item.links
               .map(
