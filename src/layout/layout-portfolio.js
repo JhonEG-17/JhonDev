@@ -53,7 +53,7 @@ class layoutPortfolio extends HTMLElement {
     const portfolioItemsHTML = this.portfolioData
       .map(
         (item) => `
-      <li>
+      <div>
         <div class="__portfolio-card">
           <article class="__card-content">
             <img src="${item.imgSrc}" class="__card-img" alt="${item.imgAlt}" loading="lazy" />
@@ -87,7 +87,7 @@ class layoutPortfolio extends HTMLElement {
               .join("")}
           </footer>
         </div>
-      </li>
+      </div>
     `
       )
       .join("");
@@ -97,9 +97,9 @@ class layoutPortfolio extends HTMLElement {
       <section id="portfolio" class="section-portfolio">
         <h2 class="__title">Proyectos</h2>
         <div class="__portfolio-slider-container">
-          <ul class="__portfolio-articles">
+          <div class="__portfolio-articles">
             ${portfolioItemsHTML}
-          </ul>
+          </div>
           <div class="__buttons-container">
             <button class="__portfolio-arrow portfolio-prev-arrow" aria-label="Proyecto anterior">
               <

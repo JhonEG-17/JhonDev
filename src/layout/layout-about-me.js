@@ -14,7 +14,7 @@ class layoutAboutMe extends HTMLElement {
                 </article>
 
                 <aside class="__about-img">
-                    <img class="__img" src="src/assets/img/fotoperfil/e3802d06.png" alt="Jhonatan Espinal" width="400px" height="450px" loading="lazy" />
+                    <img class="__img" src="src/assets/img/fotoperfil/foto-jhonatan-espinal.webp" alt="Jhonatan Espinal" width="400px" height="450px" loading="lazy" />
                 </aside>
                 
             </section>
