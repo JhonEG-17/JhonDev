@@ -56,7 +56,7 @@ class layoutPortfolio extends HTMLElement {
       <li>
         <div class="__portfolio-card">
           <header class="__card-content">
-            <img src="${item.imgSrc}" class="__card-img" alt="${item.imgAlt}">
+            <img src="${item.imgSrc}" class="__card-img" alt="${item.imgAlt}" loading="lazy" />
             <aside class="__card-body">
               <div class="__card-text">
                 <h3 class="__card-title">${item.title}</h3>
