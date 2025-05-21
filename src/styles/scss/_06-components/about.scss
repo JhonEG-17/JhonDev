@@ -2,112 +2,85 @@
 
 .section-about {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // Dos columnas de igual tamaño
-    grid-template-rows: auto auto auto; // Filas ajustadas al contenido, o puedes usar 1fr 1fr si quieres dividir el alto equitativamente
-    grid-template-areas:
-        "aboutme aboutme experience" // Primera fila: aboutme a la izquierda, experience a la derecha
-        "portfolio portfolio certificates"
-        "portfolio portfolio certificates"; // Segunda fila: portfolio a la izquierda, experience sigue a la derecha
-    grid-gap: 20px; // Espacio entre celdas
-    justify-content: center; // Centra el grid horizontalmente si es más pequeño que el contenedor
-    align-items: stretch; // Estira los items para llenar la altura de la celda (puedes cambiar a 'start', 'center', 'end')
-    width: 100%;
-    // Considera usar min-height en lugar de height para permitir que el contenido crezca si es necesario
-    
-    padding: 80px; // Asegúrate que este padding no interfiera con el tamaño deseado
-    box-sizing: border-box; // Incluye padding y border en el tamaño total del elemento
-    overflow: hidden;
-
-    // Asignar áreas a los hijos directos (custom elements)
-    app-card-about-me {
-        grid-area: aboutme;
-        //background-color: rgba(255, 0, 0, 0.5); // Rojo semitransparente
-        width: 100%; height: 100%;
-    }
-    app-card-experience {
-        grid-area: experience;
-        //background-color: rgba(0, 255, 0, 0.5); // Verde semitransparente
-        width: 100%; height: 100%;
-    }
-    app-portfolio {
-        grid-area: portfolio;
-        //background-color: rgba(0, 0, 255, 0.5); // Azul semitransparente
-        width: 100%; height: 100%;
-    }
-    app-slider-certificates {
-        grid-area: certificates;
-        width: 100%; height: 100%;
-    }
-}
-
-@include media('md') {
-    .section-about {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "aboutme aboutme"
-            "experience certificates"
-            "portfolio portfolio";
-        grid-gap: 10px;
-        width: 100%;
-        height: 100vh;
-        padding: 80px 15px 15px;
-
-        // Asignar áreas a los hijos directos (custom elements)
-        app-card-about-me {
-            grid-area: aboutme;
-            width: 100%; height: 100%;
-        }
-        app-card-experience {
-            grid-area: experience;
-            width: 100%; height: 100%;
-        }
-        app-portfolio {
-            grid-area: portfolio;
-            width: 100%; height: 100%;
-        }
-        app-slider-certificates {
-            grid-area: certificates;
-            width: 100%; height: 100%;
-        }
-    }
-}
-
-@include media('sm') {
-    .section-about {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-            "aboutme"
-            "experience"
-            "portfolio"
-            "certificates";
-        grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100dvh;
+    gap: 20px;
+    box-sizing: border-box;
+        
+    .__about-text{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
         width: 100%;
         height: 100%;
-        padding: 80px 15px 15px;
-        gap: 10px;
+        gap: 20px;
+        .__title {
+            text-align: start;
+        }
+        .__line {
+            width: 100%;
+            max-width: 400px;
+            height: 2px; // Espesor de la línea
+            background-color: #000; // Color de la línea
+        }
+        .__subtitle {
+            width: 100%;
+            font-size: clamp(1rem, 3vw + 0.5rem, 2.5rem); // Tamaño de fuente adaptable
+            font-weight: 500;
+            color: #000;
+            word-break: break-word;
+        }
+        .__text {
+            width: 100%;
+            font-size: clamp(1rem, 3vw + 0.5rem, 1.5rem); // Tamaño de fuente adaptable
+            color: #000;
+            line-height: normal; // Espaciado entre líneas
+            word-break: break-word;
+        }
+        .__btn-download {
+            display: inline-flex; // Para alinear icono y texto
+            align-items: center;
+            justify-content: center;
+            padding: 8px 15px; // Ajusta el padding del botón
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            gap: 8px; // Espacio entre icono y texto
+            white-space: nowrap; // Evita que el texto del botón se divida en dos líneas
+            font-size: 1.5rem; // Ajusta tamaño de fuente si es necesario
+            transition: background-color 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Sombra para el texto
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-        // Asignar áreas a los hijos directos (custom elements)
-        app-card-about-me {
-            grid-area: aboutme;
-            width: 100%; height: 100%;
-        }
-        app-card-experience {
-            grid-area: experience;
-            width: 100%; height: 100%;
-        }
-        app-portfolio {
-            grid-area: portfolio;
-            width: 100%; height: 100%;
-        }
-        app-slider-certificates {
-            grid-area: certificates;
-            width: 100%; height: 100%;
+            &:hover,
+            &:focus {
+                background-color: #2e2e2e; // Color más oscuro al pasar el ratón
+            }
         }
     }
-}
 
-/*
-            "portfolio portfolio"
-            "experience experience";*/
+    .__about-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        .__img {
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px; // Bordes redondeados
+        }
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr; // Una columna en pantallas pequeñas
+        height: auto; // Permite que crezca en altura
+    }
+}

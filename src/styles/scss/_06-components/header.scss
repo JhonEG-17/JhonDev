@@ -10,8 +10,8 @@ $mobile-breakpoint: 768px; // Ejemplo
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-    // padding: 20px; // Este padding puede empujar el navbar si no se maneja bien
+    z-index: 2;
+    background-color: #fff;
 
     .__navbar {
         display: flex;
@@ -24,8 +24,8 @@ $mobile-breakpoint: 768px; // Ejemplo
         box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
-        background-color: transparent; // Este será el fondo permanente ahora
-        color: var(--navbar-initial-text-color, white); // Este será el color de texto permanente
+        background-color: #fff; // Este será el fondo permanente ahora
+        color: #000; // Este será el color de texto permanente
         z-index: 10;
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; // Puedes quitar esta transición si ya no hay cambio
 
@@ -71,7 +71,7 @@ $mobile-breakpoint: 768px; // Ejemplo
                 // Añade estilos hover/focus si quieres
                 &:hover,
                 &:focus {
-                    color: var(--navbar-link-hover-color, lightgray); // Define esta variable o usa un color
+                    color: #000; // Define esta variable o usa un color
                     text-decoration: underline;
                     font-weight: 700;
                     transition: font-weight 0.3s ease, color 0.3s ease;

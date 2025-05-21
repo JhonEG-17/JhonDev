@@ -1,32 +1,59 @@
-// --- Estilos Header Content (sin Bootstrap) ---
+@import "../main";
+@import "./skills-slider";
+
 .__home-content {
+    position: relative; // Necesario para el overlay
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 70px;
-    padding-top: calc(var(--navbar-height, 80px) + 50px);
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100dvh;
     gap: 10px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: calc(100vh - var(--navbar-height, 80px));
     box-sizing: border-box;
+    background-image: url(../../../assets/img/Background/Background-min.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
+    // Overlay oscuro
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55); // Ajusta el 0.55 para más o menos oscuridad
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    // Asegura que el contenido esté por encima del overlay
+    > * {
+        position: relative;
+        z-index: 1;
+    }
     .__home-paragraph {
         font-size: clamp(1.5rem, 3vw, 2.5rem);
         line-height: 1.6;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .__home-title {
         font-size: clamp(3rem, 8vw, 6rem);
         font-weight: bold;
         line-height: 1.2;
+        color: #fff;
+        text-align: left;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .__home-subtitle {
         font-size: clamp(1rem, 1.5vw, 1.5rem);
         line-height: 1.6;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .__home-btns {

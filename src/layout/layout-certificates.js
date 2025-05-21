@@ -1,9 +1,9 @@
-class AppSliderCertificates extends HTMLElement {
+class LayoutCertificates extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <article id="certificates" class="__section-certificates">
-                <h2 class="__certificate-title">Certificados</h2>
-                <ul class="__slider-certificates">
+            <section id="certificates" class="section-certificates">
+                <h2 class="__title">Certificados</h2>
+                <ul class="__certificates-list">
                     <li class="__certificates__item">
                         <img class="__certificates__img" src="src/assets/img/certifications/HTML-ESENCIAL.webp" alt="Certificado de HTML5 Esencial">
                     </li>
@@ -35,39 +35,9 @@ class AppSliderCertificates extends HTMLElement {
                         <img class="__certificates__img" src="src/assets/img/certifications/Certificado-C-plus-plus.webp" alt="Certficado de C++">
                     </li>
                 </ul>
-            </article>
+            </section>
         `;
 
-        // 4. Configuración Slick:
-        $(".__slider-certificates").slick({
-            centerMode: true,
-            centerPadding: '80px',
-            variableWidth: true,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            slidesToShow: 1,
-            responsive: [
-              {
-                breakpoint: 768,
-                settings: {
-                  arrows: false,
-                  centerMode: true,
-                  centerPadding: '80px',
-                  slidesToShow: 1
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  arrows: false,
-                  centerMode: true,
-                  centerPadding: '80px',
-                  slidesToShow: 1
-                }
-              }
-            ]
-        });
     }
 }
-customElements.define('app-slider-certificates', AppSliderCertificates);
+customElements.define('layout-certificates', LayoutCertificates);

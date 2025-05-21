@@ -1,25 +1,15 @@
 @import "../main";
 
-.__card-experience {
-    // grid-area: "experience"; // <--- Elimina esta línea
-    // Añade estilos para que ocupe el espacio de su contenedor (app-card-experience)
-    display: flex; // O el display que necesites
+.section__experience {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    padding: 20px; // Ejemplo de padding interno
-    box-sizing: border-box; // Buena práctica
-    // Añade aquí los estilos que tenías para el card (backdrop-filter, box-shadow, etc. si aplica)
-    -webkit-backdrop-filter: blur(10px); // Ejemplo si quieres el mismo efecto
-    backdrop-filter: blur(10px);      // Ejemplo si quieres el mismo efecto
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.404); // Ejemplo si quieres el mismo efecto
+    box-sizing: border-box;
     overflow: hidden;
-    .__card-title {
-        width: 100%;
-        font-size: 2.5rem;
-        text-align: start; // Alinea el texto a la izquierda
-    }
-    // ... resto de tus estilos ...
+
     .__experience-list {
         display: flex;
         flex-direction: column;
@@ -31,8 +21,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #fff;
+            border-radius: 10px;
             margin: 5px 0px;
+            padding: 10px;
             gap: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             .__card-img {
                 aspect-ratio: 1/1;
                 width: 60px;
@@ -47,11 +41,10 @@
     }
 }
 @include media('md') {
-    .__card-experience {
-        padding: 10px; // Ejemplo de padding interno
-        // ... resto de tus estilos ...
+    .section__experience {
         .__experience-list {
             .__experience-item{
+                align-items: start;
                 .__card-img {
                     aspect-ratio: 1/1;
                     width: 60px;

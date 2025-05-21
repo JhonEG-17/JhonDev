@@ -1,4 +1,4 @@
-class AppPortfolio extends HTMLElement {
+class layoutPortfolio extends HTMLElement {
   constructor() {
     super();
     this.portfolioData = [];
@@ -93,20 +93,22 @@ class AppPortfolio extends HTMLElement {
 
     // 1. Añade los elementos para los botones personalizados
     this.innerHTML = `
-      <article id="portfolio" class="section-portfolio">
-        <h2 class="__portfolio-title">Proyectos</h2>
+      <section id="portfolio" class="section-portfolio">
+        <h2 class="__title">Proyectos</h2>
         <div class="__portfolio-slider-container">
           <ul class="__portfolio-articles">
             ${portfolioItemsHTML}
           </ul>
-          <button class="__portfolio-arrow portfolio-prev-arrow" aria-label="Proyecto anterior">
-            <
-          </button>
-          <button class="__portfolio-arrow portfolio-next-arrow" aria-label="Siguiente proyecto">
-            >
-          </button>
+          <div class="__buttons-container">
+            <button class="__portfolio-arrow portfolio-prev-arrow" aria-label="Proyecto anterior">
+              <
+            </button>
+            <button class="__portfolio-arrow portfolio-next-arrow" aria-label="Siguiente proyecto">
+              >
+            </button>
+          </div>
         </div>
-      </article>
+      </section>
     `;
   }
 
@@ -149,4 +151,4 @@ class AppPortfolio extends HTMLElement {
   }
 }
 
-customElements.define("app-portfolio", AppPortfolio);
+customElements.define("layout-portfolio", layoutPortfolio);

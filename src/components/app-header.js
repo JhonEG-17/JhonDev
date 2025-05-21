@@ -17,16 +17,19 @@ class AppHeader extends HTMLElement {
                     </div>
                     <ul class="__navbar-nav" id="navbar-nav-list">
                         <li class="__nav-item">
+                            <a class="__item-link" href="#home">inicio</a>
+                        </li>
+                        <li class="__nav-item">
                             <a class="__item-link" href="#about">Sobre mi</a>
+                        </li>
+                        <li class="__nav-item">
+                            <a class="__item-link" href="#experience">Experiencia</a>
                         </li>
                         <li class="__nav-item">
                             <a class="__item-link" href="#portfolio">Portafolio</a>
                         </li>
                         <li class="__nav-item">
                             <a class="__item-link" href="#certificates">Certificados</a>
-                        </li>
-                        <li class="__nav-item">
-                            <a class="__item-link" href="#contact">Contacto</a>
                         </li>
                     </ul>
                     <button id="toggleDarkMode" class="__dark-mode-toggle" aria-label="Cambiar modo oscuro">🌙</button>

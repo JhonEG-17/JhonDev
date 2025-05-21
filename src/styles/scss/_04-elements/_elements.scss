@@ -1,34 +1,24 @@
-html {
-    font-family: sans-serif;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 body {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #fff;
-    text-align: left;
-    background-color: #000000;
-    background-image: url(../../../assets/img/Background/Background-min.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; // Puede dar problemas en algunos móviles
-    width: 100%;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); // Fondo oscuro semitransparente
+    color: #000;
 }
 
 section {
     width: 100%;
+    background-color: #fdfdfd;
+    padding: 70px;
+    @include media("md") {
+        padding: 80px 15px 15px;
+    }
+}
+
+h2 {
+    width: 100%;
+    font-size: clamp(1.5rem, 5vw + 1rem, 5rem);
+    font-weight: 700;
+    color: #000;
+    text-align: center;
 }

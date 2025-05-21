@@ -1,9 +1,9 @@
-class appCardExperience extends HTMLElement {
+class layoutExperience extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <aside class="__card-experience">
-                <h2 class="__card-title">Mi experiencia</h2>
-                <hr class="___card-line">
+            <section class="section__experience" id="experience">
+                <h2 class="__title">Mi experiencia</h2>
+                <hr class="__line">
                 <ul class="__experience-list">
                     <li class="__experience-item">
                         <img src="src/assets/icons/icons-webp/etn-logo.webp" alt="Logo de la empres ETN Turistar Lujo" class="__card-img">
@@ -14,9 +14,9 @@ class appCardExperience extends HTMLElement {
                         </div>
                     </div>
                 </ul>
-            </aside>
+            </section>
         `;
     }
 }
 
-customElements.define("app-card-experience", appCardExperience);
+customElements.define("layout-experience", layoutExperience);

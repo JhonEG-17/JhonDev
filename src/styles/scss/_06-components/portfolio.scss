@@ -5,21 +5,11 @@
     display: flex;
     flex-direction: column;
     width: 100%; // Ocupa el ancho del grid item
-    height: 100%; // Ocupa el alto del grid item
-    padding: 30px;
+    min-height: 100dvh; // Ocupa el alto del grid item
     text-align: center;
     box-sizing: border-box; // Buena práctica
     overflow: unset;
-    -webkit-backdrop-filter: blur(10px); // Ejemplo si quieres el mismo efecto
-    backdrop-filter: blur(10px);      // Ejemplo si quieres el mismo efecto
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.404); // Ejemplo si quieres el mismo efecto
 
-    .__portfolio-title {
-        width: 100%;
-        font-size: 2.5rem;
-        text-align: start; // Alinea el texto a la izquierda
-        margin-bottom: 20px; // Añade espacio debajo del título
-    }
     .__portfolio-slider-container {
 
         .__portfolio-articles {
@@ -38,10 +28,9 @@
                 gap: 20px;
                 .__card-content {
                     display: flex;
-                    // ... resto de estilos para __card-img, __card-body, __card-links ...
                     .__card-img {
                         aspect-ratio: 16/9;
-                        height: 200px; // Altura fija o aspect-ratio
+                        height: 430px; // Altura fija o aspect-ratio
                         object-fit: cover;
                         display: block; // Evita espacio extra debajo de la imagen
                     }
@@ -56,11 +45,15 @@
     
                         .__card-text {
                             .__card-title {
-                                color: #fff;
+                                font-size: clamp(1.5rem, 5vw + 1rem, 2.5rem);
+                                font-weight: 700;
+                                color: #000;
                             }
             
                             .__card-text {
-                                color: #fff;
+                                font-size: clamp(1rem, 3vw + 0.5rem, 1.5rem);
+                                font-weight: 400;
+                                color: #000;
                             }
     
                             .__card__tech-list {
@@ -71,8 +64,8 @@
                                 gap: 10px;
                                 li {
                                     .__icon-size::before {
-                                        font-size: 1.5rem;
-                                        color: #fff;
+                                        font-size: clamp(1rem, 3vw + 0.5rem, 2.5rem);
+                                        color: #000;
                                     }
                                 }
                             }
@@ -85,7 +78,7 @@
                     justify-content: center;
                     width: 100%;
                     height: auto;
-                    padding: 0px 10px;
+                    padding: 10px 10px;
                     gap: 10px;
 
                     .__card-link {
@@ -93,127 +86,78 @@
                         font-size: 1.7rem;
                         width: 50%;
                         padding: 5px 0;
-                        color: #000;
+                        color: #fff;
                         text-decoration: none;
                         border-radius: 5px;
-                        background-color: var(--primary-color, #fff); // Usa tu color primario
+                        background-color: var(--primary-color, #000); // Usa tu color primario
                         transition: background-color 0.3s ease;
                         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        
-                        &:hover,
-                        &:focus {
-                            background-color: var(--primary-dark-color, #c7c7c7); // Color más oscuro al pasar el ratón
-                        }
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                     }
 
                     .__bg-black {
-                        color: #000;
+                        color: #fff;
+                        background-color: #1a1a1a;
+                        &:hover,
+                        &:focus {
+                            background-color: #2b2b2b; // Color más oscuro al pasar el ratón
+                        }
                     }
 
                     .__bg-white {
                         color: #000;
+                        background-color: #fff;
+                        &:hover,
+                        &:focus {
+                            background-color: #c7c7c7; // Color más oscuro al pasar el ratón
+                        }
                     }
                 }
             }
         }
+        .__buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+            .__portfolio-arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 5px 10px;
+                font-size: 1.5rem;
+                font-weight: bolder;
+                text-align: center;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                background-color: #000; // Elimina el fondo por defecto
+                color: #fff; // Color del texto
 
-        .__portfolio-arrow {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 10px;
-            font-size: 1.5rem;
-            font-weight: bolder;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            background-color: transparent; // Elimina el fondo por defecto
-            color: #fff; // Color del texto
-
-            &:hover,
-            &:focus {
-                background-color: var(--primary-color, #fff); // Color del fondo al pasar el ratón
-                color: #000;
+                &:hover,
+                &:focus {
+                    background-color: #272727; // Color del fondo al pasar el ratón
+                }
             }
-        }
-        .portfolio-prev-arrow {
-            left: 10px;
-        }
-        .portfolio-next-arrow {
-            right: 10px;
         }
     }
 }
 @include media('md') {
     .section-portfolio {
-        padding: 15px;
-    
-        .__portfolio-title {
-            margin-bottom: 10px; // Añade espacio debajo del título
-        }
-        .__portfolio-slider-container {
-            justify-content: center;
-            align-items: center;
-            .__portfolio-articles, .slick-slider, .slick-initialized {
-                width: 100%;
-                // Estilos para las tarjetas DENTRO del slider Slick
-                .__portfolio-card {
-                    
-                    .__card-content {
-                        display: flex;
-                        // ... resto de estilos para __card-img, __card-body, __card-links ...
-
-                        .__card-img {
-                            aspect-ratio: 16/9;
-                            width: 500px;
-                            height: 100%; // Altura fija o aspect-ratio
-                            object-fit: cover;
-                            display: block; // Evita espacio extra debajo de la imagen
-                        }
-        
-                        .__card-body {
-                            padding: 20px 10px 10px;
-                        }
-                    }
-                }
-            }
-    
-            .__portfolio-arrow {
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                top: 50%;
-                padding: 5px;
-    
-                &:hover,
-                &:focus {
-                    background-color: var(--primary-color, #fff); // Color del fondo al pasar el ratón
-                    color: #000;
-                }
-            }
-            .portfolio-prev-arrow {
-                left: -10px;
-            }
-            .portfolio-next-arrow {
-                right: -10px;
-            }
-        }
-    }
-}
-@include media('sm') {
-    .section-portfolio {
         .__portfolio-slider-container {
             .__portfolio-articles, .slick-slider, .slick-initialized {
-                max-width: 400px;
                 .__portfolio-card {
                     .__card-content {
                         flex-direction: column;
                         .__card-img {
                             aspect-ratio: 16/9;
-                            max-width: 400px;
+                            max-width: 800px;
                             width: 100%;
                             height: auto; // Altura fija o aspect-ratio
                             object-fit: cover;
@@ -228,25 +172,6 @@
                 }
             }
     
-            .__portfolio-arrow {
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                top: 50%;
-                padding: 5px;
-    
-                &:hover,
-                &:focus {
-                    background-color: var(--primary-color, #fff); // Color del fondo al pasar el ratón
-                    color: #000;
-                }
-            }
-            .portfolio-prev-arrow {
-                left: -10px;
-            }
-            .portfolio-next-arrow {
-                right: -10px;
-            }
         }
     }
 }
