@@ -9,7 +9,7 @@ class layoutAboutMe extends HTMLElement {
                     <hr class="__line">
                     <h3 class="__subtitle">Soy Un Desarrollador y Diseñador Web</h3>
                     <p class="__text">Mi nombre es Jhonatan Espinal, tengo 21 años y soy un desarrollador web con muchas ganas de crear soluciones tecnológicas y así brindar soluciones a problemas reales.</p>
-                    <a class="__btn-download icon-download" href="public/files/Jhonatan-Espinal-Garcia-CV.pdf" target="_blank"> Descargar CV</a>
+                    <a class="__btn-download icon-download" href="public/files/Jhonatan-Espinal-Garcia-CV.pdf" target="_blank" download rel="noopener noreferrer" title="Descargar el currículum de Jhonatan Espinal" aria-label="Descargar el currículum de Jhonatan Espinal" tabindex="0"> Descargar CV</a>
 
                 </article>
 

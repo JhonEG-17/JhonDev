@@ -80,6 +80,7 @@ class layoutPortfolio extends HTMLElement {
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="${link.ariaLabel}"
+                tabindex="0"
               ></a>
             `
               )
