@@ -14,6 +14,12 @@ class LayoutCertificates extends HTMLElement {
                         <img class="__certificates__img" src="src/assets/img/certifications/certificate-css-avanzado.webp" alt="Certificado de CSS3 avanzado" loading="lazy">
                     </li>
                     <li class="__certificates__item">
+                        <img class="__certificates__img" src="src/assets/img/certifications/REACT-en-accion.webp" alt="Certficado de React" loading="lazy">
+                    </li>
+                    <li class="__certificates__item">
+                        <img class="__certificates__img" src="src/assets/img/certifications/REACT-principiantes.webp" alt="Certficado de React para principiantes" loading="lazy">
+                    </li>
+                    <li class="__certificates__item">
                         <img class="__certificates__img" src="src/assets/img/certifications/Bases-de-datos-con-un-cafe.webp" alt="Certificado de teoria bases de datos" loading="lazy">
                     </li>
                     <li class="__certificates__item">
@@ -33,6 +39,9 @@ class LayoutCertificates extends HTMLElement {
                     </li>
                     <li class="__certificates__item">
                         <img class="__certificates__img" src="src/assets/img/certifications/Certificado-C-plus-plus.webp" alt="Certficado de C++" loading="lazy">
+                    </li>
+                    <li class="__certificates__item">
+                        <img class="__certificates__img" src="src/assets/img/certifications/JAVA-desde-cero.webp" alt="Certficado de JAVA" loading="lazy">
                     </li>
                 </ul>
             </section>
