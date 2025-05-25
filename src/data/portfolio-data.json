@@ -64,5 +64,50 @@
         "ariaLabel": "Sitio web de Vivabus"
       }
     ]
+  },
+  {
+    "imgSrc": "src/assets/img/proyects/proyects-img/landing-etn.webp",
+    "imgAlt": "Proyecto Landing ETN Semana santa",
+    "title": "Landing ETN Semana santa",
+    "description": "Esta es un a landing page creada mediante hubspot para una empresa de transporte que ofrece servicios de transporte en línea.",
+    "techIcons": ["icon-html5", "icon-css3", "icon-w3c"],
+    "links": [
+      {
+        "href": "https://info.etn.com.mx/etn-ofertas-semana-santa-estudiantes-profesores?hs_preview=EIpDbFIm-149841663791",
+        "iconClass": "icon-new-tab",
+        "bgClass": "__bg-white",
+        "ariaLabel": "Enlace a Landing ETN Semana santa"
+      }
+    ]
+  },
+  {
+    "imgSrc": "src/assets/img/proyects/proyects-img/landing-autovias.webp",
+    "imgAlt": "Proyecto Landing Autovías La Línea Semana santa",
+    "title": "Landing Aoutovías La Línea Semana santa",
+    "description": "Esta es un a landing page creada mediante hubspot para una empresa de transporte que ofrece servicios de transporte en línea.",
+    "techIcons": ["icon-html5", "icon-css3", "icon-w3c"],
+    "links": [
+      {
+        "href": "https://info.autovias.com.mx/autovias-ofertas-semana-santa-estudiantes-profesores?hs_preview=qaHonWMW-148634035506",
+        "iconClass": "icon-new-tab",
+        "bgClass": "__bg-white",
+        "ariaLabel": "Enlace a Landing Aoutovías La Línea Semana santa"
+      }
+    ]
+  },
+  {
+    "imgSrc": "src/assets/img/proyects/proyects-img/landing-costaline.webp",
+    "imgAlt": "Proyecto Landing Costa Line Semana santa",
+    "title": "Landing Costa Line Semana santa",
+    "description": "Esta es un a landing page creada mediante hubspot para una empresa de transporte que ofrece servicios de transporte en línea.",
+    "techIcons": ["icon-html5", "icon-css3", "icon-w3c"],
+    "links": [
+      {
+        "href": "https://info.costaline.com.mx/costa-line-ofertas-semana-santa-estudiantes-profesores?hs_preview=SuZcnFyN-149133854826",
+        "iconClass": "icon-new-tab",
+        "bgClass": "__bg-white",
+        "ariaLabel": "Enlace a Landing Costa Line Semana santa"
+      }
+    ]
   }
 ]
