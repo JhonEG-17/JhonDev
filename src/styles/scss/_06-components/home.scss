@@ -19,7 +19,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    @include media("md") {
+    @media (max-width: 720px) {
         background-size: cover;
         background-position: center center;
         background-attachment: scroll;
