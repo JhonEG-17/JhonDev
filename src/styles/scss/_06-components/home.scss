@@ -19,6 +19,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    @include media("md") {
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
 
     // Overlay oscuro
     &::before {
