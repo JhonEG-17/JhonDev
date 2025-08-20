@@ -1,30 +1,9 @@
 [
   {
-    "imgSrc": "src/assets/img/proyects/proyects-img/CalculFisc.webp",
-    "imgAlt": "Proyecto CalculFisc",
-    "title": "CalCulFisc",
-    "description": "Este proyecto es una herramienta para los empleados que deseen revisar o calcular el ISR retenido de su salario para el pago de impuestos.",
-    "techIcons": ["icon-html5", "icon-css3", "icon-javascript"],
-    "links": [
-      {
-        "href": "https://github.com/JhonEG-17/CalculFisc-Web",
-        "iconClass": "icon-github",
-        "bgClass": "__bg-black",
-        "ariaLabel": "Repositorio de CalculFisc en GitHub"
-      },
-      {
-        "href": "https://jhoneg-17.github.io/CalculFisc-Web/",
-        "iconClass": "icon-new-tab",
-        "bgClass": "__bg-white",
-        "ariaLabel": "Sitio web de CalculFisc"
-      }
-    ]
-  },
-  {
     "imgSrc": "src/assets/img/proyects/proyects-img/JEGDEVSTUDIOS.webp",
     "imgAlt": "Proyecto JEGDevStudios WEB",
     "title": "JEGDevStudios WEB",
-    "description": "Este es un sitio web creado para mí para poder manejar los pedidos de mis clientes y poder llevar un mejor registro de los mismos.",
+    "description": "JEG Dev Studios es un sitio web corporativo diseñado para una startup, aplicando estrategias de SEO on-page y optimización de rendimiento. Construido con React, Next.js y Node.js (Express), integra Firebase y Blogger API, con frontend en Vercel y backend en Render.",
     "techIcons": [
       "icon-html5",
       "icon-css3",
@@ -37,13 +16,13 @@
     ],
     "links": [
       {
-        "href": "https://github.com/JEGDevStudios/site",
+        "href": "https://github.com/JhonEG-17/jeg-dev-studios-site",
         "iconClass": "icon-github",
         "bgClass": "__bg-black",
         "ariaLabel": "Repositorio de JEGDevStudios en GitHub"
       },
       {
-        "href": "https://jegdevstudios.com",
+        "href": "https://www.jegdevstudios.com",
         "iconClass": "icon-new-tab",
         "bgClass": "__bg-white",
         "ariaLabel": "Sitio web de JEGDevStudios"
@@ -51,10 +30,36 @@
     ]
   },
   {
+    "imgSrc": "src/assets/img/proyects/proyects-img/CalculFisc.webp",
+    "imgAlt": "Proyecto CalculFisc",
+    "title": "CalCulFisc",
+    "description": "CalCulFisc es una aplicación web que permite a los empleados calcular su salario neto considerando ISR, impuestos y deducciones como Infonavit. Desarrollada con React, TypeScript y Tailwind CSS, aplica buenas prácticas de accesibilidad y está desplegada en Vercel.",
+    "techIcons": [
+      "icon-html5",
+      "icon-css3",
+      "icon-javascript",
+      "icon-react"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/JhonEG-17/CalculFisc-Web",
+        "iconClass": "icon-github",
+        "bgClass": "__bg-black",
+        "ariaLabel": "Repositorio de CalculFisc en GitHub"
+      },
+      {
+        "href": "https://calculfisc-web.vercel.app",
+        "iconClass": "icon-new-tab",
+        "bgClass": "__bg-white",
+        "ariaLabel": "Sitio web de CalculFisc"
+      }
+    ]
+  },
+  {
     "imgSrc": "src/assets/img/proyects/proyects-img/vivabus-proyecto-portafolio.webp",
     "imgAlt": "Proyecto Vivabus",
     "title": "Vivabus",
-    "description": "Mediante la herramienta Godaddy creé una landing para una empresa de transporte que ofrece servicios de transporte en línea.",
+    "description": "Landing page creada en GoDaddy para una empresa de transporte, desarrollada con HTML y CSS personalizado. Incluye funciones para mostrar rutas y horarios, además de CTAs para compra de boletos en línea, vinculados a los servicios de Autovías y Costa Line.",
     "techIcons": ["icon-html5", "icon-css3", "icon-w3c"],
     "links": [
       {
@@ -68,9 +73,9 @@
   {
     "imgSrc": "src/assets/img/proyects/proyects-img/landing-etn.webp",
     "imgAlt": "Proyecto Landing ETN Semana santa",
-    "title": "Landing ETN Semana santa",
-    "description": "Esta es un a landing page creada mediante hubspot para una empresa de transporte que ofrece servicios de transporte en línea.",
-    "techIcons": ["icon-html5", "icon-css3", "icon-w3c"],
+    "title": "ETN Turistar Lujo",
+    "description": "Landing pages desarrolladas en WordPress para campañas de temporada, aplicando estrategias de SEO y optimización de rendimiento. Se implementaron CTAs para venta de boletos, conversión de imágenes a formatos WebP y AVIF, y mejoras de accesibilidad según lineamientos W3C.",
+    "techIcons": ["icon-html5", "icon-css3", "icon-w3c", "icon-wordpress"],
     "links": [
       {
         "href": "https://info.etn.com.mx/etn-ofertas-semana-santa-estudiantes-profesores?hs_preview=EIpDbFIm-149841663791",
@@ -83,9 +88,9 @@
   {
     "imgSrc": "src/assets/img/proyects/proyects-img/landing-autovias.webp",
     "imgAlt": "Proyecto Landing Autovías La Línea Semana santa",
-    "title": "Landing Aoutovías La Línea Semana santa",
-    "description": "Esta es un a landing page creada mediante hubspot para una empresa de transporte que ofrece servicios de transporte en línea.",
-    "techIcons": ["icon-html5", "icon-css3", "icon-w3c"],
+    "title": "Autovías La Línea",
+    "description": "Landing pages desarrolladas en WordPress para campañas de temporada, aplicando estrategias de SEO y optimización de rendimiento. Se implementaron CTAs para venta de boletos, conversión de imágenes a formatos WebP y AVIF, y mejoras de accesibilidad según lineamientos W3C.",
+    "techIcons": ["icon-html5", "icon-css3", "icon-w3c", "icon-wordpress"],
     "links": [
       {
         "href": "https://info.autovias.com.mx/autovias-ofertas-semana-santa-estudiantes-profesores?hs_preview=qaHonWMW-148634035506",
@@ -98,15 +103,36 @@
   {
     "imgSrc": "src/assets/img/proyects/proyects-img/landing-costaline.webp",
     "imgAlt": "Proyecto Landing Costa Line Semana santa",
-    "title": "Landing Costa Line Semana santa",
-    "description": "Esta es un a landing page creada mediante hubspot para una empresa de transporte que ofrece servicios de transporte en línea.",
-    "techIcons": ["icon-html5", "icon-css3", "icon-w3c"],
+    "title": "Costa Line",
+    "description": "Landing pages desarrolladas en WordPress para campañas de temporada, aplicando estrategias de SEO y optimización de rendimiento. Se implementaron CTAs para venta de boletos, conversión de imágenes a formatos WebP y AVIF, y mejoras de accesibilidad según lineamientos W3C.",
+    "techIcons": ["icon-html5", "icon-css3", "icon-w3c", "icon-wordpress"],
     "links": [
       {
         "href": "https://info.costaline.com.mx/costa-line-ofertas-semana-santa-estudiantes-profesores?hs_preview=SuZcnFyN-149133854826",
         "iconClass": "icon-new-tab",
         "bgClass": "__bg-white",
         "ariaLabel": "Enlace a Landing Costa Line Semana santa"
+      }
+    ]
+  },
+  {
+    "imgSrc": "src/assets/img/proyects/proyects-img/liverpool-shope-clone.webp",
+    "imgAlt": "Proyecto clon de home page de liverpool",
+    "title": "Liverpool Shop Clone",
+    "description": "Clon de la página de inicio de Liverpool, desarrollado con React, Vite, TypeScript y Tailwind CSS. El proyecto incluye diseño responsivo, mejoras en cards y sliders para optimizar UX/UI, aplica buenas prácticas de accesibilidad W3C y está desplegado en Vercel.",
+    "techIcons": ["icon-react","icon-html5", "icon-css3", "icon-w3c", "icon-vercel"],
+    "links": [
+      {
+        "href": "https://github.com/JhonEG-17/liverpool-shop-clone",
+        "iconClass": "icon-github",
+        "bgClass": "__bg-black",
+        "ariaLabel": "Repositorio de Liverpool Shop Clone en GitHub"
+      },
+      {
+        "href": "https://liverpool-shop-clone.vercel.app/",
+        "iconClass": "icon-new-tab",
+        "bgClass": "__bg-white",
+        "ariaLabel": "Enlace a Liverpool Shop Clone"
       }
     ]
   }
