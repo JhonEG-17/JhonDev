@@ -63,7 +63,7 @@ class layoutPortfolio extends HTMLElement {
                 <p class="__card-text">${item.description}</p>
                 <ul class="__card__tech-list">
                   ${item.techIcons
-                    .map((icon) => `<li><i class="__icon-size ${icon}"></i></li>`)
+                    .map((icon) => `<li><i class="__icon-size __icon-color ${icon}"></i></li>`)
                     .join("")}
                 </ul>
               </div>
