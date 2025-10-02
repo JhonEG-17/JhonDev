@@ -3,7 +3,7 @@
     "imgSrc": "src/assets/img/proyects/proyects-img/JEGDEVSTUDIOS.webp",
     "imgAlt": "Proyecto JEGDevStudios WEB",
     "title": "JEGDevStudios WEB",
-    "description": "JEG Dev Studios es un sitio web corporativo diseñado para una startup, aplicando estrategias de SEO on-page y optimización de rendimiento. Construido con React, Next.js y Node.js (Express), integra Firebase y Blogger API, con frontend en Vercel y backend en Render.",
+    "description": "Sitio web corporativo full-stack con frontend en React/Next.js y backend en Node.js/Express. Integra Blogger API y Firebase, aplicando estrategias avanzadas de SEO on-page y optimización de rendimiento. Desplegado en Vercel y Render.",
     "techIcons": [
       "icon-html5",
       "icon-css3",
@@ -33,7 +33,7 @@
     "imgSrc": "src/assets/img/proyects/proyects-img/CalculFisc.webp",
     "imgAlt": "Proyecto CalculFisc",
     "title": "CalCulFisc",
-    "description": "CalCulFisc es una aplicación web que permite a los empleados calcular su salario neto considerando ISR, impuestos y deducciones como Infonavit. Desarrollada con React, TypeScript y Tailwind CSS, aplica buenas prácticas de accesibilidad y está desplegada en Vercel.",
+    "description": "Herramienta web interactiva desarrollada con React y TypeScript que moderniza una app de escritorio. Mejora radicalmente la accesibilidad y UX, utilizando Tailwind CSS para una interfaz responsive y lógica compleja para el cálculo de deducciones.",
     "techIcons": [
       "icon-html5",
       "icon-css3",
@@ -59,7 +59,7 @@
     "imgSrc": "src/assets/img/proyects/proyects-img/vivabus-proyecto-portafolio.webp",
     "imgAlt": "Proyecto Vivabus",
     "title": "Vivabus",
-    "description": "Landing page creada en GoDaddy para una empresa de transporte, desarrollada con HTML y CSS personalizado. Incluye funciones para mostrar rutas y horarios, además de CTAs para compra de boletos en línea, vinculados a los servicios de Autovías y Costa Line.",
+    "description": "Creación de un mini-sitio web para una empresa de transporte utilizando el editor de GoDaddy, potenciado con HTML y CSS personalizado para lograr un diseño y funcionalidades a medida. El sitio está optimizado para mostrar rutas, horarios y centralizar las llamadas a la acción (CTAs) para la compra de boletos, redirigiendo a los servicios de Autovías y Sur de Jalisco.",
     "techIcons": ["icon-html5", "icon-css3", "icon-w3c"],
     "links": [
       {
@@ -119,7 +119,7 @@
     "imgSrc": "src/assets/img/proyects/proyects-img/liverpool-shope-clone.webp",
     "imgAlt": "Proyecto clon de home page de liverpool",
     "title": "Liverpool Shop Clone",
-    "description": "Clon de la página de inicio de Liverpool, desarrollado con React, Vite, TypeScript y Tailwind CSS. El proyecto incluye diseño responsivo, mejoras en cards y sliders para optimizar UX/UI, aplica buenas prácticas de accesibilidad W3C y está desplegado en Vercel.",
+    "description": "Clon de alta fidelidad de la página de Liverpool, enfocado en replicar y mejorar la UX/UI. Demuestra mi capacidad para construir componentes complejos y responsivos con React, Vite y TypeScript, utilizando Tailwind CSS para la maquetación avanzada.",
     "techIcons": ["icon-react","icon-html5", "icon-css3", "icon-w3c", "icon-vercel"],
     "links": [
       {
