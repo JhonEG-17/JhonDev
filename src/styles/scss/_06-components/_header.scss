@@ -1,5 +1,5 @@
 // _06-components/header.scss
-@import "../main"; // Asegúrate que aquí se definen las variables CSS necesarias
+// Asegúrate que aquí se definen las variables CSS necesarias
 
 // Define un breakpoint para el menú móvil, ajústalo según necesites
 $mobile-breakpoint: 768px; // Ejemplo
@@ -160,12 +160,13 @@ $mobile-breakpoint: 768px; // Ejemplo
         }
     }
 
-    
+
 }
 
 @include media('md') {
-        
+
     .header-container {
+
         // --- Estilos Header Content (sin Bootstrap) ---
         .__header-content {
             padding: 15px;

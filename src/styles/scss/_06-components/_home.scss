@@ -1,6 +1,3 @@
-@import "../main";
-@import "./skills-slider";
-
 .__home-content {
     position: relative; // Necesario para el overlay
     z-index: 1;
@@ -14,11 +11,12 @@
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
-    background-image: url(../../../assets/img/Background/Background-min.webp);
+    background-image: url(../../assets/img/Background/Background-min.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
     @media (max-width: 720px) {
         background-size: cover;
         background-position: center center;
@@ -36,10 +34,11 @@
     }
 
     // Asegura que el contenido esté por encima del overlay
-    > * {
+    >* {
         position: relative;
         z-index: 1;
     }
+
     .__home-paragraph {
         font-size: clamp(1.5rem, 3vw, 2.5rem);
         line-height: 1.6;
