@@ -3,8 +3,8 @@ class LayoutHome extends HTMLElement {
         this.innerHTML = `
             <section class="__home-content" id="home">
                 <p class="__home-paragraph">Hola, soy</p>
-                <h2 class="__home-title">Jhonatan Espinal</h2>
-                <small class="__home-subtitle">Desarrollador Web | Diseñador Frontend</small>
+                <h1 class="__home-title">Jhonatan Espinal</h1>
+                <h2 class="__home-subtitle">Desarrollador Web | Diseñador Frontend</h2>
                 <app-skills-slider></app-skills-slider>
                 <div class="__home-btns">
                     <a class="__home-btn-download icon-download" href="public/files/Jhonatan-Espinal-Garcia-CV.pdf" target="_blank" download rel="noopener noreferrer" title="Descargar el currículum de Jhonatan Espinal" aria-label="Descargar el currículum de Jhonatan Espinal" tabindex="0"> Descargar CV</a>
