@@ -30,7 +30,8 @@ $mobile-breakpoint: 768px; // Ejemplo
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; // Puedes quitar esta transición si ya no hay cambio
 
         .__navbar-brand {
-
+            display: flex;
+            flex-direction: column-reverse;
             // Estilos para el logo/título
             h1,
             p {
