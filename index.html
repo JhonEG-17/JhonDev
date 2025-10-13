@@ -1,62 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JhonDev | Desarrollador Web (React, Next.js) | Optimización SEO</title>
 
-    <title>JhonDev | Software Developer</title>
+		<meta
+			name="description"
+			content="Desarrollador Web experto en React, Next.js y TypeScript. Creo aplicaciones de alto rendimiento, accesibles y optimización SEO. ¡Conoce mi trabajo!"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Jhonatan Espinal Garcia" />
+		<meta name="language" content="es-MX" />
+		<meta
+			property="og:title"
+			content="JhonDev | Desarrollador Web (React, Next.js, TypeScript)"
+		/>
+		<meta
+			property="og:description"
+			content="Desarrollador Web Frontend experto en React, Next.js y TypeScript. Creo aplicaciones de alto rendimiento, accesibles y optimizadas para SEO. ¡Conoce mi trabajo!"
+		/>
+		<meta
+			property="og:image"
+			content="https://jhoneg-17.github.io/JhonDev/src/assets/img/meta-img/jhondev.webp"
+		/>
 
-    <meta name="description" content="Desarrollador full stack con experiencia en HTML, CSS, JavaScript, C++, C#, y más. Experto en el uso de Git, GitHub, Visual Studio y Visual Studio Code. Visita mi perfil para ver ejemplos de proyectos y colaboraciones.">
-    <meta name="keywords" content="desarrollador full stack, HTML, CSS, JavaScript, C++, C#, Git, GitHub, Visual Studio, Visual Studio Code">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Jhonatan Espinal Garcia">
-    <meta name="language" content="en-US">
-    <meta property="og:title" content="JhonDev | Software Developer">
-    <meta property="og:description" content="Desarrollador full stack con experiencia en HTML, CSS, JavaScript, C++, C#, y más. Experto en el uso de Git, GitHub, Visual Studio y Visual Studio Code. Visita mi perfil para ver ejemplos de proyectos y colaboraciones.">
-    <meta property="og:image" content="https://jhoneg-17.github.io/JhonDev/src/assets/img/meta-img/jhondev.webp">
-    <meta property="og:url" content="https://jhoneg-17.github.io/JhonDev/">
-    <meta property="og:type" content="website">
-    <meta name="google-site-verification" content="ZuLeN527RLeu6fCEEWEZsRbq3r7SbpqLPCBIFy2CS48" />
-    <meta name="geo.region" content="MX">
-    <meta name="geo.placename" content="Ciudad de México, México">
-    <meta name="geo.position" content="19.4326;-99.1332">
-    
-    <!-- Stylesheets -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta
+			property="twitter:url"
+			content="https://jhoneg-17.github.io/JhonDev/"
+		/>
+		<meta
+			property="twitter:title"
+			content="Jhonatan Espinal | Desarrollador Web Frontend (React, Next.js)"
+		/>
+		<meta
+			property="twitter:description"
+			content="Desarrollador Web Frontend experto en React, Next.js y TypeScript. Creo aplicaciones de alto rendimiento, accesibles y optimizadas para SEO. ¡Conoce mi trabajo!"
+		/>
+		<meta
+			property="twitter:image"
+			content="https://jhoneg-17.github.io/JhonDev/src/assets/img/meta-img/jhondev.webp"
+		/>
+		<meta
+			name="google-site-verification"
+			content="ZuLeN527RLeu6fCEEWEZsRbq3r7SbpqLPCBIFy2CS48"
+		/>
+		<meta name="geo.region" content="MX" />
+		<meta name="geo.placename" content="Ciudad de México, México" />
+		<meta name="geo.position" content="19.4326;-99.1332" />
 
-    <!-- CSS Slick Slider -->
-    
-    <link
-    rel="stylesheet"
-    href="src/styles/css/css-librerias/slick-slider/slick.css"
-    />
+		<!-- Stylesheets -->
 
-    <link
-    rel="stylesheet"
-    href="src/styles/css/css-librerias/slick-slider/slick-theme.css"
-    />
+		<link rel="stylesheet" href="src/styles/css/main.min.css" type="text/css" />
+		<!-- Scripts -->
+		<script async src="src/js/jquery.min.js"></script>
+		<script async src="src/js/slick.js"></script>
+		<script async src="src/js/darkmode.js"></script>
+		<!-- Scripts -->
+		<script type="module" src="app.js"></script>
+	</head>
+	<body>
+		<app-header></app-header>
 
-    <!--Import components styles-->
-    <link rel="stylesheet" href="src/styles/css/css-components/global.min.css" type="text/css"/>
-
-    <!-- Scripts -->
-    <script type="module" src="app.js"></script>
-
-  </head>
-  <body>
-    
-    <app-header></app-header>
-
-    <main>
-      <layout-home></layout-home>
-      <layout-about-me></layout-about-me>
-      <layout-experience></layout-experience>
-      <layout-portfolio></layout-portfolio>
-      <layout-certificates></layout-certificates>
-    </main>
-
-    <!-- scripts -->
-    <script src="src/js/jquery.min.js"></script>
-    <script src="src/js/slick.js"></script>
-  </body>
+		<main>
+			<layout-home></layout-home>
+			<layout-about-me></layout-about-me>
+			<layout-experience></layout-experience>
+			<layout-portfolio></layout-portfolio>
+			<layout-certificates></layout-certificates>
+		</main>
+	</body>
 </html>

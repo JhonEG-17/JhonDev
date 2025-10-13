@@ -1,9 +1,9 @@
 class AppSkillsSlider extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-          <section class="skills-slider-container">
+          <div class="skills-slider-container">
             <div class="skills-slider" role="region"></div>
-          </section>
+          </div>
         `;
 
         const skillsLogos = [

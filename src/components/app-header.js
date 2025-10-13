@@ -12,8 +12,8 @@ class AppHeader extends HTMLElement {
             <header class="header-container">
                 <nav class="__navbar" id="navbar">
                     <div class="__navbar-brand">
-                        <h1 class="__brand-title">JhonDev</h1>
-                        <p class="__brand-subtitle">Desarrollador Web | Diseñador Frontend</p>
+                        <h1 class="__brand-subtitle">Desarrollador Web | Diseñador Frontend</h1>
+                        <p class="__brand-title">JhonDev</p>
                     </div>
                     <ul class="__navbar-nav" id="navbar-nav-list">
                         <li class="__nav-item">

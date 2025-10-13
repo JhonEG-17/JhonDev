@@ -1,20 +1,32 @@
 // Import settings
-@import './_01-settings/_variables';
-@import './_01-settings/_fonts';
-@import './_01-settings/_icons';
+@import './_01-settings/variables';
+@import './_01-settings/fonts';
+@import './_01-settings/icons';
 
 // Import tools
-@import './_02-tools/_mixins';
+@import './_02-tools/mixins';
 
 // Import generic
-@import './_03-generic/_reset';
+@import './_03-generic/reset';
 
 // Import elements
-@import './_04-elements/_elements';
+@import './_04-elements/elements';
 
 // Import object
-@import './_05-object/_animations';
-@import './_05-object/_layout';
+@import './_05-object/animations';
+@import './_05-object/layout';
+// Import Slick Slider styles
+@import './_05-object/_slick-slider/slick';
+@import './_05-object/_slick-slider/slick-theme';
+
+// Import components
+@import './_06-components/header';
+@import './_06-components/home';
+@import './_06-components/about';
+@import './_06-components/experience';
+@import './_06-components/portfolio';
+@import './_06-components/certificates';
+@import './_06-components/skills-slider';
 
 // Import utilities
 @import './_07-utilities/_utilities';

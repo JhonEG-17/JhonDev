@@ -1,5 +1,5 @@
 // _06-components/header.scss
-@import "../main"; // Asegúrate que aquí se definen las variables CSS necesarias
+// Asegúrate que aquí se definen las variables CSS necesarias
 
 // Define un breakpoint para el menú móvil, ajústalo según necesites
 $mobile-breakpoint: 768px; // Ejemplo
@@ -30,7 +30,8 @@ $mobile-breakpoint: 768px; // Ejemplo
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; // Puedes quitar esta transición si ya no hay cambio
 
         .__navbar-brand {
-
+            display: flex;
+            flex-direction: column-reverse;
             // Estilos para el logo/título
             h1,
             p {
@@ -160,12 +161,13 @@ $mobile-breakpoint: 768px; // Ejemplo
         }
     }
 
-    
+
 }
 
 @include media('md') {
-        
+
     .header-container {
+
         // --- Estilos Header Content (sin Bootstrap) ---
         .__header-content {
             padding: 15px;

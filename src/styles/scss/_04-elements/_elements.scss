@@ -1,3 +1,13 @@
+body.dark-mode {
+
+    .__card__tech-list .__icon-size.dark-icon::before,
+    .skills-slider-item .__icon-color.dark-icon::before,
+    .__icon-size,
+    .__icon-color {
+        color: #FFFFFF !important;
+    }
+}
+
 body {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1rem;
@@ -10,6 +20,7 @@ section {
     width: 100%;
     background-color: #fdfdfd;
     padding: 70px;
+
     @include media("md") {
         padding: 80px 15px 15px;
     }

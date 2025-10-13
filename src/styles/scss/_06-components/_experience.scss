@@ -1,5 +1,3 @@
-@import "../main";
-
 .section__experience {
     display: flex;
     flex-direction: column;
@@ -17,7 +15,7 @@
         height: 100%;
         gap: 20px;
 
-        .__experience-item{
+        .__experience-item {
             display: flex;
             align-items: center;
             justify-content: start;
@@ -27,12 +25,14 @@
             padding: 10px;
             gap: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
             .__card-img {
                 aspect-ratio: 1/1;
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;
             }
+
             .__experience-content {
                 padding: 10px;
             }
@@ -40,23 +40,26 @@
 
     }
 }
+
 @include media('md') {
     .section__experience {
         .__experience-list {
-            .__experience-item{
+            .__experience-item {
                 align-items: start;
+
                 .__card-img {
                     aspect-ratio: 1/1;
                     width: 60px;
                     height: 60px;
                     border-radius: 50%;
                 }
+
                 .__experience-content {
                     padding: 10px;
                     width: calc(100% - 60px);
                 }
             }
-    
+
         }
     }
 }

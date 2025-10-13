@@ -1,50 +1,65 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("toggleDarkMode");
-    const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+	const observer = new MutationObserver((mutations, obs) => {
+		const btnDarkMode = document.getElementById("toggleDarkMode");
+		if (btnDarkMode) {
+			const header = document.querySelector(
+				"header.header-container .__navbar"
+			);
+			const sections = document.querySelectorAll("section");
+			const textElements = document.querySelectorAll(
+				"h1, h2, h3, p, small, .__subtitle, .__text, .__card-title, .__card-text"
+			);
+			const links = document.querySelectorAll("a.__item-link");
+			const icons = document.querySelectorAll(
+				".__card__tech-list .__icon-size, .skills-slider-item .__icon-color"
+			);
+			const experienceItems = document.querySelectorAll(".__experience-item");
+			const portfolioArrows = document.querySelectorAll(".__portfolio-arrow");
+			const downloadCvButton = document.querySelector(".__btn-download");
 
-    // Comprobar si hay un modo almacenado
-    if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
-        toggleButton.classList.replace("btn-dark", "btn-light");
-        toggleButton.textContent = "☀️";
-    }
+			btnDarkMode.addEventListener("click", () => {
+				const isDarkMode = document.body.classList.contains("dark-mode");
+				const backgroundColor = isDarkMode ? "#121212" : "";
+				const textColor = isDarkMode ? "#FFFFFF" : "";
+				const cardBackgroundColor = isDarkMode ? "#1E1E1E" : "";
+				const arrowBgColor = isDarkMode ? "#FFFFFF" : "";
+				const arrowTextColor = isDarkMode ? "#000000" : "";
+				const downloadBtnBgColor = isDarkMode ? "#FFFFFF" : "";
+				const downloadBtnTextColor = isDarkMode ? "#000000" : "";
 
-    toggleButton.addEventListener("click", function () {
-        if (body.classList.contains("dark-mode")) {
-            body.classList.remove("dark-mode");
-            toggleButton.classList.replace("btn-light", "btn-dark");
-            toggleButton.textContent = "🌙";
-            localStorage.setItem("dark-mode", "disabled");
-        } else {
-            body.classList.add("dark-mode");
-            toggleButton.classList.replace("btn-dark", "btn-light");
-            toggleButton.textContent = "☀️";
-            localStorage.setItem("dark-mode", "enabled");
-        }
-    });
-});
+				if (header) {
+					header.style.backgroundColor = backgroundColor;
+				}
 
-//Formulario section
+				sections.forEach((section) => {
+					section.style.backgroundColor = backgroundColor;
+				});
 
-document.getElementById("contact-form").addEventListener("submit", async function (e) {
-    e.preventDefault(); // Evita el envío por defecto del formulario
+				experienceItems.forEach((item) => {
+					item.style.backgroundColor = cardBackgroundColor;
+				});
 
-    const formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-    };
+				portfolioArrows.forEach((arrow) => {
+					arrow.style.backgroundColor = arrowBgColor;
+					arrow.style.color = arrowTextColor;
+				});
 
-    try {
-        const response = await fetch("https://jegdevstudios.onrender.com", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-        });
+				if (downloadCvButton) {
+					downloadCvButton.style.backgroundColor = downloadBtnBgColor;
+					downloadCvButton.style.color = downloadBtnTextColor;
+				}
 
-        const result = await response.json();
-        alert(result.message);
-    } catch (error) {
-        alert("Error al enviar el mensaje.");
-    }
+				textElements.forEach((el) => (el.style.color = textColor));
+				links.forEach((link) => (link.style.color = textColor));
+				icons.forEach((icon) => {
+					isDarkMode
+						? icon.classList.add("dark-icon")
+						: icon.classList.remove("dark-icon");
+					icon.style.color = isDarkMode ? "#FFFFFF" : "";
+				});
+			});
+			obs.disconnect();
+		}
+	});
+	observer.observe(document.body, { childList: true, subtree: true });
 });
